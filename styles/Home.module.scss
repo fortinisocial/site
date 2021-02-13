@@ -7,6 +7,9 @@
   align-items: center;
 
   header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
     background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
       url("/images/header-01.jpg");
     background-size: cover;
@@ -17,31 +20,67 @@
     height: 1000px;
     z-index: -1;
 
-    > div {
-      position: relative;
-      margin-left: 30px;
-      width: 358px;
-      height: 245px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      > div {
-        width: 200px;
-        border-bottom: 1px solid #e3e3e3;
-        margin: 20px 0;
-      }
-
-      > img:last-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-top: -60px;
-        transform: rotate(-102deg);
+    div {
+      &.logo {
+        position: relative;
         width: 358px;
-        height: 318px;
-        z-index: -1;
+        height: 245px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div {
+          &.divisor {
+            width: 200px;
+            border-bottom: 1px solid #e3e3e3;
+            margin: 20px 0;
+          }
+        }
+
+        img {
+          &.hexagon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: -60px;
+            transform: rotate(-102deg);
+            width: 358px;
+            height: 318px;
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    div {
+      &.menu {
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+        margin: 60px 100px 0 0;
+        gap: 30px;
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #ffffff;
+
+          &.donate {
+            padding: 5px 10px;
+            color: #24d6db;
+            border-radius: 20px;
+            border: 2px solid #24d6db;
+          }
+
+          img {
+            width: 9px;
+            margin-left: 5px;
+          }
+        }
       }
     }
   }
