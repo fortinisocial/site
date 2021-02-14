@@ -48,6 +48,14 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Handlee&family=Lato&family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
