@@ -9,15 +9,15 @@ export default function Home() {
         <header>
           <div className={styles.top}>
             <div className={styles.logo}>
-              <img
-                src="/images/logo.svg"
+              <Image
+                src="/images/fortini-logo.svg"
                 alt="Fortini Investimento Social"
                 width={180}
                 height={55}
               />
               <div className={styles.divider}></div>
-              <img
-                src="/images/header/gf-logo.jpg"
+              <Image
+                src="/images/header/gerando-falcoes-logo.svg"
                 alt="Gerando Falcões"
                 width={124}
                 height={31}
@@ -31,11 +31,21 @@ export default function Home() {
             <nav className={styles.menu}>
               <a href="/institucional" title="Institucional">
                 Institucional{' '}
-                <img src="/images/header/down-arrow.svg" alt="arrow down" />
+                <Image
+                  src="/images/header/down-arrow.svg"
+                  alt="arrow down"
+                  width={9}
+                  height={18}
+                />
               </a>
               <a href="/Projetos" title="Projetos">
                 Projetos{' '}
-                <img src="/images/header/down-arrow.svg" alt="arrow down" />
+                <Image
+                  src="/images/header/down-arrow.svg"
+                  alt="arrow down"
+                  width={9}
+                  height={18}
+                />
               </a>
               <a href="/blog" title="Blog">
                 Blog
@@ -73,10 +83,8 @@ export default function Home() {
               Quer saber o que dizem da gente? Se liga nos depoimentos dos
               nossos amigos e parceiros:
             </h2>
-            <img
-              src={
-                'https://media-exp1.licdn.com/dms/image/C4E03AQGqy5ZM8nUCWg/profile-displayphoto-shrink_800_800/0/1612657509393?e=1618444800&v=beta&t=82cHHj9pv0Gl1NUBAlq1wlR2Fms-GM0tOWs3bKVNCkA'
-              }
+            <Image
+              src="/image/depositions/maiara.jpg"
               width={175}
               height={175}
               alt="Maiara Wenceslau"
@@ -101,7 +109,12 @@ export default function Home() {
               desenvolvimento sustentável.
             </h2>
             <div className={styles.onu}>
-              <img src="/images/ods/ONU.svg" alt="ONU" />
+              <Image
+                src="/images/ods/ONU.svg"
+                alt="ONU"
+                width={122}
+                height={101}
+              />
               <p>
                 <strong>O</strong>bjetivos de <strong>d</strong>esenvolvimento{' '}
                 <strong>s</strong>ustentável
@@ -113,9 +126,11 @@ export default function Home() {
                   className={styles.ods}
                   data-text="ODS 1 - Erradicação da Pobreza"
                 >
-                  <img
+                  <Image
                     src="/images/ods/ods1.svg"
                     alt="ODS 1 - Erradicação da Pobreza"
+                    width={100}
+                    height={44}
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -125,9 +140,11 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n3}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods3.svg"
                     alt="ODS 3 - Saúde e Bem-Estar"
+                    width={120}
+                    height={84}
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -137,9 +154,11 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n4}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods4.svg"
                     alt="ODS 4 - Educação de Qualidade"
+                    width={100}
+                    height={82}
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -149,9 +168,11 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n5}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods5.svg"
                     alt="ODS 5 - Igualdade de Gênero"
+                    width={75}
+                    height={101}
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -161,9 +182,11 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods16.svg"
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
+                    width={100}
+                    height={99}
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -192,23 +215,34 @@ export default function Home() {
             <div className={styles.list}>
               <div className={styles.card}>
                 <div className={styles.header}>
-                  {' '}
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
+                        width={27}
+                        height={30}
                       />
                       <span>2016</span>
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img src="/images/projects/children.svg" alt="Crianças" />
+                      <img
+                        src="/images/projects/children.svg"
+                        alt="Crianças"
+                        width={31}
+                        height={27}
+                      />
                       <span>40</span>
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img src="/images/projects/pencil.svg" alt="Lápis" />
+                      <img
+                        src="/images/projects/pencil.svg"
+                        alt="Lápis"
+                        width={30}
+                        height={30}
+                      />
                       <span>5</span>
                       <p>Escolas</p>
                     </div>
@@ -225,6 +259,8 @@ export default function Home() {
                     <img
                       src="/images/projects/hands-heart.svg"
                       alt="Mãos segurando coração"
+                      width={18}
+                      height={14}
                     />
                     <span>Projeto em Andamento</span>
                   </p>
@@ -240,17 +276,29 @@ export default function Home() {
                       <img
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
+                        width={27}
+                        height={30}
                       />
                       <span>2016</span>
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img src="/images/projects/children.svg" alt="Crianças" />
+                      <img
+                        src="/images/projects/children.svg"
+                        alt="Crianças"
+                        width={31}
+                        height={27}
+                      />
                       <span>40</span>
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img src="/images/projects/pencil.svg" alt="Lápis" />
+                      <img
+                        src="/images/projects/pencil.svg"
+                        alt="Lápis"
+                        width={30}
+                        height={30}
+                      />
                       <span>5</span>
                       <p>Escolas</p>
                     </div>
@@ -264,7 +312,12 @@ export default function Home() {
                     da cidadania.
                   </p>
                   <p className={styles.status}>
-                    <img src="/images/projects/clock.svg" alt="Relógio" />
+                    <img
+                      src="/images/projects/clock.svg"
+                      alt="Relógio"
+                      width={18}
+                      height={18}
+                    />
                     <span>Aguardando recurso</span>
                   </p>
                 </div>
@@ -279,17 +332,29 @@ export default function Home() {
                       <img
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
+                        width={27}
+                        height={30}
                       />
                       <span>2016</span>
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img src="/images/projects/children.svg" alt="Crianças" />
+                      <img
+                        src="/images/projects/children.svg"
+                        alt="Crianças"
+                        width={31}
+                        height={27}
+                      />
                       <span>40</span>
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img src="/images/projects/pencil.svg" alt="Lápis" />
+                      <img
+                        src="/images/projects/pencil.svg"
+                        alt="Lápis"
+                        width={30}
+                        height={30}
+                      />
                       <span>5</span>
                       <p>Escolas</p>
                     </div>
@@ -304,8 +369,10 @@ export default function Home() {
                   </p>
                   <p className={styles.status}>
                     <img
-                      src="/images/projects/hands-heart.svg"
-                      alt="Mãos segurando coração"
+                      src="/images/projects/clock.svg"
+                      alt="Relógio"
+                      width={18}
+                      height={18}
                     />
                     <span>Aguardando recurso</span>
                   </p>
@@ -430,7 +497,7 @@ export default function Home() {
         <footer className={styles.footer}>
           <div className={styles.logo}>
             <img
-              src="/images/logo.svg"
+              src="/images/fortini-logo.svg"
               alt="Fortini Investimento Social"
               width={162}
               height={50}
@@ -448,7 +515,12 @@ export default function Home() {
                   rel="noopener"
                   title="Instagram da Fortini"
                 >
-                  <img src="/images/footer/insta_footer.svg" alt="Instagram" />
+                  <Image
+                    src="/images/footer/insta_footer.svg"
+                    alt="Instagram"
+                    width={30}
+                    height={30}
+                  />
                 </a>
                 <a
                   href="https://www.facebook.com/fortinisocial"
@@ -456,7 +528,12 @@ export default function Home() {
                   rel="noopener"
                   title="Facebook da Fortini"
                 >
-                  <img src="/images/footer/fb_footer.svg" alt="Facebook" />
+                  <Image
+                    src="/images/footer/fb_footer.svg"
+                    alt="Facebook"
+                    width={17}
+                    height={30}
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/fortini-investimento-social"
@@ -464,9 +541,11 @@ export default function Home() {
                   rel="noopener"
                   title="LinkedIn da Fortini"
                 >
-                  <img
+                  <Image
                     src="/images/footer/linkedin_footer.svg"
                     alt="LinkedIn"
+                    width={30}
+                    height={30}
                   />
                 </a>
               </div>
