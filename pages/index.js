@@ -1,10 +1,10 @@
-import styles from "../styles/Home.module.scss";
-import Layout from "../components/Layout";
-import Image from "next/image";
+import styles from '../styles/Home.module.scss';
+import Layout from '../components/Layout';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <Layout title={"Fortini Investimento Social - Belo Horizonte"}>
+    <Layout title={'Fortini Investimento Social - Belo Horizonte'}>
       <div className={styles.container}>
         <header>
           <div className={styles.top}>
@@ -30,11 +30,11 @@ export default function Home() {
             </div>
             <nav className={styles.menu}>
               <a href="/institucional" title="Institucional">
-                Institucional{" "}
+                Institucional{' '}
                 <img src="/images/header/down-arrow.svg" alt="arrow down" />
               </a>
               <a href="/Projetos" title="Projetos">
-                Projetos{" "}
+                Projetos{' '}
                 <img src="/images/header/down-arrow.svg" alt="arrow down" />
               </a>
               <a href="/blog" title="Blog">
@@ -50,15 +50,15 @@ export default function Home() {
             <h1>"Sonho que se sonha junto é realidade"</h1>
             <p>
               Somos a <strong>Fortini</strong>, uma organização social que
-              promove o acesso ao <strong>esporte e a cultura</strong> para{" "}
-              <strong>estudantes de escolas públicas</strong> da{" "}
+              promove o acesso ao <strong>esporte e a cultura</strong> para{' '}
+              <strong>estudantes de escolas públicas</strong> da{' '}
               <strong>região metropolitana de Belo Horizonte</strong>.
             </p>
           </div>
         </header>
 
         <main className={styles.main}>
-          <section className={styles["numbers-container"]}>
+          <section className={styles['numbers-container']}>
             <div className={styles.title}>
               <h1>
                 A Fortini <br />
@@ -67,7 +67,7 @@ export default function Home() {
               <h2>De 2016 até hoje</h2>
             </div>
           </section>
-          <section className={styles["depositions-container"]}>
+          <section className={styles['depositions-container']}>
             <h1>O que dizem por aí...</h1>
             <h2>
               Quer saber o que dizem da gente? Se liga nos depoimentos dos
@@ -75,7 +75,7 @@ export default function Home() {
             </h2>
             <img
               src={
-                "https://media-exp1.licdn.com/dms/image/C4E03AQGqy5ZM8nUCWg/profile-displayphoto-shrink_800_800/0/1612657509393?e=1618444800&v=beta&t=82cHHj9pv0Gl1NUBAlq1wlR2Fms-GM0tOWs3bKVNCkA"
+                'https://media-exp1.licdn.com/dms/image/C4E03AQGqy5ZM8nUCWg/profile-displayphoto-shrink_800_800/0/1612657509393?e=1618444800&v=beta&t=82cHHj9pv0Gl1NUBAlq1wlR2Fms-GM0tOWs3bKVNCkA'
               }
               width={175}
               height={175}
@@ -87,13 +87,13 @@ export default function Home() {
               existisse o projeto. As atividades desenvolvem a auto estima das
               crianças influenciando no crescimento de sua aprendizagem."
               <p className={styles.author}>Janis Costa</p>
-              <p className={styles["author-info"]}>
+              <p className={styles['author-info']}>
                 Agente Comunitária no munícipio de Contagem e professora na E.
                 E. Carlos Drummond de Andrade
               </p>
             </article>
           </section>
-          <section className={styles["ods-container"]}>
+          <section className={styles['ods-container']}>
             <h1>Objetivos de Desenvolvimento Sustentável - ODS</h1>
             <h2>
               A Fortini está alinhada aos ODS da Agenda 2030 das Nações Unidas,
@@ -103,12 +103,12 @@ export default function Home() {
             <div className={styles.onu}>
               <img src="/images/ods/ONU.svg" alt="ONU" />
               <p>
-                <strong>O</strong>bjetivos de <strong>d</strong>esenvolvimento{" "}
+                <strong>O</strong>bjetivos de <strong>d</strong>esenvolvimento{' '}
                 <strong>s</strong>ustentável
               </p>
             </div>
-            <div className={styles["ods-list"]}>
-              <div className={`${styles["ods-item-container"]} ${styles.n1}`}>
+            <div className={styles['ods-list']}>
+              <div className={`${styles['ods-item-container']} ${styles.n1}`}>
                 <div
                   className={styles.ods}
                   data-text="ODS 1 - Erradicação da Pobreza"
@@ -118,62 +118,62 @@ export default function Home() {
                     alt="ODS 1 - Erradicação da Pobreza"
                   />
                 </div>
-                <div className={styles["ods-description"]}>
+                <div className={styles['ods-description']}>
                   ODS 1 - Erradicação da Pobreza
                 </div>
               </div>
 
-              <div className={`${styles["ods-item-container"]} ${styles.n3}`}>
+              <div className={`${styles['ods-item-container']} ${styles.n3}`}>
                 <div className={styles.ods}>
                   <img
                     src="/images/ods/ods3.svg"
                     alt="ODS 3 - Saúde e Bem-Estar"
                   />
                 </div>
-                <div className={styles["ods-description"]}>
+                <div className={styles['ods-description']}>
                   ODS 3 - Saúde e Bem-Estar
                 </div>
               </div>
 
-              <div className={`${styles["ods-item-container"]} ${styles.n4}`}>
+              <div className={`${styles['ods-item-container']} ${styles.n4}`}>
                 <div className={styles.ods}>
                   <img
                     src="/images/ods/ods4.svg"
                     alt="ODS 4 - Educação de Qualidade"
                   />
                 </div>
-                <div className={styles["ods-description"]}>
+                <div className={styles['ods-description']}>
                   ODS 4 - Educação de Qualidade
                 </div>
               </div>
 
-              <div className={`${styles["ods-item-container"]} ${styles.n5}`}>
+              <div className={`${styles['ods-item-container']} ${styles.n5}`}>
                 <div className={styles.ods}>
                   <img
                     src="/images/ods/ods5.svg"
                     alt="ODS 5 - Igualdade de Gênero"
                   />
                 </div>
-                <div className={styles["ods-description"]}>
+                <div className={styles['ods-description']}>
                   ODS 5 - Igualdade de Gênero
                 </div>
               </div>
 
-              <div className={`${styles["ods-item-container"]} ${styles.n16}`}>
+              <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
                   <img
                     src="/images/ods/ods16.svg"
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
                   />
                 </div>
-                <div className={styles["ods-description"]}>
+                <div className={styles['ods-description']}>
                   ODS 16 - Paz, Justiça e Instituições Eficazes
                 </div>
               </div>
             </div>
           </section>
 
-          <section className={styles["history-container"]}>
+          <section className={styles['history-container']}>
             <div className={styles.description}>
               <h1>Nossos projetos</h1>
               <p>
@@ -188,11 +188,11 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={styles["projects-container"]}>
+          <section className={styles['projects-container']}>
             <div className={styles.list}>
               <div className={styles.card}>
                 <div className={styles.header}>
-                  {" "}
+                  {' '}
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
@@ -317,7 +317,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={styles["join-container"]}>
+          <section className={styles['join-container']}>
             <div className={styles.description}>
               <h1>Junte-se a nós</h1>
               <p>Seja um voluntário na Fortini.</p>
@@ -331,11 +331,11 @@ export default function Home() {
               </a>
             </div>
           </section>
-          <section className={styles["partners-container"]}>
+          <section className={styles['partners-container']}>
             <div className={styles.description}>
               <h1>Quem já sonha com a gente?</h1>
             </div>
-            <div className={styles["list-container"]}>
+            <div className={styles['list-container']}>
               <div className={styles.list}>
                 <a
                   href="https://www.academiatennishall.com.br/"
@@ -471,7 +471,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className={styles["menu-container"]}>
+            <div className={styles['menu-container']}>
               <div className={styles.menu}>
                 <h1>Institucional</h1>
                 <nav role="navigation">
