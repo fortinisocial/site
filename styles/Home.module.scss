@@ -479,6 +479,10 @@ $ods16-color: #086594;
             border-radius: 30px;
             height: 340px;
 
+            &.tenis {
+              background: url('/images/projects/tenis.jpg');
+            }
+
             .info {
               background: #f1f1f1;
               display: flex;
@@ -487,7 +491,7 @@ $ods16-color: #086594;
               justify-content: center;
               height: 100%;
               width: 116px;
-              border-radius: 30px;
+              border-radius: 26px;
               font-size: 16px;
 
               span {
@@ -562,41 +566,61 @@ $ods16-color: #086594;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      background: #174f86;
       height: 488px;
+      background-image: linear-gradient(
+          to right,
+          rgb(36, 128, 220),
+          rgb(36, 218, 220)
+        ),
+        url('/images/join/background.jpg');
+      background-repeat: no-repeat;
+      background-blend-mode: soft-light;
+      background-repeat: no-repeat;
 
-      .description {
-        width: 400px;
+      .join {
+        background: #174f86;
+        width: 529px;
+        height: calc(100% + 124px);
+        margin: 0 -62px;
 
-        h1 {
-          font-size: 32px;
-          text-transform: uppercase;
-          font-weight: 700;
-          line-height: 1.2;
-          color: #6eb6ff;
-        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          width: 440px;
+          height: 100%;
+          padding: 62px;
+          font-size: 16px;
 
-        p {
-          font-size: 14px;
-          color: #ffffff;
-          margin-bottom: 24px;
-        }
+          h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #6eb6ff;
+          }
 
-        a {
-          display: inline-flex;
-          align-items: center;
-          font-size: 14px;
-          font-weight: 400;
-          text-transform: uppercase;
-          transition: all 0.2s;
-          padding: 10px 15px;
-          color: #6eb6ff;
-          border-radius: 50px;
-          border: 2px solid #6eb6ff;
-
-          &:hover {
+          p {
             color: #ffffff;
-            border: 2px solid #ffffff;
+            margin: 10px 0;
+          }
+
+          a {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            padding: 10px 15px;
+            color: #6eb6ff;
+            border-radius: 50px;
+            border: 2px solid #6eb6ff;
+            margin-top: 32px;
+
+            &:hover {
+              color: #ffffff;
+              border: 2px solid #ffffff;
+            }
           }
         }
       }
