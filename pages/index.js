@@ -88,6 +88,7 @@ export default function Home() {
               width={175}
               height={175}
               alt="Maiara Wenceslau"
+              loading="lazy"
             />
             <article>
               "A Fortini proporciona acesso à esportes considerados nobres e que
@@ -114,6 +115,7 @@ export default function Home() {
                 alt="ONU"
                 width={122}
                 height={101}
+                loading="lazy"
               />
               <p>
                 <strong>O</strong>bjetivos de <strong>d</strong>esenvolvimento{' '}
@@ -131,6 +133,7 @@ export default function Home() {
                     alt="ODS 1 - Erradicação da Pobreza"
                     width={100}
                     height={44}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -145,6 +148,7 @@ export default function Home() {
                     alt="ODS 3 - Saúde e Bem-Estar"
                     width={120}
                     height={84}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -159,6 +163,7 @@ export default function Home() {
                     alt="ODS 4 - Educação de Qualidade"
                     width={100}
                     height={82}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -173,6 +178,7 @@ export default function Home() {
                     alt="ODS 5 - Igualdade de Gênero"
                     width={75}
                     height={101}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -187,6 +193,7 @@ export default function Home() {
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
                     width={100}
                     height={99}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles['ods-description']}>
@@ -222,6 +229,7 @@ export default function Home() {
                         alt="Calendário"
                         width={27}
                         height={30}
+                        loading="lazy"
                       />
                       <span>2016</span>
                       <p>Período</p>
@@ -232,6 +240,7 @@ export default function Home() {
                         alt="Crianças"
                         width={31}
                         height={27}
+                        loading="lazy"
                       />
                       <span>40</span>
                       <p>Alunos</p>
@@ -242,6 +251,7 @@ export default function Home() {
                         alt="Lápis"
                         width={30}
                         height={30}
+                        loading="lazy"
                       />
                       <span>5</span>
                       <p>Escolas</p>
@@ -261,6 +271,7 @@ export default function Home() {
                       alt="Mãos segurando coração"
                       width={18}
                       height={14}
+                      loading="lazy"
                     />
                     <span>Projeto em Andamento</span>
                   </p>
@@ -278,6 +289,7 @@ export default function Home() {
                         alt="Calendário"
                         width={27}
                         height={30}
+                        loading="lazy"
                       />
                       <span>2016</span>
                       <p>Período</p>
@@ -288,6 +300,7 @@ export default function Home() {
                         alt="Crianças"
                         width={31}
                         height={27}
+                        loading="lazy"
                       />
                       <span>40</span>
                       <p>Alunos</p>
@@ -298,6 +311,7 @@ export default function Home() {
                         alt="Lápis"
                         width={30}
                         height={30}
+                        loading="lazy"
                       />
                       <span>5</span>
                       <p>Escolas</p>
@@ -317,6 +331,7 @@ export default function Home() {
                       alt="Relógio"
                       width={18}
                       height={18}
+                      loading="lazy"
                     />
                     <span>Aguardando recurso</span>
                   </p>
@@ -334,6 +349,7 @@ export default function Home() {
                         alt="Calendário"
                         width={27}
                         height={30}
+                        loading="lazy"
                       />
                       <span>2016</span>
                       <p>Período</p>
@@ -344,6 +360,7 @@ export default function Home() {
                         alt="Crianças"
                         width={31}
                         height={27}
+                        loading="lazy"
                       />
                       <span>40</span>
                       <p>Alunos</p>
@@ -354,6 +371,7 @@ export default function Home() {
                         alt="Lápis"
                         width={30}
                         height={30}
+                        loading="lazy"
                       />
                       <span>5</span>
                       <p>Escolas</p>
@@ -373,6 +391,7 @@ export default function Home() {
                       alt="Relógio"
                       width={18}
                       height={18}
+                      loading="lazy"
                     />
                     <span>Aguardando recurso</span>
                   </p>
@@ -416,6 +435,7 @@ export default function Home() {
                     src="/images/partners/academiatennishall.jpg"
                     title="Academia Tennis Hall"
                     alt="Academia Tennis Hall"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -428,6 +448,7 @@ export default function Home() {
                     src="/images/partners/cemig.jpg"
                     title="Cemig"
                     alt="Cemig"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -440,6 +461,7 @@ export default function Home() {
                     src="/images/partners/imap.jpg"
                     title="Instituto Marum Patrus"
                     alt="Instituto Marum Patrus"
+                    loading="lazy"
                   />
                 </a>
 
@@ -453,6 +475,7 @@ export default function Home() {
                     src="/images/partners/noe.jpg"
                     title="Núcleo Odontológico Eldorado - NOE"
                     alt="Núcleo Odontológico Eldorado - NOE"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -465,6 +488,7 @@ export default function Home() {
                     src="/images/partners/ohubsocial.jpg"
                     title="Incubadora De Projetos Sociais | Hub Social"
                     alt="Incubadora De Projetos Sociais | Hub Social"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -477,6 +501,7 @@ export default function Home() {
                     src="/images/partners/qart.jpg"
                     title="Qart Tecnologia"
                     alt="Qart Tecnologia"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -489,6 +514,7 @@ export default function Home() {
                     src="/images/partners/voaambev.jpg"
                     title="Ambev - Programa VOA"
                     alt="Ambev - Programa VOA"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -522,6 +548,7 @@ export default function Home() {
                     alt="Instagram"
                     width={30}
                     height={30}
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -535,6 +562,7 @@ export default function Home() {
                     alt="Facebook"
                     width={17}
                     height={30}
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -548,6 +576,7 @@ export default function Home() {
                     alt="LinkedIn"
                     width={30}
                     height={30}
+                    loading="lazy"
                   />
                 </a>
               </div>
