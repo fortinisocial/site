@@ -84,7 +84,7 @@ export default function Home() {
               nossos amigos e parceiros:
             </h2>
             <img
-              src="/image/depositions/maiara.jpg"
+              src="/images/depositions/maiara.jpg"
               width={175}
               height={175}
               alt="Maiara Wenceslau"
