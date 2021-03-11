@@ -9,14 +9,14 @@ export default function Home() {
         <header>
           <div className={styles.top}>
             <div className={styles.logo}>
-              <Image
+              <img
                 src="/images/fortini-logo.svg"
                 alt="Fortini Investimento Social"
                 width={180}
                 height={55}
               />
               <div className={styles.divider}></div>
-              <Image
+              <img
                 src="/images/header/gerando-falcoes-logo.svg"
                 alt="Gerando Falcões"
                 width={124}
@@ -31,7 +31,7 @@ export default function Home() {
             <nav className={styles.menu}>
               <a href="/institucional" title="Institucional">
                 Institucional{' '}
-                <Image
+                <img
                   src="/images/header/down-arrow.svg"
                   alt="arrow down"
                   width={9}
@@ -40,7 +40,7 @@ export default function Home() {
               </a>
               <a href="/Projetos" title="Projetos">
                 Projetos{' '}
-                <Image
+                <img
                   src="/images/header/down-arrow.svg"
                   alt="arrow down"
                   width={9}
@@ -83,7 +83,7 @@ export default function Home() {
               Quer saber o que dizem da gente? Se liga nos depoimentos dos
               nossos amigos e parceiros:
             </h2>
-            <Image
+            <img
               src="/image/depositions/maiara.jpg"
               width={175}
               height={175}
@@ -109,7 +109,7 @@ export default function Home() {
               desenvolvimento sustentável.
             </h2>
             <div className={styles.onu}>
-              <Image
+              <img
                 src="/images/ods/ONU.svg"
                 alt="ONU"
                 width={122}
@@ -126,7 +126,7 @@ export default function Home() {
                   className={styles.ods}
                   data-text="ODS 1 - Erradicação da Pobreza"
                 >
-                  <Image
+                  <img
                     src="/images/ods/ods1.svg"
                     alt="ODS 1 - Erradicação da Pobreza"
                     width={100}
@@ -140,7 +140,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n3}`}>
                 <div className={styles.ods}>
-                  <Image
+                  <img
                     src="/images/ods/ods3.svg"
                     alt="ODS 3 - Saúde e Bem-Estar"
                     width={120}
@@ -154,7 +154,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n4}`}>
                 <div className={styles.ods}>
-                  <Image
+                  <img
                     src="/images/ods/ods4.svg"
                     alt="ODS 4 - Educação de Qualidade"
                     width={100}
@@ -168,7 +168,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n5}`}>
                 <div className={styles.ods}>
-                  <Image
+                  <img
                     src="/images/ods/ods5.svg"
                     alt="ODS 5 - Igualdade de Gênero"
                     width={75}
@@ -182,7 +182,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
-                  <Image
+                  <img
                     src="/images/ods/ods16.svg"
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
                     width={100}
@@ -214,7 +214,7 @@ export default function Home() {
           <section className={styles['projects-container']}>
             <div className={styles.list}>
               <div className={styles.card}>
-                <div className={styles.header}>
+                <div className={`${styles.header} ${styles.tenis}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
@@ -385,17 +385,19 @@ export default function Home() {
           </section>
 
           <section className={styles['join-container']}>
-            <div className={styles.description}>
-              <h1>Junte-se a nós</h1>
-              <p>Seja um voluntário na Fortini.</p>
-              <p>
-                Faça parte da nossa rede de colaboradores e ajude-nos a
-                transformar vidas.
-              </p>
+            <div className={styles.join}>
+              <div className={styles.description}>
+                <h1>Junte-se a nós</h1>
+                <p>Seja um voluntário na Fortini.</p>
+                <p>
+                  Faça parte da nossa rede de colaboradores e ajude-nos a
+                  transformar vidas.
+                </p>
 
-              <a href="/participar" title="Faça parte da Fortini">
-                Participar
-              </a>
+                <a href="/participar" title="Faça parte da Fortini">
+                  Participar
+                </a>
+              </div>
             </div>
           </section>
           <section className={styles['partners-container']}>
@@ -515,7 +517,7 @@ export default function Home() {
                   rel="noopener"
                   title="Instagram da Fortini"
                 >
-                  <Image
+                  <img
                     src="/images/footer/insta_footer.svg"
                     alt="Instagram"
                     width={30}
@@ -528,7 +530,7 @@ export default function Home() {
                   rel="noopener"
                   title="Facebook da Fortini"
                 >
-                  <Image
+                  <img
                     src="/images/footer/fb_footer.svg"
                     alt="Facebook"
                     width={17}
@@ -541,7 +543,7 @@ export default function Home() {
                   rel="noopener"
                   title="LinkedIn da Fortini"
                 >
-                  <Image
+                  <img
                     src="/images/footer/linkedin_footer.svg"
                     alt="LinkedIn"
                     width={30}
