@@ -46,7 +46,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Handlee&family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap"
             rel="stylesheet"
           />
         </Head>
