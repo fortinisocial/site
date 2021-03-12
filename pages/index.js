@@ -435,7 +435,6 @@ export default function Home() {
                     src="/images/partners/academiatennishall.jpg"
                     title="Academia Tennis Hall"
                     alt="Academia Tennis Hall"
-                    loading="lazy"
                   />
                 </a>
                 <a
@@ -448,7 +447,6 @@ export default function Home() {
                     src="/images/partners/cemig.jpg"
                     title="Cemig"
                     alt="Cemig"
-                    loading="lazy"
                   />
                 </a>
                 <a
@@ -461,7 +459,6 @@ export default function Home() {
                     src="/images/partners/imap.jpg"
                     title="Instituto Marum Patrus"
                     alt="Instituto Marum Patrus"
-                    loading="lazy"
                   />
                 </a>
 
@@ -475,7 +472,6 @@ export default function Home() {
                     src="/images/partners/noe.jpg"
                     title="Núcleo Odontológico Eldorado - NOE"
                     alt="Núcleo Odontológico Eldorado - NOE"
-                    loading="lazy"
                   />
                 </a>
                 <a
@@ -488,7 +484,6 @@ export default function Home() {
                     src="/images/partners/ohubsocial.jpg"
                     title="Incubadora De Projetos Sociais | Hub Social"
                     alt="Incubadora De Projetos Sociais | Hub Social"
-                    loading="lazy"
                   />
                 </a>
                 <a
@@ -501,7 +496,6 @@ export default function Home() {
                     src="/images/partners/qart.jpg"
                     title="Qart Tecnologia"
                     alt="Qart Tecnologia"
-                    loading="lazy"
                   />
                 </a>
                 <a
@@ -514,7 +508,6 @@ export default function Home() {
                     src="/images/partners/voaambev.jpg"
                     title="Ambev - Programa VOA"
                     alt="Ambev - Programa VOA"
-                    loading="lazy"
                   />
                 </a>
               </div>
