@@ -426,7 +426,7 @@ $ods16-color: #086594;
         }
 
         p {
-          font-size: 14px;
+          font-size: 18px;
           color: #ffffff;
           margin-bottom: 24px;
         }
@@ -565,33 +565,32 @@ $ods16-color: #086594;
     &.join-container {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      max-width: $max-width;
+      width: 100%;
       height: 488px;
-      background-image: linear-gradient(
-          to right,
-          rgb(36, 128, 220),
-          rgb(36, 218, 220)
-        ),
-        url('/images/join/background.jpg');
-      background-repeat: no-repeat;
-      background-blend-mode: soft-light;
-      background-repeat: no-repeat;
 
       .join {
+        display: flex;
+        flex: 1;
         background: #174f86;
-        width: 529px;
-        height: calc(100% + 124px);
         margin: 0 -62px;
+
+        img {
+          @media (min-width: 1920px) {
+            width: 845px;
+            height: 488px;
+          }
+        }
 
         .description {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          width: 440px;
+          min-width: 440px;
           height: 100%;
           padding: 62px;
-          font-size: 16px;
+          font-size: 18px;
 
           h1 {
             font-size: 32px;
