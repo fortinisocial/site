@@ -1,71 +1,13 @@
 import styles from '../styles/Home.module.scss';
 import Layout from '../components/Layout';
-import Image from 'next/image';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <Layout title={'Fortini Investimento Social - Belo Horizonte'}>
       <div className={styles.container}>
-        <header>
-          <div className={styles.top}>
-            <div className={styles.logo}>
-              <img
-                src="/images/fortini-logo.svg"
-                alt="Fortini Investimento Social"
-                width={180}
-                height={55}
-              />
-              <div className={styles.divider}></div>
-              <img
-                src="/images/header/gerando-falcoes-logo.svg"
-                alt="Gerando Falcões"
-                width={124}
-                height={31}
-              />
-              <img
-                src="/images/header/hexagon.svg"
-                alt="Hexagono"
-                className={styles.hexagon}
-              />
-            </div>
-            <nav className={styles.menu}>
-              <a href="/institucional" title="Institucional">
-                Institucional{' '}
-                <img
-                  src="/images/header/down-arrow.svg"
-                  alt="arrow down"
-                  width={9}
-                  height={18}
-                />
-              </a>
-              <a href="/Projetos" title="Projetos">
-                Projetos{' '}
-                <img
-                  src="/images/header/down-arrow.svg"
-                  alt="arrow down"
-                  width={9}
-                  height={18}
-                />
-              </a>
-              <a href="/blog" title="Blog">
-                Blog
-              </a>
-              <a href="/doacao" title="Institucional" className={styles.donate}>
-                Faça a sua doação
-              </a>
-            </nav>
-          </div>
-
-          <div className={styles.message}>
-            <h1>"Sonho que se sonha junto é realidade"</h1>
-            <p>
-              Somos a <strong>Fortini</strong>, uma organização social que
-              promove o acesso ao <strong>esporte e a cultura</strong> para{' '}
-              <strong>estudantes de escolas públicas</strong> da{' '}
-              <strong>região metropolitana de Belo Horizonte</strong>.
-            </p>
-          </div>
-        </header>
+        <Header styles={styles} />
 
         <main className={styles.main}>
           <section className={styles['numbers-container']}>
@@ -85,9 +27,9 @@ export default function Home() {
             </h2>
             <img
               src="/images/depositions/maiara.jpg"
+              alt="Maiara Wenceslau"
               width={175}
               height={175}
-              alt="Maiara Wenceslau"
               loading="lazy"
             />
             <article>
@@ -186,6 +128,21 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className={`${styles['ods-item-container']} ${styles.n10}`}>
+                <div className={styles.ods}>
+                  <img
+                    src="/images/ods/ods10.svg"
+                    alt="ODS 10 - Redução das Desigualdades"
+                    width={100}
+                    height={99}
+                    loading="lazy"
+                  />
+                </div>
+                <div className={styles['ods-description']}>
+                  ODS 10 - Redução das Desigualdades
+                </div>
+              </div>
+
               <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
                   <img
@@ -204,6 +161,7 @@ export default function Home() {
           </section>
 
           <section className={styles['history-container']}>
+            <img src="/images/hexagon.svg" />
             <div className={styles.description}>
               <h1>Nossos projetos</h1>
               <p>
@@ -221,7 +179,7 @@ export default function Home() {
           <section className={styles['projects-container']}>
             <div className={styles.list}>
               <div className={styles.card}>
-                <div className={`${styles.header} ${styles.tenis}`}>
+                <header className={`${styles.header} ${styles.tenis}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
@@ -257,8 +215,8 @@ export default function Home() {
                       <p>Escolas</p>
                     </div>
                   </div>
-                </div>
-                <div className={styles.description}>
+                </header>
+                <article className={styles.description}>
                   <h1>Tênis</h1>
                   <p>
                     Projeto socioeducativo que utiliza das aulas de tênis de
@@ -275,13 +233,13 @@ export default function Home() {
                     />
                     <span>Projeto em Andamento</span>
                   </p>
-                </div>
+                </article>
                 <div className={styles.footer}>
                   <a href="/projeto/">Ver projeto</a>
                 </div>
               </div>
               <div className={styles.card}>
-                <div className={styles.header}>
+                <header className={`${styles.header} ${styles.handball}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
@@ -317,9 +275,9 @@ export default function Home() {
                       <p>Escolas</p>
                     </div>
                   </div>
-                </div>
-                <div className={styles.description}>
-                  <h1>Handeball</h1>
+                </header>
+                <article className={styles.description}>
+                  <h1>Handebol</h1>
                   <p>
                     Projeto socioeducativo que utiliza das aulas de tênis de
                     quadra como ferramenta para a inclusão social e a promoção
@@ -335,13 +293,13 @@ export default function Home() {
                     />
                     <span>Aguardando recurso</span>
                   </p>
-                </div>
+                </article>
                 <div className={styles.footer}>
                   <a href="/projeto/">Ver projeto</a>
                 </div>
               </div>
               <div className={styles.card}>
-                <div className={styles.header}>
+                <header className={`${styles.header} ${styles.karate}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
                       <img
@@ -377,8 +335,8 @@ export default function Home() {
                       <p>Escolas</p>
                     </div>
                   </div>
-                </div>
-                <div className={styles.description}>
+                </header>
+                <article className={styles.description}>
                   <h1>Karatê</h1>
                   <p>
                     Projeto socioeducativo que utiliza das aulas de tênis de
@@ -395,7 +353,7 @@ export default function Home() {
                     />
                     <span>Aguardando recurso</span>
                   </p>
-                </div>
+                </article>
                 <div className={styles.footer}>
                   <a href="/projeto/">Ver projeto</a>
                 </div>
@@ -405,6 +363,13 @@ export default function Home() {
 
           <section className={styles['join-container']}>
             <div className={styles.join}>
+              <img
+                src="/images/join/background.jpg"
+                alt="Três crianças com a camisa da Fortini"
+                width={732}
+                height={423}
+                loading="lazy"
+              />
               <div className={styles.description}>
                 <h1>Junte-se a nós</h1>
                 <p>Seja um voluntário na Fortini.</p>
@@ -515,94 +480,7 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className={styles.footer}>
-          <div className={styles.logo}>
-            <img
-              src="/images/fortini-logo.svg"
-              alt="Fortini Investimento Social"
-              width={162}
-              height={50}
-            />
-            <p>Fortini 2021. Todos os direitos reservados.</p>
-          </div>
-          <div className={styles.navigation}>
-            <div className={styles.social}>
-              <h1>Redes sociais</h1>
-              <p>@fortinisocial</p>
-              <div className={styles.icons}>
-                <a
-                  href="https://www.instagram.com/fortinisocial"
-                  target="_blank"
-                  rel="noopener"
-                  title="Instagram da Fortini"
-                >
-                  <img
-                    src="/images/footer/insta_footer.svg"
-                    alt="Instagram"
-                    width={30}
-                    height={30}
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/fortinisocial"
-                  target="_blank"
-                  rel="noopener"
-                  title="Facebook da Fortini"
-                >
-                  <img
-                    src="/images/footer/fb_footer.svg"
-                    alt="Facebook"
-                    width={17}
-                    height={30}
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/fortini-investimento-social"
-                  target="_blank"
-                  rel="noopener"
-                  title="LinkedIn da Fortini"
-                >
-                  <img
-                    src="/images/footer/linkedin_footer.svg"
-                    alt="LinkedIn"
-                    width={30}
-                    height={30}
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-            <div className={styles['menu-container']}>
-              <div className={styles.menu}>
-                <h1>Institucional</h1>
-                <nav role="navigation">
-                  <a href="/institucional">Sobre a Fortini</a>
-                  <a href="/time">Nosso time</a>
-                  <a href="/contribua">Contribua</a>
-                  <a href="/faq">Perguntas frequentes</a>
-                  <a href="/faq">Blog</a>
-                </nav>
-              </div>
-              <div className={styles.menu}>
-                <h1>Projetos</h1>
-                <nav role="navigation">
-                  <a href="/projetos/tenis">Tênis</a>
-                  <a href="/projetos/handebol">Handebol</a>
-                  <a href="/projetos/karate">Karatê</a>
-                  <a href="/projetos/futsal">Futsal</a>
-                </nav>
-              </div>
-              <div className={styles.menu}>
-                <h1>Contato</h1>
-                <p>(31) 99850-4420</p>
-                <p>Segunda a sexta, das 09h às 17h</p>
-                <p>contato@fortini.org.br</p>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer styles={styles} />
       </div>
     </Layout>
   );
