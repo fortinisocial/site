@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -6,20 +7,20 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.top}>
         <div className={styles.logo}>
-          <img
+          <Image
             src="/images/fortini-logo.svg"
             alt="Fortini Investimento Social"
             width={180}
             height={55}
           />
           <div className={styles.divider}></div>
-          <img
+          <Image
             src="/images/header/gerando-falcoes-logo.svg"
             alt="Gerando Falcões"
             width={124}
             height={31}
           />
-          <img
+          <Image
             src="/images/header/hexagon.svg"
             alt="Hexagono"
             className={styles.hexagon}
@@ -28,7 +29,7 @@ export default function Header() {
         <nav className={styles.menu}>
           <a href="/institucional" title="Institucional">
             Institucional{' '}
-            <img
+            <Image
               src="/images/header/down-arrow.svg"
               alt="arrow down"
               width={9}
@@ -37,7 +38,7 @@ export default function Header() {
           </a>
           <a href="/Projetos" title="Projetos">
             Projetos{' '}
-            <img
+            <Image
               src="/images/header/down-arrow.svg"
               alt="arrow down"
               width={9}
@@ -54,7 +55,7 @@ export default function Header() {
       </div>
 
       <div className={styles.message}>
-        <h1>"Sonho que se sonha junto é realidade"</h1>
+        <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
         <p>
           Somos a <strong>Fortini</strong>, uma organização social que promove o
           acesso ao <strong>esporte e a cultura</strong> para{' '}

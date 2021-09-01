@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
-        <img
+        <Image
           src="/images/fortini-logo.svg"
           alt="Fortini Investimento Social"
           width={162}
@@ -21,10 +22,10 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/fortinisocial"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               title="Instagram da Fortini"
             >
-              <img
+              <Image
                 src="/images/footer/insta_footer.svg"
                 alt="Instagram"
                 width={30}
@@ -35,10 +36,10 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/fortinisocial"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               title="Facebook da Fortini"
             >
-              <img
+              <Image
                 src="/images/footer/fb_footer.svg"
                 alt="Facebook"
                 width={17}
@@ -49,10 +50,10 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/company/fortini-investimento-social"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               title="LinkedIn da Fortini"
             >
-              <img
+              <Image
                 src="/images/footer/linkedin_footer.svg"
                 alt="LinkedIn"
                 width={30}

@@ -1,7 +1,8 @@
-import styles from '../styles/Home.module.scss';
+import Image from 'next/image';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <Header styles={styles} />
 
         <main className={styles.main}>
-          <section className={styles['numbers-container']}>
+          {/* <section className={styles['numbers-container']}>
             <div className={styles.title}>
               <h1>
                 A Fortini <br />
@@ -18,14 +19,14 @@ export default function Home() {
               </h1>
               <h2>De 2016 até hoje</h2>
             </div>
-          </section>
+          </section> */}
           <section className={styles['depositions-container']}>
             <h1>O que dizem por aí...</h1>
             <h2>
               Quer saber o que dizem da gente? Se liga nos depoimentos dos
               nossos amigos e parceiros:
             </h2>
-            <img
+            <Image
               src="/images/depositions/maiara.jpg"
               alt="Maiara Wenceslau"
               width={175}
@@ -33,10 +34,10 @@ export default function Home() {
               loading="lazy"
             />
             <article>
-              "A Fortini proporciona acesso à esportes considerados nobres e que
-              não estariam ao alcance dos estudantes de baixa renda se não
+              &quot;A Fortini proporciona acesso à esportes considerados nobres
+              e que não estariam ao alcance dos estudantes de baixa renda se não
               existisse o projeto. As atividades desenvolvem a auto estima das
-              crianças influenciando no crescimento de sua aprendizagem."
+              crianças influenciando no crescimento de sua aprendizagem.&quot;
               <p className={styles.author}>Janis Costa</p>
               <p className={styles['author-info']}>
                 Agente Comunitária no munícipio de Contagem e professora na E.
@@ -52,7 +53,7 @@ export default function Home() {
               desenvolvimento sustentável.
             </h2>
             <div className={styles.onu}>
-              <img
+              <Image
                 src="/images/ods/ONU.svg"
                 alt="ONU"
                 width={122}
@@ -70,7 +71,7 @@ export default function Home() {
                   className={styles.ods}
                   data-text="ODS 1 - Erradicação da Pobreza"
                 >
-                  <img
+                  <Image
                     src="/images/ods/ods1.svg"
                     alt="ODS 1 - Erradicação da Pobreza"
                     width={100}
@@ -85,7 +86,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n3}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods3.svg"
                     alt="ODS 3 - Saúde e Bem-Estar"
                     width={120}
@@ -100,7 +101,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n4}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods4.svg"
                     alt="ODS 4 - Educação de Qualidade"
                     width={100}
@@ -115,7 +116,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n5}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods5.svg"
                     alt="ODS 5 - Igualdade de Gênero"
                     width={75}
@@ -130,7 +131,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n10}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods10.svg"
                     alt="ODS 10 - Redução das Desigualdades"
                     width={100}
@@ -145,7 +146,7 @@ export default function Home() {
 
               <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
-                  <img
+                  <Image
                     src="/images/ods/ods16.svg"
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
                     width={100}
@@ -161,7 +162,7 @@ export default function Home() {
           </section>
 
           <section className={styles['history-container']}>
-            <img src="/images/hexagon.svg" />
+            <Image src="/images/hexagon.svg" alt="Hexágono" />
             <div className={styles.description}>
               <h1>Nossos projetos</h1>
               <p>
@@ -182,7 +183,7 @@ export default function Home() {
                 <header className={`${styles.header} ${styles.tenis}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
-                      <img
+                      <Image
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
                         width={27}
@@ -193,7 +194,7 @@ export default function Home() {
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img
+                      <Image
                         src="/images/projects/children.svg"
                         alt="Crianças"
                         width={31}
@@ -204,7 +205,7 @@ export default function Home() {
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img
+                      <Image
                         src="/images/projects/pencil.svg"
                         alt="Lápis"
                         width={30}
@@ -224,7 +225,7 @@ export default function Home() {
                     da cidadania.
                   </p>
                   <p className={styles.status}>
-                    <img
+                    <Image
                       src="/images/projects/hands-heart.svg"
                       alt="Mãos segurando coração"
                       width={18}
@@ -242,7 +243,7 @@ export default function Home() {
                 <header className={`${styles.header} ${styles.handball}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
-                      <img
+                      <Image
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
                         width={27}
@@ -253,7 +254,7 @@ export default function Home() {
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img
+                      <Image
                         src="/images/projects/children.svg"
                         alt="Crianças"
                         width={31}
@@ -264,7 +265,7 @@ export default function Home() {
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img
+                      <Image
                         src="/images/projects/pencil.svg"
                         alt="Lápis"
                         width={30}
@@ -284,7 +285,7 @@ export default function Home() {
                     da cidadania.
                   </p>
                   <p className={styles.status}>
-                    <img
+                    <Image
                       src="/images/projects/clock.svg"
                       alt="Relógio"
                       width={18}
@@ -302,7 +303,7 @@ export default function Home() {
                 <header className={`${styles.header} ${styles.karate}`}>
                   <div className={styles.info}>
                     <div className={styles.year}>
-                      <img
+                      <Image
                         src="/images/projects/calendar.svg"
                         alt="Calendário"
                         width={27}
@@ -313,7 +314,7 @@ export default function Home() {
                       <p>Período</p>
                     </div>
                     <div className={styles.students}>
-                      <img
+                      <Image
                         src="/images/projects/children.svg"
                         alt="Crianças"
                         width={31}
@@ -324,7 +325,7 @@ export default function Home() {
                       <p>Alunos</p>
                     </div>
                     <div className={styles.schools}>
-                      <img
+                      <Image
                         src="/images/projects/pencil.svg"
                         alt="Lápis"
                         width={30}
@@ -344,7 +345,7 @@ export default function Home() {
                     da cidadania.
                   </p>
                   <p className={styles.status}>
-                    <img
+                    <Image
                       src="/images/projects/clock.svg"
                       alt="Relógio"
                       width={18}
@@ -363,7 +364,7 @@ export default function Home() {
 
           <section className={styles['join-container']}>
             <div className={styles.join}>
-              <img
+              <Image
                 src="/images/join/background.jpg"
                 alt="Três crianças com a camisa da Fortini"
                 width={732}
@@ -392,11 +393,11 @@ export default function Home() {
               <div className={styles.list}>
                 <a
                   href="https://www.academiatennishall.com.br/"
-                  title="Academia Tennis Hall"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Academia Tennis Hall"
                 >
-                  <img
+                  <Image
                     src="/images/partners/academiatennishall.jpg"
                     title="Academia Tennis Hall"
                     alt="Academia Tennis Hall"
@@ -404,11 +405,11 @@ export default function Home() {
                 </a>
                 <a
                   href="https://www.cemig.com.br/"
-                  title="Cemig"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Cemig"
                 >
-                  <img
+                  <Image
                     src="/images/partners/cemig.jpg"
                     title="Cemig"
                     alt="Cemig"
@@ -416,11 +417,11 @@ export default function Home() {
                 </a>
                 <a
                   href="https://www.institutoimap.org.br/"
-                  title="Instituto Marum Patrus"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Instituto Marum Patrus"
                 >
-                  <img
+                  <Image
                     src="/images/partners/imap.jpg"
                     title="Instituto Marum Patrus"
                     alt="Instituto Marum Patrus"
@@ -429,11 +430,11 @@ export default function Home() {
 
                 <a
                   href="http://www.nucleoodontologicoeldorado.com.br"
-                  title="Núcleo Odontológico Eldorado - NOE"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Núcleo Odontológico Eldorado - NOE"
                 >
-                  <img
+                  <Image
                     src="/images/partners/noe.jpg"
                     title="Núcleo Odontológico Eldorado - NOE"
                     alt="Núcleo Odontológico Eldorado - NOE"
@@ -441,11 +442,11 @@ export default function Home() {
                 </a>
                 <a
                   href="https://www.ohubsocial.com.br"
-                  title="Incubadora De Projetos Sociais | Hub Social"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Incubadora De Projetos Sociais | Hub Social"
                 >
-                  <img
+                  <Image
                     src="/images/partners/ohubsocial.jpg"
                     title="Incubadora De Projetos Sociais | Hub Social"
                     alt="Incubadora De Projetos Sociais | Hub Social"
@@ -453,11 +454,11 @@ export default function Home() {
                 </a>
                 <a
                   href="http://www.qartt.com.br"
-                  title="Qart Tecnologia"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Qart Tecnologia"
                 >
-                  <img
+                  <Image
                     src="/images/partners/qart.jpg"
                     title="Qart Tecnologia"
                     alt="Qart Tecnologia"
@@ -465,11 +466,11 @@ export default function Home() {
                 </a>
                 <a
                   href="https://www.ambev.com.br/voa/"
-                  title="Ambev - Programa VOA"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer"
+                  title="Ambev - Programa VOA"
                 >
-                  <img
+                  <Image
                     src="/images/partners/voaambev.jpg"
                     title="Ambev - Programa VOA"
                     alt="Ambev - Programa VOA"
