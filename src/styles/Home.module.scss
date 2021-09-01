@@ -1,4 +1,4 @@
-$fold-heightx: 654px;
+// $fold-height: 654px;
 $fold-height: 700px;
 $max-width: 1920px;
 
@@ -57,6 +57,7 @@ $ods16-color: #086594;
     }
 
     &.depositions-container {
+      background: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
