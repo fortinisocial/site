@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -7,20 +6,20 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.top}>
         <div className={styles.logo}>
-          <Image
+          <img
             src="/images/fortini-logo.svg"
             alt="Fortini Investimento Social"
             width={180}
             height={55}
           />
           <div className={styles.divider}></div>
-          <Image
+          <img
             src="/images/header/gerando-falcoes-logo.svg"
             alt="Gerando Falcões"
             width={124}
             height={31}
           />
-          <Image
+          <img
             src="/images/header/hexagon.svg"
             alt="Hexagono"
             className={styles.hexagon}
@@ -29,7 +28,7 @@ export default function Header() {
         <nav className={styles.menu}>
           <a href="/institucional" title="Institucional">
             Institucional{' '}
-            <Image
+            <img
               src="/images/header/down-arrow.svg"
               alt="arrow down"
               width={9}
@@ -38,7 +37,7 @@ export default function Header() {
           </a>
           <a href="/Projetos" title="Projetos">
             Projetos{' '}
-            <Image
+            <img
               src="/images/header/down-arrow.svg"
               alt="arrow down"
               width={9}
