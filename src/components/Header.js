@@ -35,8 +35,8 @@ export default function Header() {
               height={18}
             />
           </a>
-          <a href="/Projetos" title="Projetos">
-            Projetos{' '}
+          <a href="/atuacao" title="Atuação">
+            Atuação{' '}
             <img
               src="/images/header/down-arrow.svg"
               alt="arrow down"
@@ -44,11 +44,17 @@ export default function Header() {
               height={18}
             />
           </a>
-          <a href="/blog" title="Blog">
-            Blog
+          <a href="/transparencia" title="Transparência">
+            Transparência
           </a>
-          <a href="/doacao" title="Institucional" className={styles.donate}>
-            Faça a sua doação
+          <a href="/midias" title="Mídias">
+            Mídias
+          </a>
+          <a href="/contato" title="Contato">
+            Contato
+          </a>
+          <a href="/doe" title="Institucional" className={styles.donate}>
+            Doe agora
           </a>
         </nav>
       </div>
