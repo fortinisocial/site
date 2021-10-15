@@ -10,15 +10,33 @@ export default function Home() {
         <Header styles={styles} />
 
         <main className={styles.main}>
-          {/* <section className={styles['numbers-container']}>
-            <div className={styles.title}>
-              <h1>
-                A Fortini <br />
-                em números
-              </h1>
-              <h2>De 2016 até hoje</h2>
+          <section className={styles.about}>
+            <div className={styles['about-header']}>
+              <img
+                src="/images/about/maiara-wenceslau-fortini.png"
+                alt="Maiara Wenceslau"
+                width={464}
+                height={479}
+                loading="lazy"
+              />
+              <div className={styles['about-content']}>
+                <h1>Sobre a Fortini</h1>
+                <p>
+                  A Fortini é uma organização social que atua em parceria com
+                  escolas públicas da{' '}
+                  <strong>Região Metropolitana de Belo Horizonte</strong>, a fim
+                  de promover o acesso à educação, ao esporte e a cultura para
+                  crianças e adolescentes.
+                </p>
+                <p>
+                  Nosso grande sonho é{' '}
+                  <strong>promover o acesso ao esporte e a cultura</strong> para
+                  estudantes de todas as escolas públicas da Região
+                  Metropolitana de Belo Horizonte.
+                </p>
+              </div>
             </div>
-          </section> */}
+          </section>
           <section className={styles['depositions-container']}>
             <h1>O que dizem por aí...</h1>
             <h2>
