@@ -10,58 +10,84 @@ export default function Home() {
         <Header styles={styles} />
 
         <main className={styles.main}>
-          <section className={styles.about}>
-            <div className={styles['about-header']}>
-              <img
-                src="/images/about/maiara-wenceslau-fortini.png"
-                alt="Maiara Wenceslau"
-                width={464}
-                height={479}
-                loading="lazy"
-              />
-              <div className={styles['about-content']}>
-                <h1>Sobre a Fortini</h1>
+          <section className={styles['about-container']}>
+            <div className={styles['about-columns']}>
+              <div className={styles['about-first-column']}>
+                <img
+                  src="/images/about/maiara-wenceslau-fortini.png"
+                  alt="Maiara Wenceslau"
+                  width={464}
+                  height={479}
+                  loading="lazy"
+                />
                 <p>
-                  A Fortini é uma organização social que atua em parceria com
-                  escolas públicas da{' '}
-                  <strong>Região Metropolitana de Belo Horizonte</strong>, a fim
-                  de promover o acesso à educação, ao esporte e a cultura para
-                  crianças e adolescentes.
-                </p>
-                <p>
-                  Nosso grande sonho é{' '}
-                  <strong>promover o acesso ao esporte e a cultura</strong> para
-                  estudantes de todas as escolas públicas da Região
-                  Metropolitana de Belo Horizonte.
+                  Criamos a nossa organização para{' '}
+                  <strong>contribuir com uma educação transformadora</strong>{' '}
+                  para crianças e adolescentes estudantes da rede pública de
+                  ensino da Região Metropolitana de Belo Horizonte.
                 </p>
               </div>
+              <div className={styles['about-second-column']}>
+                <div className={styles['about-intro']}>
+                  <h1>Sobre a Fortini</h1>
+                  <p>
+                    A Fortini é uma organização social que atua em parceria com
+                    escolas públicas da{' '}
+                    <strong>Região Metropolitana de Belo Horizonte</strong>, a
+                    fim de promover o acesso à educação, ao esporte e a cultura
+                    para crianças e adolescentes.
+                  </p>
+                  <p>
+                    Nosso grande sonho é{' '}
+                    <strong>promover o acesso ao esporte e a cultura</strong>{' '}
+                    para estudantes de todas as escolas públicas da Região
+                    Metropolitana de Belo Horizonte.
+                  </p>
+                </div>
+                <div className={styles['about-institutional']}>
+                  <div className={styles['about-vision']}>
+                    <h2>Nossa visão</h2>
+                    <p>
+                      Ser <strong>referência</strong> na realização de{' '}
+                      <strong>projetos socioeducativos</strong>, na Região
+                      Metropolitana de Belo Horizonte, <strong>até 2026</strong>
+                      . Vamos conosco?
+                    </p>
+                  </div>
+                  <div className={styles['about-values']}>
+                    <h2>Valores</h2>
+                    <ul>
+                      <li>Iniciativa e Engajamento</li>
+                      <li>Amor e cuidado</li>
+                      <li>Juntos somos melhores</li>
+                      <li>Comprometimento e excelência</li>
+                      <li>Sustentabilidade</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles['about-hexagons']}>
+              <h1>Por que o Hexágono?</h1>
+              <p>
+                Para nós o hexágono é o símbolo representativo da sinergia que
+                existe nos projetos sociais que executamos. Desenvolvemos nossos
+                trabalhos no formato de <strong>rede de cooperação</strong>,
+                desde o início nos propomos a{' '}
+                <strong>estabelecer parcerias</strong>, e todos os projetos são
+                planejados e executados com a atuação de{' '}
+                <strong>múltiplos atores</strong>.
+              </p>
+              <img
+                src="/images/about/hexagons.png"
+                alt="Hexágonos Fortini"
+                width={738}
+                height={692}
+                loading="lazy"
+              />
             </div>
           </section>
-          <section className={styles['depositions-container']}>
-            <h1>O que dizem por aí...</h1>
-            <h2>
-              Quer saber o que dizem da gente? Se liga nos depoimentos dos
-              nossos amigos e parceiros:
-            </h2>
-            <img
-              src="/images/depositions/maiara.jpg"
-              alt="Maiara Wenceslau"
-              width={175}
-              height={175}
-              loading="lazy"
-            />
-            <article>
-              &quot;A Fortini proporciona acesso à esportes considerados nobres
-              e que não estariam ao alcance dos estudantes de baixa renda se não
-              existisse o projeto. As atividades desenvolvem a auto estima das
-              crianças influenciando no crescimento de sua aprendizagem.&quot;
-              <p className={styles.author}>Janis Costa</p>
-              <p className={styles['author-info']}>
-                Agente Comunitária no munícipio de Contagem e professora na E.
-                E. Carlos Drummond de Andrade
-              </p>
-            </article>
-          </section>
+
           <section className={styles['ods-container']}>
             <h1>Objetivos de Desenvolvimento Sustentável - ODS</h1>
             <h2>
@@ -176,6 +202,32 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </section>
+
+          <section className={styles['depositions-container']}>
+            <h1>O que dizem por aí...</h1>
+            <h2>
+              Quer saber o que dizem da gente? Se liga nos depoimentos dos
+              nossos amigos e parceiros:
+            </h2>
+            <img
+              src="/images/depositions/maiara.jpg"
+              alt="Maiara Wenceslau"
+              width={175}
+              height={175}
+              loading="lazy"
+            />
+            <article>
+              &quot;A Fortini proporciona acesso à esportes considerados nobres
+              e que não estariam ao alcance dos estudantes de baixa renda se não
+              existisse o projeto. As atividades desenvolvem a auto estima das
+              crianças influenciando no crescimento de sua aprendizagem.&quot;
+              <p className={styles.author}>Janis Costa</p>
+              <p className={styles['author-info']}>
+                Agente Comunitária no munícipio de Contagem e professora na E.
+                E. Carlos Drummond de Andrade
+              </p>
+            </article>
           </section>
 
           <section className={styles['history-container']}>

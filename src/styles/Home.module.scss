@@ -59,33 +59,118 @@ $fortini: #24d6db;
       }
     }
 
-    &.about {
-      background: #ffffff;
+    &.about-container {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      background: #ffffff;
+      height: auto;
 
-      .about-header {
+      h1 {
+        color: $fortini;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: $fortini;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: left;
+        font-weight: 400;
+        line-height: 1.75rem;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      .about-columns {
         display: flex;
         justify-content: space-between;
-        flex: 1;
 
-        .about-content {
-          h1 {
-            color: $fortini;
-            font-size: 32px;
-            text-transform: uppercase;
-          }
+        .about-first-column {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
 
           p {
-            font-size: 1rem;
-            text-align: left;
-            font-weight: 400;
+            max-width: 320px;
+          }
+        }
 
-            strong {
-              font-weight: 700;
+        .about-second-column {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .about-institutional {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 240px;
+
+            p {
+              color: white;
+              text-align: center;
+            }
+
+            .about-vision,
+            .about-values {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 1.75rem;
+              width: 360px;
+              height: 410px;
+            }
+
+            .about-vision {
+              position: relative;
+              background-image: url('/images/about/hexagon-01.svg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              z-index: 0;
+            }
+
+            .about-values {
+              position: absolute;
+              background-image: url('/images/about/hexagon-02.svg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              z-index: 1;
+              left: -30px;
+              bottom: -260px;
+
+              h2 {
+                position: absolute;
+                transform: rotate(-90deg);
+                left: 0;
+                color: white;
+              }
+
+              ul {
+                list-style-type: square;
+                padding-left: 4rem;
+                color: white;
+                font-size: 1rem;
+                line-height: 2rem;
+              }
             }
           }
+        }
+      }
+      .about-hexagons {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          margin-top: 4rem;
+          align-self: center;
         }
       }
     }
