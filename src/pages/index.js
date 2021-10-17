@@ -118,90 +118,66 @@ export default function Home() {
                   data-text="ODS 1 - Erradicação da Pobreza"
                 >
                   <img
-                    src="/images/ods/ods1.svg"
+                    src="/images/ods/ODS-1.svg"
                     alt="ODS 1 - Erradicação da Pobreza"
-                    width={100}
-                    height={44}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 1 - Erradicação da Pobreza
                 </div>
               </div>
 
               <div className={`${styles['ods-item-container']} ${styles.n3}`}>
                 <div className={styles.ods}>
                   <img
-                    src="/images/ods/ods3.svg"
+                    src="/images/ods/ODS-3.svg"
                     alt="ODS 3 - Saúde e Bem-Estar"
-                    width={120}
-                    height={84}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 3 - Saúde e Bem-Estar
                 </div>
               </div>
 
               <div className={`${styles['ods-item-container']} ${styles.n4}`}>
                 <div className={styles.ods}>
                   <img
-                    src="/images/ods/ods4.svg"
+                    src="/images/ods/ODS-4.svg"
                     alt="ODS 4 - Educação de Qualidade"
-                    width={100}
-                    height={82}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 4 - Educação de Qualidade
                 </div>
               </div>
 
               <div className={`${styles['ods-item-container']} ${styles.n5}`}>
                 <div className={styles.ods}>
                   <img
-                    src="/images/ods/ods5.svg"
+                    src="/images/ods/ODS-5.svg"
                     alt="ODS 5 - Igualdade de Gênero"
-                    width={75}
-                    height={101}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 5 - Igualdade de Gênero
                 </div>
               </div>
 
               <div className={`${styles['ods-item-container']} ${styles.n10}`}>
                 <div className={styles.ods}>
                   <img
-                    src="/images/ods/ods10.svg"
+                    src="/images/ods/ODS-10.svg"
                     alt="ODS 10 - Redução das Desigualdades"
-                    width={100}
-                    height={99}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 10 - Redução das Desigualdades
                 </div>
               </div>
 
               <div className={`${styles['ods-item-container']} ${styles.n16}`}>
                 <div className={styles.ods}>
                   <img
-                    src="/images/ods/ods16.svg"
+                    src="/images/ods/ODS-16.svg"
                     alt="ODS 16 - Paz, Justiça e Instituições Eficazes"
-                    width={100}
-                    height={99}
+                    height={130}
                     loading="lazy"
                   />
-                </div>
-                <div className={styles['ods-description']}>
-                  ODS 16 - Paz, Justiça e Instituições Eficazes
                 </div>
               </div>
             </div>

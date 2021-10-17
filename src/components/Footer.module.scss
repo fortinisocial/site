@@ -12,7 +12,8 @@ footer {
     width: 100%;
     background: #232323;
     color: #ffffff;
-    height: 430px;
+    min-height: 430px;
+    height: auto;
     gap: 50px;
 
     .logo {
@@ -90,6 +91,29 @@ footer {
               }
             }
           }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+
+      .logo {
+        flex-basis: 100%;
+      }
+
+      .navigation {
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .social {
+          min-width: auto;
+        }
+
+        .menu-container {
+          flex-direction: column;
         }
       }
     }

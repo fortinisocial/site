@@ -86,8 +86,11 @@ export default function Footer() {
           <div className={styles.menu}>
             <h1>Contato</h1>
             <p>(31) 99850-4420</p>
-            <p>Segunda a sexta, das 09h às 17h</p>
             <p>contato@fortini.org.br</p>
+            <p>Segunda a sexta, das 09h às 17h</p>
+            <p>
+              Av. Río Negro, 580 - Riacho das Pedras, Contagem - MG, 32280-000
+            </p>
           </div>
         </div>
       </div>

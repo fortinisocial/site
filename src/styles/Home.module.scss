@@ -3,12 +3,12 @@ $fold-height: 700px;
 $max-width: 1920px;
 
 //ODS
-$ods1-color: #d32b3b;
-$ods3-color: #4d9747;
-$ods4-color: #b8222e;
-$ods5-color: #df432f;
-$ods10-color: #cd2363;
-$ods16-color: #086594;
+$ods1-color: #e5243b;
+$ods3-color: #4c9f38;
+$ods4-color: #c5192d;
+$ods5-color: #ff3a21;
+$ods10-color: #dd1367;
+$ods16-color: #00689d;
 
 //FORTINI COLOR
 $fortini: #24d6db;
@@ -30,6 +30,7 @@ $fortini: #24d6db;
   align-items: center;
 
   section {
+    position: relative;
     width: 100%;
     height: $fold-height;
     padding: 3.85rem;
@@ -238,15 +239,21 @@ $fortini: #24d6db;
 
       h1 {
         color: #174f86;
-        font-size: 32px;
+        font-size: 2rem;
         text-transform: uppercase;
       }
 
       h2 {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         color: #6a6363;
         margin: 0 0 48px 0;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.85rem;
+        }
       }
 
       img {
@@ -378,6 +385,7 @@ $fortini: #24d6db;
             border-radius: 10px;
             transition: all 0.2s;
             width: 170px;
+            overflow: hidden;
 
             img {
               transition: all 0.4s;
@@ -494,7 +502,7 @@ $fortini: #24d6db;
       background-position: 0% 50%;
       max-width: $max-width;
       width: 100%;
-      height: 700px;
+      height: $fold-height;
       display: flex;
       flex-direction: column;
 
@@ -541,12 +549,28 @@ $fortini: #24d6db;
           }
         }
       }
+
+      @media (max-width: 768px) {
+        height: auto;
+        padding: 2rem;
+
+        > img {
+          display: none;
+        }
+
+        .description {
+          width: 100%;
+          margin-bottom: 0;
+          line-height: 2rem;
+        }
+      }
     }
 
     &.projects-container {
       position: relative;
       background: #fcfcfc;
-      height: 615px;
+      min-height: 615px;
+      height: auto;
 
       .list {
         display: flex;
@@ -667,6 +691,24 @@ $fortini: #24d6db;
           }
         }
       }
+
+      @media (max-width: 768px) {
+        background: linear-gradient(
+          rgb(7, 18, 20),
+          rgb(21, 48, 57),
+          rgb(32, 80, 85),
+          rgb(36, 218, 220),
+          rgb(36, 128, 220)
+        );
+
+        .list {
+          flex-direction: column;
+
+          .card {
+            margin-top: 0;
+          }
+        }
+      }
     }
 
     &.join-container {
@@ -674,7 +716,8 @@ $fortini: #24d6db;
       align-items: center;
       max-width: $max-width;
       width: 100%;
-      height: 488px;
+      min-height: 488px;
+      height: auto;
 
       .join {
         display: flex;
@@ -734,6 +777,54 @@ $fortini: #24d6db;
           }
         }
       }
+
+      @media (max-width: 768px) {
+        background: rgba(7, 18, 20, 0.5);
+
+        &:after {
+          content: '';
+          background: url('/images/join/background.jpg') rgba(0, 0, 0, 0.1);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          opacity: 0.6;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .join {
+          background: none;
+          flex-direction: column;
+          margin: -2rem;
+          width: 100%;
+
+          > img {
+            display: none;
+          }
+
+          .description {
+            min-width: initial;
+            padding: 2rem;
+
+            h1 {
+              color: white;
+            }
+
+            p {
+              filter: drop-shadow(1px 2px 8px hsl(260deg 20% 10% / 0.8));
+            }
+
+            a {
+              color: white;
+              border-color: white;
+            }
+          }
+        }
+      }
     }
 
     &.partners-container {
@@ -742,7 +833,8 @@ $fortini: #24d6db;
       justify-content: flex-start;
       gap: 60px;
       background: #ffffff;
-      height: 438px;
+      min-height: 438px;
+      height: auto;
 
       .description {
         width: 230px;
@@ -784,6 +876,14 @@ $fortini: #24d6db;
               }
             }
           }
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+
+        .description {
+          width: 100%;
         }
       }
     }
