@@ -16,8 +16,6 @@ export default function Home() {
                 <img
                   src="/images/about/maiara-wenceslau-fortini.png"
                   alt="Maiara Wenceslau"
-                  width={464}
-                  height={479}
                   loading="lazy"
                 />
                 <p>
@@ -65,6 +63,12 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
+                <p>
+                  Criamos a nossa organização para{' '}
+                  <strong>contribuir com uma educação transformadora</strong>{' '}
+                  para crianças e adolescentes estudantes da rede pública de
+                  ensino da Região Metropolitana de Belo Horizonte.
+                </p>
               </div>
             </div>
             <div className={styles['about-hexagons']}>
@@ -81,9 +85,8 @@ export default function Home() {
               <img
                 src="/images/about/hexagons.png"
                 alt="Hexágonos Fortini"
-                width={738}
-                height={692}
                 loading="lazy"
+                width="100%"
               />
             </div>
           </section>

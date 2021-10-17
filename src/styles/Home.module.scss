@@ -32,9 +32,13 @@ $fortini: #24d6db;
   section {
     width: 100%;
     height: $fold-height;
-    padding: 62px;
+    padding: 3.85rem;
     font-family: 'Nunito', sans-serif;
     max-width: $max-width;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
 
     &.numbers-container {
       background: #fff0d5;
@@ -92,13 +96,33 @@ $fortini: #24d6db;
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+
         .about-first-column {
           display: flex;
           flex-direction: column;
           gap: 2rem;
 
+          img {
+            margin-right: 2rem;
+          }
+
           p {
             max-width: 320px;
+          }
+
+          @media (max-width: 768px) {
+            img {
+              margin-right: 0;
+            }
+
+            p {
+              &:first-of-type {
+                display: none;
+              }
+            }
           }
         }
 
@@ -107,11 +131,26 @@ $fortini: #24d6db;
           flex-direction: column;
           gap: 2rem;
 
+          @media (min-width: 769px) {
+            > p {
+              &:last-of-type {
+                display: none;
+              }
+            }
+          }
+
           .about-institutional {
             position: relative;
             display: flex;
             justify-content: center;
             margin-bottom: 240px;
+
+            @media (max-width: 768px) {
+              gap: 2rem;
+              flex-direction: column;
+              margin-bottom: 0;
+              align-items: center;
+            }
 
             p {
               color: white;
@@ -161,9 +200,25 @@ $fortini: #24d6db;
                 line-height: 2rem;
               }
             }
+
+            @media (max-width: 768px) {
+              .about-vision,
+              .about-values {
+                width: 343px;
+                height: 390px;
+                margin: 0 -1rem;
+              }
+
+              .about-values {
+                position: relative;
+                left: 0;
+                bottom: 0;
+              }
+            }
           }
         }
       }
+
       .about-hexagons {
         display: flex;
         flex-direction: column;
@@ -232,7 +287,8 @@ $fortini: #24d6db;
       align-items: center;
       color: #fff;
       text-align: center;
-      height: 620px;
+      min-height: 620px;
+      height: auto;
 
       h1 {
         font-size: 32px;
@@ -270,6 +326,10 @@ $fortini: #24d6db;
         justify-content: space-around;
         align-items: center;
         gap: 10px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
 
         .ods-item-container {
           position: relative;
