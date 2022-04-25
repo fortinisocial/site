@@ -335,7 +335,7 @@ $fortini: #24d6db;
         gap: 10px;
 
         @media (max-width: 768px) {
-          flex-direction: column;
+          flex-wrap: wrap;
         }
 
         .ods-item-container {
@@ -386,6 +386,10 @@ $fortini: #24d6db;
             transition: all 0.2s;
             width: 170px;
             overflow: hidden;
+
+            @media (max-width: 768px) {
+              width: 150px;
+            }
 
             img {
               transition: all 0.4s;
@@ -511,6 +515,7 @@ $fortini: #24d6db;
         top: -160px;
         left: -160px;
         max-height: 1000px;
+        pointer-events: none;
       }
 
       .description {
@@ -593,7 +598,7 @@ $fortini: #24d6db;
 
           .header {
             background: #d5d5d5;
-            border-radius: 30px;
+            border-radius: 30px 30px 0 0;
             height: 340px;
 
             &.tenis {
@@ -604,14 +609,18 @@ $fortini: #24d6db;
               background: url('/images/projects/handball.jpg');
               background-size: cover;
               background-repeat: no-repeat;
-              background-position-x: -100px;
             }
 
-            &.karate {
-              background: url('/images/projects/karate.jpg');
+            &.judo {
+              background: url('/images/projects/judo.jpg');
               background-size: cover;
               background-repeat: no-repeat;
-              background-position: 90px -170px;
+            }
+
+            &.taekwondo {
+              background: url('/images/projects/taekwondo.jpg');
+              background-size: cover;
+              background-repeat: no-repeat;
             }
 
             .info {
@@ -716,8 +725,7 @@ $fortini: #24d6db;
       align-items: center;
       max-width: $max-width;
       width: 100%;
-      min-height: 488px;
-      height: auto;
+      height: 423px;
 
       .join {
         display: flex;
@@ -859,7 +867,7 @@ $fortini: #24d6db;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-          gap: 40px;
+          gap: 30px;
 
           a {
             img {

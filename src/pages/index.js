@@ -228,43 +228,7 @@ export default function Home() {
           <section className={styles['projects-container']}>
             <div className={styles.list}>
               <div className={styles.card}>
-                <header className={`${styles.header} ${styles.tenis}`}>
-                  <div className={styles.info}>
-                    <div className={styles.year}>
-                      <img
-                        src="/images/projects/calendar.svg"
-                        alt="Calendário"
-                        width={27}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>2016</span>
-                      <p>Período</p>
-                    </div>
-                    <div className={styles.students}>
-                      <img
-                        src="/images/projects/children.svg"
-                        alt="Crianças"
-                        width={31}
-                        height={27}
-                        loading="lazy"
-                      />
-                      <span>40</span>
-                      <p>Alunos</p>
-                    </div>
-                    <div className={styles.schools}>
-                      <img
-                        src="/images/projects/pencil.svg"
-                        alt="Lápis"
-                        width={30}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>5</span>
-                      <p>Escolas</p>
-                    </div>
-                  </div>
-                </header>
+                <header className={`${styles.header} ${styles.tenis}`} />
                 <article className={styles.description}>
                   <h1>Tênis</h1>
                   <p>
@@ -284,47 +248,11 @@ export default function Home() {
                   </p>
                 </article>
                 <div className={styles.footer}>
-                  <a href="/projeto/">Ver projeto</a>
+                  <a href="/projeto/">Ver mais</a>
                 </div>
               </div>
               <div className={styles.card}>
-                <header className={`${styles.header} ${styles.handball}`}>
-                  <div className={styles.info}>
-                    <div className={styles.year}>
-                      <img
-                        src="/images/projects/calendar.svg"
-                        alt="Calendário"
-                        width={27}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>2016</span>
-                      <p>Período</p>
-                    </div>
-                    <div className={styles.students}>
-                      <img
-                        src="/images/projects/children.svg"
-                        alt="Crianças"
-                        width={31}
-                        height={27}
-                        loading="lazy"
-                      />
-                      <span>40</span>
-                      <p>Alunos</p>
-                    </div>
-                    <div className={styles.schools}>
-                      <img
-                        src="/images/projects/pencil.svg"
-                        alt="Lápis"
-                        width={30}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>5</span>
-                      <p>Escolas</p>
-                    </div>
-                  </div>
-                </header>
+                <header className={`${styles.header} ${styles.handball}`} />
                 <article className={styles.description}>
                   <h1>Handebol</h1>
                   <p>
@@ -334,59 +262,23 @@ export default function Home() {
                   </p>
                   <p className={styles.status}>
                     <img
-                      src="/images/projects/clock.svg"
-                      alt="Relógio"
+                      src="/images/projects/hands-heart.svg"
+                      alt="Mãos segurando coração"
                       width={18}
-                      height={18}
+                      height={14}
                       loading="lazy"
                     />
-                    <span>Aguardando recurso</span>
+                    <span>Projeto em Andamento</span>
                   </p>
                 </article>
                 <div className={styles.footer}>
-                  <a href="/projeto/">Ver projeto</a>
+                  <a href="/projeto/">Ver mais</a>
                 </div>
               </div>
               <div className={styles.card}>
-                <header className={`${styles.header} ${styles.karate}`}>
-                  <div className={styles.info}>
-                    <div className={styles.year}>
-                      <img
-                        src="/images/projects/calendar.svg"
-                        alt="Calendário"
-                        width={27}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>2016</span>
-                      <p>Período</p>
-                    </div>
-                    <div className={styles.students}>
-                      <img
-                        src="/images/projects/children.svg"
-                        alt="Crianças"
-                        width={31}
-                        height={27}
-                        loading="lazy"
-                      />
-                      <span>40</span>
-                      <p>Alunos</p>
-                    </div>
-                    <div className={styles.schools}>
-                      <img
-                        src="/images/projects/pencil.svg"
-                        alt="Lápis"
-                        width={30}
-                        height={30}
-                        loading="lazy"
-                      />
-                      <span>5</span>
-                      <p>Escolas</p>
-                    </div>
-                  </div>
-                </header>
+                <header className={`${styles.header} ${styles.judo}`} />
                 <article className={styles.description}>
-                  <h1>Karatê</h1>
+                  <h1>Judô</h1>
                   <p>
                     Projeto socioeducativo que utiliza das aulas de tênis de
                     quadra como ferramenta para a inclusão social e a promoção
@@ -394,17 +286,41 @@ export default function Home() {
                   </p>
                   <p className={styles.status}>
                     <img
-                      src="/images/projects/clock.svg"
-                      alt="Relógio"
+                      src="/images/projects/hands-heart.svg"
+                      alt="Mãos segurando coração"
                       width={18}
-                      height={18}
+                      height={14}
                       loading="lazy"
                     />
-                    <span>Aguardando recurso</span>
+                    <span>Projeto em Andamento</span>
                   </p>
                 </article>
                 <div className={styles.footer}>
-                  <a href="/projeto/">Ver projeto</a>
+                  <a href="/projeto/">Ver mais</a>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <header className={`${styles.header} ${styles.taekwondo}`} />
+                <article className={styles.description}>
+                  <h1>Taekwondo</h1>
+                  <p>
+                    Projeto socioeducativo que utiliza das aulas de tênis de
+                    quadra como ferramenta para a inclusão social e a promoção
+                    da cidadania.
+                  </p>
+                  <p className={styles.status}>
+                    <img
+                      src="/images/projects/hands-heart.svg"
+                      alt="Mãos segurando coração"
+                      width={18}
+                      height={14}
+                      loading="lazy"
+                    />
+                    <span>Projeto em Andamento</span>
+                  </p>
+                </article>
+                <div className={styles.footer}>
+                  <a href="/projeto/">Ver mais</a>
                 </div>
               </div>
             </div>
@@ -421,7 +337,7 @@ export default function Home() {
               />
               <div className={styles.description}>
                 <h1>Junte-se a nós</h1>
-                <p>Seja um voluntário na Fortini.</p>
+                <p>Seja voluntário(a) na Fortini.</p>
                 <p>
                   Faça parte da nossa rede de colaboradores e ajude-nos a
                   transformar vidas.
@@ -501,27 +417,15 @@ export default function Home() {
                   />
                 </a>
                 <a
-                  href="http://www.qartt.com.br"
+                  href="https://www.redesoma.com.br/"
                   target="_blank"
                   rel="noreferrer"
-                  title="Qart Tecnologia"
+                  title="Rede Soma Drogarias"
                 >
                   <img
-                    src="/images/partners/qart.jpg"
-                    title="Qart Tecnologia"
-                    alt="Qart Tecnologia"
-                  />
-                </a>
-                <a
-                  href="https://www.ambev.com.br/voa/"
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Ambev - Programa VOA"
-                >
-                  <img
-                    src="/images/partners/voaambev.jpg"
-                    title="Ambev - Programa VOA"
-                    alt="Ambev - Programa VOA"
+                    src="/images/partners/redesomadrogarias.jpg"
+                    title="Rede Soma Drogarias"
+                    alt="Rede Soma Drogarias"
                   />
                 </a>
               </div>
