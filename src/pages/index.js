@@ -350,7 +350,7 @@ export default function Home() {
           </section>
           <section className={styles['partners-container']}>
             <div className={styles.description}>
-              <h1>Quem já sonha com a gente?</h1>
+              <h1>Quem já realiza com a gente</h1>
             </div>
             <div className={styles['list-container']}>
               <div className={styles.list}>
