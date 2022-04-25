@@ -79,17 +79,17 @@ export default function Footer() {
             <nav role="navigation">
               <a href="/projetos/tenis">Tênis</a>
               <a href="/projetos/handebol">Handebol</a>
-              <a href="/projetos/karate">Karatê</a>
-              <a href="/projetos/futsal">Futsal</a>
+              <a href="/projetos/judo">Judô</a>
+              <a href="/projetos/taekwondo">Taekwondo</a>
             </nav>
           </div>
           <div className={styles.menu}>
             <h1>Contato</h1>
-            <p>(31) 99850-4420</p>
+            <p>(31) 99265-7329</p>
             <p>contato@fortini.org.br</p>
-            <p>Segunda a sexta, das 09h às 17h</p>
+            <p>Segunda a sexta, das 08h às 17h</p>
             <p>
-              Av. Río Negro, 580 - Riacho das Pedras, Contagem - MG, 32280-000
+              Av. Rio Negro, 580 - Riacho das Pedras, Contagem - MG, 32280-000
             </p>
           </div>
         </div>
