@@ -86,7 +86,6 @@ export default function Home() {
                 src="/images/about/hexagons.png"
                 alt="Hexágonos Fortini"
                 loading="lazy"
-                width="100%"
               />
             </div>
           </section>

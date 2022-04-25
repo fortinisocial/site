@@ -228,6 +228,12 @@ $fortini: #24d6db;
           margin-top: 4rem;
           align-self: center;
         }
+
+        @media (max-width: 768px) {
+          img {
+            width: 100%;
+          }
+        }
       }
     }
 
