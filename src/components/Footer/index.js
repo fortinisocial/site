@@ -1,11 +1,135 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './Footer.module.scss';
+import styled from 'styled-components';
+
+export const StyledFooter = styled.footer`
+  max-width: 1920px;
+  font-family: 'Nunito', sans-serif;
+  padding: 62px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #232323;
+  color: #ffffff;
+  min-height: 430px;
+  height: auto;
+  gap: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+export const Logo = styled.div`
+  flex-basis: 25%;
+
+  p {
+    font-size: 12px;
+    padding: 0 5px;
+    color: #a3a3a3;
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
+`;
+
+export const Navigation = styled.div`
+  flex-basis: 75%;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const Social = styled.div`
+  min-width: 200px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+
+    a {
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-width: auto;
+  }
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`;
+
+export const Menu = styled.div`
+  display: flex;
+  gap: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const MenuItem = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    a {
+      transition: all 0.2s;
+      padding: 5px 0;
+
+      &:hover {
+        color: #a3a3a3;
+      }
+    }
+  }
+`;
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.logo}>
+    <StyledFooter>
+      <Logo>
         <Image
           src="/images/fortini-logo.svg"
           alt="Fortini Investimento Social"
@@ -13,12 +137,21 @@ export default function Footer() {
           height={50}
         />
         <p>Fortini 2021. Todos os direitos reservados.</p>
-      </div>
-      <div className={styles.navigation}>
-        <div className={styles.social}>
+      </Logo>
+      <Navigation>
+        <Social>
           <h1>Redes sociais</h1>
-          <p>@fortinisocial</p>
-          <div className={styles.icons}>
+          <p>
+            <a
+              href="https://www.instagram.com/fortinisocial"
+              target="_blank"
+              rel="noreferrer"
+              title="Instagram da Fortini"
+            >
+              @fortinisocial
+            </a>
+          </p>
+          <Icons>
             <a
               href="https://www.instagram.com/fortinisocial"
               target="_blank"
@@ -61,10 +194,10 @@ export default function Footer() {
                 loading="lazy"
               />
             </a>
-          </div>
-        </div>
-        <div className={styles['menu-container']}>
-          <div className={styles.menu}>
+          </Icons>
+        </Social>
+        <Menu>
+          <MenuItem>
             <h1>Institucional</h1>
             <nav role="navigation">
               <a href="/institucional">Sobre a Fortini</a>
@@ -73,8 +206,8 @@ export default function Footer() {
               <a href="/faq">Perguntas frequentes</a>
               <a href="/faq">Blog</a>
             </nav>
-          </div>
-          <div className={styles.menu}>
+          </MenuItem>
+          <MenuItem>
             <h1>Projetos</h1>
             <nav role="navigation">
               <a href="/projetos/tenis">Tênis</a>
@@ -82,8 +215,8 @@ export default function Footer() {
               <a href="/projetos/judo">Judô</a>
               <a href="/projetos/taekwondo">Taekwondo</a>
             </nav>
-          </div>
-          <div className={styles.menu}>
+          </MenuItem>
+          <MenuItem>
             <h1>Contato</h1>
             <p>(31) 99265-7329</p>
             <p>contato@fortini.org.br</p>
@@ -91,9 +224,9 @@ export default function Footer() {
             <p>
               Av. Rio Negro, 580 - Riacho das Pedras, Contagem - MG, 32280-000
             </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+          </MenuItem>
+        </Menu>
+      </Navigation>
+    </StyledFooter>
   );
 }
