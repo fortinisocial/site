@@ -91,6 +91,18 @@ export default function PartnersSection() {
             <img src="/images/partners/cemig.jpg" title="Cemig" alt="Cemig" />
           </a>
           <a
+            href="https://www.ohubsocial.com.br"
+            target="_blank"
+            rel="noreferrer"
+            title="Incubadora De Projetos Sociais | Hub Social"
+          >
+            <img
+              src="/images/partners/ohubsocial.jpg"
+              title="Incubadora De Projetos Sociais | Hub Social"
+              alt="Incubadora De Projetos Sociais | Hub Social"
+            />
+          </a>
+          <a
             href="https://www.institutoimap.org.br/"
             target="_blank"
             rel="noreferrer"
@@ -102,7 +114,6 @@ export default function PartnersSection() {
               alt="Instituto Marum Patrus"
             />
           </a>
-
           <a
             href="http://www.nucleoodontologicoeldorado.com.br"
             target="_blank"
@@ -113,18 +124,6 @@ export default function PartnersSection() {
               src="/images/partners/noe.jpg"
               title="Núcleo Odontológico Eldorado - NOE"
               alt="Núcleo Odontológico Eldorado - NOE"
-            />
-          </a>
-          <a
-            href="https://www.ohubsocial.com.br"
-            target="_blank"
-            rel="noreferrer"
-            title="Incubadora De Projetos Sociais | Hub Social"
-          >
-            <img
-              src="/images/partners/ohubsocial.jpg"
-              title="Incubadora De Projetos Sociais | Hub Social"
-              alt="Incubadora De Projetos Sociais | Hub Social"
             />
           </a>
           <a
