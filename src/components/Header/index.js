@@ -52,12 +52,53 @@ const Logo = styled.div`
     transform: rotate(-102deg);
     z-index: -1;
   }
+
+  img {
+    &.fortini-logo {
+      width: 180px;
+      height: 55px;
+    }
+
+    &.gf-logo {
+      width: 124px;
+      height: 31px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 266px;
+    height: 200px;
+
+    img {
+      &.fortini-logo {
+        width: 160px;
+        height: 49px;
+      }
+
+      &.gf-logo {
+        width: 104px;
+        height: 26px;
+      }
+    }
+
+    &:before {
+      width: 305px;
+      height: 260px;
+      background-image: url('/images/header/hexagon-mobile.svg');
+    }
+  }
 `;
 
 const Divider = styled.div`
   width: 200px;
   border-bottom: 1px solid #e3e3e3;
   margin: 20px 0;
+
+  @media (max-width: 768px) {
+      width: 180px;
+
+    }
+  }
 `;
 
 const Menu = styled.nav`
@@ -227,13 +268,13 @@ export default function Header() {
       <Top>
         <Logo>
           <img
+            className="fortini-logo"
             src="/images/fortini-logo.svg"
             alt="Fortini Investimento Social"
-            width={180}
-            height={55}
           />
           <Divider />
           <img
+            className="gf-logo"
             src="/images/header/gerando-falcoes-logo.svg"
             alt="Gerando Falcões"
             width={124}
@@ -334,10 +375,12 @@ export default function Header() {
         <Message>
           <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
           <p>
-            Somos a <strong>Fortini</strong>, uma organização social que promove
-            o acesso ao <strong>esporte e a cultura</strong> para{' '}
+            Somos a <strong>Fortini</strong>, uma{' '}
+            <strong>organização da sociedade civil sem fins lucrativos</strong>{' '}
+            que promove o acesso à <strong>educação integral</strong>, ao{' '}
+            <strong>esporte</strong> e a <strong>cultura</strong> para{' '}
             <strong>estudantes de escolas públicas</strong> da{' '}
-            <strong>região metropolitana de Belo Horizonte</strong>.
+            <strong>Região Metropolitana de Belo Horizonte</strong>.
           </p>
         </Message>
       )}

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Section } from '../Layout';
 
 const Depositions = styled(Section)`
-  background: #ffffff;
+  background: #f8f9fa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@ const Depositions = styled(Section)`
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #6a6363;
     margin: 0 0 48px 0;
@@ -63,8 +63,8 @@ export default function DepositionsSection() {
     <Depositions className="depositions-section">
       <h1>O que dizem por aí...</h1>
       <h2>
-        Quer saber o que dizem da gente? Se liga nos depoimentos dos nossos
-        amigos e parceiros:
+        Quer saber o que dizem da gente? Se liga nos depoimentos de quem já
+        conhece o nosso trabalho:
       </h2>
       <img
         src="/images/depositions/maiara.jpg"

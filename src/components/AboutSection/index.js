@@ -21,7 +21,7 @@ const About = styled(Section)`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
     font-weight: 400;
     line-height: 1.75rem;
@@ -32,6 +32,7 @@ const About = styled(Section)`
   }
 
   .about-hexagons {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
 
@@ -41,6 +42,8 @@ const About = styled(Section)`
     }
 
     @media (max-width: 768px) {
+      margin-top: 0;
+
       img {
         width: 100%;
       }
@@ -152,9 +155,9 @@ const Institutional = styled.div`
 
     ul {
       list-style-type: square;
-      padding-left: 4rem;
+      padding-left: 5rem;
       color: white;
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 2rem;
     }
   }
@@ -186,27 +189,30 @@ export default function AboutSection() {
             loading="lazy"
           />
           <p>
-            Criamos a nossa organização para{' '}
-            <strong>contribuir com uma educação transformadora</strong> para
-            crianças e adolescentes estudantes da rede pública de ensino da
-            Região Metropolitana de Belo Horizonte.
+            Nosso propósito é transformar vidas proporcionado o acesso à
+            educação integral, ao esporte e a cultura.
           </p>
         </FirstColumn>
         <SecondColumn>
           <div className="about-intro">
             <h1>Sobre a Fortini</h1>
             <p>
-              A Fortini é uma organização social que atua em parceria com
-              escolas públicas da{' '}
-              <strong>Região Metropolitana de Belo Horizonte</strong>, a fim de
-              promover o acesso à educação, ao esporte e a cultura para crianças
-              e adolescentes.
+              Proporcionamos uma educação transformadora para crianças e
+              adolescentes estudantes da rede pública de ensino na Região
+              Metropolitana de Belo Horizonte.
             </p>
             <p>
-              Nosso grande sonho é{' '}
-              <strong>promover o acesso ao esporte e a cultura</strong> para
-              estudantes de todas as escolas públicas da Região Metropolitana de
-              Belo Horizonte.
+              Reconhecemos o papel primordial que a instituição escola tem na
+              constituição dos cidadãos e lhe propomos uma parceria para levar o
+              acesso ao <strong>esporte e a cultura</strong> de forma
+              sistematizada para os estudantes, além disso oferecendo
+              concomitantemente atividades de{' '}
+              <strong>
+                desenvolvimento socioemocional e acompanhamento
+                socioassistencial para seus familiares
+              </strong>
+              , agimos de forma multidisciplinar para que cada criança ou
+              adolescente atendido possa desempenhar o seu pelo potencial.
             </p>
           </div>
           <Institutional>
@@ -222,19 +228,16 @@ export default function AboutSection() {
             <div className="about-values">
               <h2>Valores</h2>
               <ul>
-                <li>Iniciativa e Engajamento</li>
                 <li>Amor e cuidado</li>
-                <li>Juntos somos melhores</li>
+                <li>Transparência</li>
+                <li>Ganha-ganha-ganha</li>
                 <li>Comprometimento e excelência</li>
-                <li>Sustentabilidade</li>
               </ul>
             </div>
           </Institutional>
           <p>
-            Criamos a nossa organização para{' '}
-            <strong>contribuir com uma educação transformadora</strong> para
-            crianças e adolescentes estudantes da rede pública de ensino da
-            Região Metropolitana de Belo Horizonte.
+            Nosso propósito é transformar vidas proporcionado o acesso à
+            educação integral, ao esporte e a cultura.
           </p>
         </SecondColumn>
       </Columns>
@@ -242,10 +245,10 @@ export default function AboutSection() {
         <h1>Por que o Hexágono?</h1>
         <p>
           Para nós o hexágono é o símbolo representativo da sinergia que existe
-          nos projetos sociais que executamos. Desenvolvemos nossos trabalhos no
-          formato de <strong>rede de cooperação</strong>, desde o início nos
-          propomos a <strong>estabelecer parcerias</strong>, e todos os projetos
-          são planejados e executados com a atuação de{' '}
+          no nosso método de trabalho. Desenvolvemos nossas ações no formato de{' '}
+          <strong>rede de cooperação</strong>, desde o início nos propomos a{' '}
+          <strong>estabelecer parcerias</strong> e todos os projetos são
+          planejados e executados com a atuação de{' '}
           <strong>múltiplos atores</strong>.
         </p>
         <img

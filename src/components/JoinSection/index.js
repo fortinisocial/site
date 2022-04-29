@@ -36,6 +36,7 @@ const Join = styled(Section)`
       p {
         color: #ffffff;
         margin: 10px 0;
+        font-size: 1.4rem;
       }
 
       a {
@@ -129,14 +130,13 @@ export default function JoinSection() {
         />
         <div className="description">
           <h1>Junte-se a nós</h1>
-          <p>Seja voluntário(a) na Fortini.</p>
           <p>
-            Faça parte da nossa rede de colaboradores e ajude-nos a transformar
+            Faça parte da nossa rede de doadores e nos ajude a transformar
             vidas.
           </p>
 
           <a href="/participar" title="Faça parte da Fortini">
-            Participar
+            Quero Doar
           </a>
         </div>
       </div>

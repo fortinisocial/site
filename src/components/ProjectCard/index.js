@@ -13,7 +13,7 @@ const Card = styled.div`
   color: #232323;
   font-size: 14px;
   box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
-  margin-top: -200px;
+  margin-top: -300px;
 
   .description {
     padding: 0 32px;

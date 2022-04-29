@@ -18,7 +18,6 @@ export default function Home() {
         <Main>
           <AboutSection />
           <ODSSection />
-          <DepositionsSection />
           <HistorySection />
           <ProjectsSection>
             <ProjectCard
@@ -46,8 +45,9 @@ export default function Home() {
         ferramenta para a inclusão social e a promoção da cidadania."
             />
           </ProjectsSection>
-          <JoinSection />
+          <DepositionsSection />
           <PartnersSection />
+          <JoinSection />
         </Main>
         <Footer />
       </Wrapper>

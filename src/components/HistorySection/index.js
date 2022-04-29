@@ -86,10 +86,10 @@ export default function HistorySection() {
     <History className="history-section">
       <img src="/images/hexagon.svg" alt="Hexágono" />
       <div className="description">
-        <h1>Nossos projetos</h1>
+        <h1>Nossas oficinas</h1>
         <p>
-          Falar aqui sobre compromisso, resumidamente sobre o propósito dos
-          projetos, sobre o valor que isso traz, etc, e como isso faz parte da
+          Falar aqui sobre compromisso, resumidamente sobre o propósito das
+          oficinas, sobre o valor que isso traz, etc, e como isso faz parte da
           história da Fortini.
         </p>
 

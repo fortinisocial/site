@@ -5,7 +5,6 @@ import { Section } from '../Layout';
 const Projects = styled(Section)`
   position: relative;
   background: #fcfcfc;
-  min-height: 615px;
   height: auto;
 
   .list {

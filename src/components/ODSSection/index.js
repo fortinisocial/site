@@ -19,9 +19,9 @@ const ODS = styled(Section)`
   }
 
   h2 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
-    max-width: 700px;
+    max-width: 800px;
   }
 
   .onu {
@@ -61,7 +61,7 @@ export default function ODSSection() {
     <ODS className="ods-section">
       <h1>Objetivos de Desenvolvimento Sustentável - ODS</h1>
       <h2>
-        A Fortini está alinhada aos ODS da Agenda 2030 das Nações Unidas, em
+        A Fortini está alinhada aos ODS da Agenda 2030 das Nações Unidas em
         conformidade com as dimensões econômica, social e ambiental do
         desenvolvimento sustentável.
       </h2>
