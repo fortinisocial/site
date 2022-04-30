@@ -58,7 +58,7 @@ const ODS = styled(Section)`
 
 export default function ODSSection() {
   return (
-    <ODS className="ods-section">
+    <ODS id="ods-section" className="ods-section">
       <h1>Objetivos de Desenvolvimento Sustentável - ODS</h1>
       <h2>
         A Fortini está alinhada aos ODS da Agenda 2030 das Nações Unidas em

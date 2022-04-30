@@ -60,7 +60,7 @@ const Depositions = styled(Section)`
 
 export default function DepositionsSection() {
   return (
-    <Depositions className="depositions-section">
+    <Depositions id="depositions-section" className="depositions-section">
       <h1>O que dizem por aí...</h1>
       <h2>
         Quer saber o que dizem da gente? Se liga nos depoimentos de quem já

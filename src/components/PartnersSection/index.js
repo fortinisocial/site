@@ -64,24 +64,12 @@ const Partners = styled(Section)`
 
 export default function PartnersSection() {
   return (
-    <Partners className="partners-section">
+    <Partners id="partners-section" className="partners-section">
       <div className="description">
         <h1>Quem já realiza com a gente</h1>
       </div>
       <div className="list-container">
         <div className="list">
-          <a
-            href="https://www.academiatennishall.com.br/"
-            target="_blank"
-            rel="noreferrer"
-            title="Academia Tennis Hall"
-          >
-            <img
-              src="/images/partners/academiatennishall.jpg"
-              title="Academia Tennis Hall"
-              alt="Academia Tennis Hall"
-            />
-          </a>
           <a
             href="https://www.cemig.com.br/"
             target="_blank"
@@ -136,6 +124,18 @@ export default function PartnersSection() {
               src="/images/partners/redesomadrogarias.jpg"
               title="Rede Soma Drogarias"
               alt="Rede Soma Drogarias"
+            />
+          </a>
+          <a
+            href="https://www.academiatennishall.com.br/"
+            target="_blank"
+            rel="noreferrer"
+            title="Academia Tennis Hall"
+          >
+            <img
+              src="/images/partners/academiatennishall.jpg"
+              title="Academia Tennis Hall"
+              alt="Academia Tennis Hall"
             />
           </a>
         </div>

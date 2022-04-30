@@ -60,8 +60,8 @@ const Logo = styled.div`
     }
 
     &.gf-logo {
-      width: 124px;
-      height: 31px;
+      width: 120px;
+      height: 30px;
     }
   }
 
@@ -277,39 +277,25 @@ export default function Header() {
             className="gf-logo"
             src="/images/header/gerando-falcoes-logo.svg"
             alt="Gerando Falcões"
-            width={124}
-            height={31}
           />
         </Logo>
         <Menu>
-          <a href="/institucional" title="Institucional">
-            Institucional{' '}
-            <img
-              src="/images/header/down-arrow.svg"
-              alt="arrow down"
-              width={9}
-              height={18}
-            />
+          <a href="#about-section" title="Sobre">
+            Sobre{' '}
           </a>
-          <a href="/atuacao" title="Atuação">
-            Atuação{' '}
-            <img
-              src="/images/header/down-arrow.svg"
-              alt="arrow down"
-              width={9}
-              height={18}
-            />
+          <a href="#ods-section" title="Metodologia">
+            Metodologia{' '}
           </a>
-          <a href="/transparencia" title="Transparência">
-            Transparência
+          <a href="#depositions-section" title="Depoimentos">
+            Depoimentos
           </a>
-          <a href="/midias" title="Mídias">
-            Mídias
+          <a href="#partners-section" title="Parceiros">
+            Parceiros
           </a>
           <a href="/contato" title="Contato">
             Contato
           </a>
-          <a href="/doe" title="Institucional" className="donate">
+          <a href="/doe" title="Doe agora" className="donate">
             Doe agora
           </a>
         </Menu>
@@ -343,29 +329,17 @@ export default function Header() {
 
       {opened ? (
         <MobileMenu>
-          <a href="/institucional" title="Institucional">
-            Institucional{' '}
-            <img
-              src="/images/header/down-arrow.svg"
-              alt="arrow down"
-              width={9}
-              height={18}
-            />
+          <a href="#about-section" title="Sobre">
+            Sobre{' '}
           </a>
-          <a href="/atuacao" title="Atuação">
-            Atuação{' '}
-            <img
-              src="/images/header/down-arrow.svg"
-              alt="arrow down"
-              width={9}
-              height={18}
-            />
+          <a href="#ods-section" title="Metodologia">
+            Metodologia{' '}
           </a>
-          <a href="/transparencia" title="Transparência">
-            Transparência
+          <a href="#depositions-section" title="Depoimentos">
+            Depoimentos
           </a>
-          <a href="/midias" title="Mídias">
-            Mídias
+          <a href="#partners-section" title="Parceiros">
+            Parceiros
           </a>
           <a href="/contato" title="Contato">
             Contato

@@ -200,20 +200,20 @@ export default function Footer() {
           <MenuItem>
             <h1>Institucional</h1>
             <nav role="navigation">
-              <a href="/institucional">Sobre a Fortini</a>
-              <a href="/time">Nosso time</a>
-              <a href="/contribua">Contribua</a>
-              <a href="/faq">Perguntas frequentes</a>
-              <a href="/faq">Blog</a>
+              <a href="#about-section">Sobre</a>
+              <a href="#ods-section">Metodologia</a>
+              <a href="#depositions-section">Depoimentos</a>
+              <a href="#partners-section">Parceiros</a>
+              <a href="/contato">Contato</a>
             </nav>
           </MenuItem>
           <MenuItem>
-            <h1>Projetos</h1>
+            <h1>Oficinas</h1>
             <nav role="navigation">
-              <a href="/projetos/tenis">Tênis</a>
-              <a href="/projetos/handebol">Handebol</a>
-              <a href="/projetos/judo">Judô</a>
-              <a href="/projetos/taekwondo">Taekwondo</a>
+              <a href="/projeto-social/tenis">Tênis</a>
+              <a href="/projeto-social/handebol">Handebol</a>
+              <a href="/projeto-social/judo">Judô</a>
+              <a href="/projeto-social/taekwondo">Taekwondo</a>
             </nav>
           </MenuItem>
           <MenuItem>

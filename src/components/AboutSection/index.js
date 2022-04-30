@@ -180,7 +180,7 @@ const Institutional = styled.div`
 
 export default function AboutSection() {
   return (
-    <About className="about-section">
+    <About id="about-section" className="about-section">
       <Columns>
         <FirstColumn>
           <img
