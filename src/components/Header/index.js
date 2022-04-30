@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   padding: 0 30px;
   background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
     url('/images/header/background-01.jpg');

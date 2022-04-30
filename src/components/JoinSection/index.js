@@ -90,7 +90,6 @@ const Join = styled(Section)`
     .join {
       background: none;
       flex-direction: column;
-      margin: -2rem;
       width: 100%;
 
       > img {
