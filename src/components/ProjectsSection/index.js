@@ -31,7 +31,7 @@ const Projects = styled(Section)`
       overflow-y: hidden;
       justify-content: initial;
       padding: 0 2rem;
-      gap: 24px;
+      gap: 20px;
     }
   }
 `;

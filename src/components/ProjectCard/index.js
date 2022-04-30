@@ -5,18 +5,18 @@ const Card = styled.div`
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 340px;
-  height: 600px;
+  height: 657px;
   border-radius: 30px;
   color: #232323;
   font-size: 14px;
   box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
-  margin-top: -300px;
+  margin-top: -310px;
   flex-shrink: 0;
 
   .description {
-    padding: 0 32px;
+    padding: 0 24px 24px;
 
     h1 {
       text-transform: uppercase;
@@ -27,21 +27,43 @@ const Card = styled.div`
   .info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     span {
+      flex-shrink: 0;
       font-weight: 700;
       margin-right: 4px;
     }
 
-    &:first-child {
+    &:first-of-type {
       margin-top: 24px;
+      outline: 1px solid;
     }
-    &:last-child {
-      margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 6px;
     }
 
     img {
       margin-right: 6px;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+    margin: 0;
+
+    li {
+      line-height: 1.6;
+
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        max-width: 236px;
+        vertical-align: bottom;
+      }
     }
   }
 
@@ -54,7 +76,8 @@ const Card = styled.div`
 const CardHeader = styled.header`
   background: #d5d5d5;
   border-radius: 30px 30px 0 0;
-  height: 340px;
+  height: 248px;
+  flex-shrink: 0;
 
   &.tenis {
     background: url('/images/projects/tenis.jpg');
@@ -64,12 +87,14 @@ const CardHeader = styled.header`
     background: url('/images/projects/handball.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: bottom;
   }
 
   &.judo {
     background: url('/images/projects/judo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: -78px;
   }
 
   &.taekwondo {
@@ -111,6 +136,7 @@ export default function ProjectCard({
   city,
   schools,
   since,
+  location,
 }) {
   return (
     <Card>
@@ -120,10 +146,10 @@ export default function ProjectCard({
         <p>{description}</p>
         <p className="info">
           <img
-            src="/images/projects/students.svg"
+            src="/images/projects/student.svg"
             alt="Mãos segurando coração"
-            width={32}
-            height={22}
+            width={20}
+            height={23}
             loading="lazy"
           />
           <span>Número de participantes: </span>
@@ -131,10 +157,10 @@ export default function ProjectCard({
         </p>
         <p className="info">
           <img
-            src="/images/projects/hands-heart.svg"
+            src="/images/projects/city.svg"
             alt="Mãos segurando coração"
-            width={18}
-            height={14}
+            width={20}
+            height={20}
             loading="lazy"
           />
           <span>Município: </span>
@@ -142,26 +168,43 @@ export default function ProjectCard({
         </p>
         <p className="info">
           <img
-            src="/images/projects/hands-heart.svg"
+            src="/images/projects/calendar.svg"
             alt="Mãos segurando coração"
-            width={18}
-            height={14}
-            loading="lazy"
-          />
-          <span>Escolas Parceiras: </span>
-          {schools}
-        </p>
-        <p className="info">
-          <img
-            src="/images/projects/hands-heart.svg"
-            alt="Mãos segurando coração"
-            width={18}
-            height={14}
+            width={20}
+            height={20}
             loading="lazy"
           />
           <span>Em execução desde: </span>
           {since}
         </p>
+        <p className="info">
+          <img
+            src="/images/projects/location.svg"
+            alt="Mãos segurando coração"
+            width={20}
+            height={20}
+            loading="lazy"
+          />
+          <span>Local de execução: </span>
+          {location}
+        </p>
+        <p className="info">
+          <img
+            src="/images/projects/openbook.svg"
+            alt="Mãos segurando coração"
+            width={20}
+            height={19}
+            loading="lazy"
+          />
+          <span>Escolas Parceiras: </span>
+        </p>
+        <ul>
+          {schools.split(',').map(school => (
+            <li key={school} title={school}>
+              <span>{school}</span>
+            </li>
+          ))}
+        </ul>
       </article>
     </Card>
   );

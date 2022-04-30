@@ -7,7 +7,7 @@ const Join = styled(Section)`
   align-items: center;
   max-width: 1920px;
   width: 100%;
-  height: 423px;
+  height: 390px;
 
   .join {
     display: flex;

@@ -27,9 +27,10 @@ export default function Home() {
         ferramenta para a inclusão social e a promoção da cidadania."
               students="32"
               city="Contagem"
-              schools="E. E. José Almeida Flores, E. E. Luiz Carlos
-            Silva"
+              schools="E. M. Heitor Villa Lobos
+, E. E. Padre Camargos, E. E. Conceição Hilário, E. M. Carlos Drummond de Andrade (CAIC)"
               since="2016"
+              location="Academia Tennis Hall"
             />
             <ProjectCard
               kind="handball"
@@ -41,6 +42,7 @@ export default function Home() {
               schools="E. E. Luiz Carlos
             Silva"
               since="2020"
+              location="Ginásio Riacho"
             />
             <ProjectCard
               kind="judo"
@@ -52,6 +54,7 @@ export default function Home() {
               schools="E. E. Luiz Carlos
             Silva"
               since="2021"
+              location="Ginásio Riacho"
             />
             <ProjectCard
               kind="taekwondo"
@@ -63,6 +66,7 @@ export default function Home() {
               schools="E. E. Luiz Carlos
             Silva"
               since="2022"
+              location="Ginásio Riacho"
             />
           </ProjectsSection>
           <DepositionsSection />

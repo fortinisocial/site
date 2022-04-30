@@ -10,7 +10,7 @@ const History = styled(Section)`
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
-  background-position: 0% 50%;
+  background-position: center;
   max-width: 1920px;
   width: 100%;
   height: 700;
@@ -26,7 +26,7 @@ const History = styled(Section)`
   }
 
   .description {
-    width: 400px;
+    max-width: 600px;
     margin-bottom: 400px;
 
     h1 {
@@ -38,9 +38,8 @@ const History = styled(Section)`
     }
 
     p {
-      font-size: 18px;
+      font-size: 1.2rem;
       color: #ffffff;
-      margin-bottom: 24px;
     }
 
     a {
@@ -65,6 +64,7 @@ const History = styled(Section)`
   @media (max-width: 768px) {
     height: auto;
     padding: 2rem;
+    max-width: initial;
 
     > img {
       display: none;
@@ -76,6 +76,9 @@ const History = styled(Section)`
 
       p {
         line-height: 2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 4px;
+        border-radius: 10px;
       }
     }
   }
@@ -88,14 +91,13 @@ export default function HistorySection() {
       <div className="description">
         <h1>Nossas oficinas</h1>
         <p>
-          Falar aqui sobre compromisso, resumidamente sobre o propósito das
-          oficinas, sobre o valor que isso traz, etc, e como isso faz parte da
-          história da Fortini.
+          Nossos projetos sociais são executados em parcerias com escolas
+          públicas e utilizam uma metodologia com foco no desenvolvimento
+          educacional em paralelo ao social utilizando das oficinas esportivas,
+          culturais e de desenvolvimento socioemocional como ferramenta para a
+          melhoria no desempenho físico, escolar e na autoestima dos
+          participantes.
         </p>
-
-        <a href="/institucional" title="Nossa história">
-          Nossa história
-        </a>
       </div>
     </History>
   );
