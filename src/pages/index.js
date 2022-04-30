@@ -23,50 +23,39 @@ export default function Home() {
             <ProjectCard
               kind="tenis"
               title="Tênis"
-              description="Projeto socioeducativo que utiliza das aulas de tênis de quadra como
-        ferramenta para a inclusão social e a promoção da cidadania."
-              students="32"
+              students="80"
               city="Contagem"
-              schools="E. M. Heitor Villa Lobos
-, E. E. Padre Camargos, E. E. Conceição Hilário, E. M. Carlos Drummond de Andrade (CAIC)"
+              schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos
+, E. M. René Chateubriand Domingues"
               since="2016"
-              location="Academia Tennis Hall"
+              locations="Academia Tennis Hall"
             />
             <ProjectCard
               kind="handball"
               title="Handebol"
-              description="Projeto socioeducativo que utiliza das aulas de tênis de quadra como
-        ferramenta para a inclusão social e a promoção da cidadania."
-              students="20"
-              city="Contagem e Ibirité"
-              schools="E. E. Luiz Carlos
-            Silva"
-              since="2020"
-              location="Ginásio Riacho"
+              students="200"
+              city="Betim, Contagem e Ibirité"
+              schools="E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares"
+              since="2018"
+              locations="E. E. Padre Camargos, E. M. Adelina Mesquita Januzzi, Ginásio Califórnia, Poliesportivo Petrovale"
             />
             <ProjectCard
               kind="judo"
               title="Judô"
-              description="Projeto socioeducativo que utiliza das aulas de tênis de quadra como
-        ferramenta para a inclusão social e a promoção da cidadania."
-              students="8"
+              students="120"
               city="Contagem"
-              schools="E. E. Luiz Carlos
-            Silva"
+              schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
               since="2021"
-              location="Ginásio Riacho"
+              locations="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
             />
             <ProjectCard
               kind="taekwondo"
               title="Taekwondo"
-              description="Projeto socioeducativo que utiliza das aulas de tênis de quadra como
-        ferramenta para a inclusão social e a promoção da cidadania."
-              students="12"
-              city="Contagem"
-              schools="E. E. Luiz Carlos
-            Silva"
+              students="150"
+              city="Betim e Contagem"
+              schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães, E. M. Valério Ferreira Palhares"
               since="2022"
-              location="Ginásio Riacho"
+              locations="Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
             />
           </ProjectsSection>
           <DepositionsSection />

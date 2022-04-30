@@ -90,7 +90,7 @@ export default function HistorySection() {
     <History className="history-section">
       <img src="/images/hexagon.svg" alt="Hexágono" />
       <div className="description">
-        <h1>Nossas oficinas</h1>
+        <h1>Projetos sociais</h1>
         <p>
           Nossos projetos sociais são executados em{' '}
           <strong>parceria com escolas públicas</strong> e utilizam uma

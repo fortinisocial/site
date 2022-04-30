@@ -7,7 +7,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 340px;
-  height: 657px;
+  height: 680px;
   border-radius: 30px;
   color: #232323;
   font-size: 14px;
@@ -37,11 +37,6 @@ const Card = styled.div`
 
     &:first-of-type {
       margin-top: 24px;
-      outline: 1px solid;
-    }
-
-    &:last-of-type {
-      margin-bottom: 6px;
     }
 
     img {
@@ -52,6 +47,7 @@ const Card = styled.div`
   ul {
     list-style-type: square;
     margin: 0;
+    margin-top: -12px;
 
     li {
       line-height: 1.6;
@@ -76,7 +72,7 @@ const Card = styled.div`
 const CardHeader = styled.header`
   background: #d5d5d5;
   border-radius: 30px 30px 0 0;
-  height: 248px;
+  height: 249px;
   flex-shrink: 0;
 
   &.tenis {
@@ -131,19 +127,17 @@ const CardFooter = styled.footer`
 export default function ProjectCard({
   kind,
   title,
-  description,
   students,
   city,
   schools,
   since,
-  location,
+  locations,
 }) {
   return (
     <Card>
       <CardHeader className={kind} />
       <article className="description">
         <h1>{title}</h1>
-        <p>{description}</p>
         <p className="info">
           <img
             src="/images/projects/student.svg"
@@ -179,17 +173,6 @@ export default function ProjectCard({
         </p>
         <p className="info">
           <img
-            src="/images/projects/location.svg"
-            alt="Mãos segurando coração"
-            width={20}
-            height={20}
-            loading="lazy"
-          />
-          <span>Local de execução: </span>
-          {location}
-        </p>
-        <p className="info">
-          <img
             src="/images/projects/openbook.svg"
             alt="Mãos segurando coração"
             width={20}
@@ -202,6 +185,23 @@ export default function ProjectCard({
           {schools.split(',').map(school => (
             <li key={school} title={school}>
               <span>{school}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="info">
+          <img
+            src="/images/projects/location.svg"
+            alt="Mãos segurando coração"
+            width={20}
+            height={20}
+            loading="lazy"
+          />
+          <span>Local de execução: </span>
+        </p>
+        <ul>
+          {locations.split(',').map(location => (
+            <li key={location} title={location}>
+              <span>{location}</span>
             </li>
           ))}
         </ul>
