@@ -15,6 +15,8 @@ const Projects = styled(Section)`
   }
 
   @media (max-width: 768px) {
+    padding: 2rem 0;
+
     background: linear-gradient(
       rgb(7, 18, 20),
       rgb(21, 48, 57),
@@ -24,7 +26,12 @@ const Projects = styled(Section)`
     );
 
     .list {
-      flex-direction: column;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      justify-content: initial;
+      padding: 0 2rem;
+      gap: 24px;
     }
   }
 `;

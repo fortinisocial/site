@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 const Card = styled.div`
@@ -14,6 +13,7 @@ const Card = styled.div`
   font-size: 14px;
   box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
   margin-top: -300px;
+  flex-shrink: 0;
 
   .description {
     padding: 0 32px;
@@ -24,19 +24,30 @@ const Card = styled.div`
     }
   }
 
-  .status {
+  .info {
     display: flex;
     align-items: center;
-    font-weight: 700;
-    margin-top: 24px;
+
+    span {
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    &:first-child {
+      margin-top: 24px;
+    }
+    &:last-child {
+      margin-bottom: 32px;
+    }
 
     img {
-      margin-right: 10px;
+      margin-right: 6px;
     }
   }
 
   @media (max-width: 768px) {
     margin-top: 0;
+    scroll-snap-align: center;
   }
 `;
 
@@ -92,14 +103,33 @@ const CardFooter = styled.footer`
   }
 `;
 
-export default function ProjectCard({ kind, title, description }) {
+export default function ProjectCard({
+  kind,
+  title,
+  description,
+  students,
+  city,
+  schools,
+  since,
+}) {
   return (
     <Card>
       <CardHeader className={kind} />
       <article className="description">
         <h1>{title}</h1>
         <p>{description}</p>
-        <p className="status">
+        <p className="info">
+          <img
+            src="/images/projects/students.svg"
+            alt="Mãos segurando coração"
+            width={32}
+            height={22}
+            loading="lazy"
+          />
+          <span>Número de participantes: </span>
+          {students}
+        </p>
+        <p className="info">
           <img
             src="/images/projects/hands-heart.svg"
             alt="Mãos segurando coração"
@@ -107,12 +137,32 @@ export default function ProjectCard({ kind, title, description }) {
             height={14}
             loading="lazy"
           />
-          <span>Projeto em Andamento</span>
+          <span>Município: </span>
+          {city}
+        </p>
+        <p className="info">
+          <img
+            src="/images/projects/hands-heart.svg"
+            alt="Mãos segurando coração"
+            width={18}
+            height={14}
+            loading="lazy"
+          />
+          <span>Escolas Parceiras: </span>
+          {schools}
+        </p>
+        <p className="info">
+          <img
+            src="/images/projects/hands-heart.svg"
+            alt="Mãos segurando coração"
+            width={18}
+            height={14}
+            loading="lazy"
+          />
+          <span>Em execução desde: </span>
+          {since}
         </p>
       </article>
-      <CardFooter>
-        <a href="/projeto/">Ver mais</a>
-      </CardFooter>
     </Card>
   );
 }
