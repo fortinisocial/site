@@ -20,13 +20,13 @@ const History = styled(Section)`
   img {
     position: absolute;
     top: -160px;
-    left: -160px;
+    left: -130px;
     max-height: 1000px;
     pointer-events: none;
   }
 
   .description {
-    max-width: 600px;
+    max-width: 560px;
     margin-bottom: 400px;
 
     h1 {
@@ -38,6 +38,8 @@ const History = styled(Section)`
     }
 
     p {
+      line-height: 2rem;
+
       font-size: 1.2rem;
       color: #ffffff;
     }
@@ -75,7 +77,6 @@ const History = styled(Section)`
       margin-bottom: 0;
 
       p {
-        line-height: 2rem;
         background-color: rgba(0, 0, 0, 0.2);
         padding: 4px;
         border-radius: 10px;
@@ -91,12 +92,19 @@ export default function HistorySection() {
       <div className="description">
         <h1>Nossas oficinas</h1>
         <p>
-          Nossos projetos sociais são executados em parcerias com escolas
-          públicas e utilizam uma metodologia com foco no desenvolvimento
-          educacional em paralelo ao social utilizando das oficinas esportivas,
-          culturais e de desenvolvimento socioemocional como ferramenta para a
-          melhoria no desempenho físico, escolar e na autoestima dos
-          participantes.
+          Nossos projetos sociais são executados em{' '}
+          <strong>parceria com escolas públicas</strong> e utilizam uma
+          metodologia com foco no{' '}
+          <strong>desenvolvimento educacional em paralelo ao social</strong>{' '}
+          utilizando das{' '}
+          <strong>
+            oficinas esportivas, culturais e de desenvolvimento socioemocional
+          </strong>{' '}
+          como ferramenta para a{' '}
+          <strong>
+            melhoria no desempenho físico, escolar e na autoestima
+          </strong>{' '}
+          de cada criança e adolescente participante.
         </p>
       </div>
     </History>
