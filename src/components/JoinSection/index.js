@@ -8,12 +8,13 @@ const Join = styled(Section)`
   max-width: 1920px;
   width: 100%;
   height: 390px;
+  padding: 0;
 
   .join {
     display: flex;
     flex: 1;
     background: #174f86;
-    margin: 0 -62px;
+    margin: 0;
 
     .description {
       display: flex;
