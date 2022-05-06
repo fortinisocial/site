@@ -11,7 +11,7 @@ const Card = styled.div`
   border-radius: 30px;
   color: #232323;
   font-size: 14px;
-  box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 16px 16px hsl(0deg 0% 62% / 0.25);
   margin-top: -310px;
   flex-shrink: 0;
 
@@ -63,8 +63,12 @@ const Card = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1366px) {
     margin-top: 0;
+    scroll-snap-align: start;
+  }
+
+  @media (max-width: 768px) {
     scroll-snap-align: center;
   }
 `;

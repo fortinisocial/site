@@ -70,7 +70,7 @@ const Join = styled(Section)`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1366px) {
     background: rgba(7, 18, 20, 0.5);
 
     &:after {

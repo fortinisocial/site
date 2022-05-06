@@ -50,8 +50,9 @@ const ODS = styled(Section)`
     align-items: center;
     gap: 10px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 `;

@@ -41,11 +41,12 @@ const About = styled(Section)`
       align-self: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       margin-top: 0;
 
       img {
         width: 100%;
+        max-width: 727px;
       }
     }
   }
@@ -55,8 +56,9 @@ const Columns = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -73,9 +75,10 @@ const FirstColumn = styled.div`
     max-width: 320px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     img {
-      margin-right: 0;
+      width: 286px;
+      height: 335px;
     }
 
     p {
@@ -162,7 +165,9 @@ const Institutional = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    margin-bottom: 4rem;
+
     .about-vision,
     .about-values {
       width: 343px;
@@ -176,6 +181,10 @@ const Institutional = styled.div`
       bottom: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 export default function AboutSection() {
@@ -187,6 +196,8 @@ export default function AboutSection() {
             src="/images/about/maiara-wenceslau-fortini.png"
             alt="Maiara Wenceslau"
             loading="lazy"
+            width={381}
+            height={447}
           />
           <p>
             Nosso propósito é transformar vidas proporcionado o acesso à

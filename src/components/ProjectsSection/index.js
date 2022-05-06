@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
+import Image from 'next/image';
 
 const Projects = styled(Section)`
   position: relative;
@@ -14,6 +15,11 @@ const Projects = styled(Section)`
     gap: 32px;
   }
 
+  .prev,
+  .next {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     padding: 2rem 0;
 
@@ -24,22 +30,144 @@ const Projects = styled(Section)`
       rgb(36, 218, 220),
       rgb(36, 128, 220)
     );
+  }
 
+  @media (max-width: 1366px) {
     .list {
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: x proximity;
       overflow-x: scroll;
       overflow-y: hidden;
       justify-content: initial;
-      padding: 0 2rem;
+      padding: 2rem;
       gap: 20px;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+    }
+
+    .prev,
+    .next {
+      display: initial;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 48px;
+      height: 48px;
+
+      background: #fff;
+      border-radius: 9999px;
+      box-shadow: 8px 8px 16px hsl(0deg 0% 62% / 0.25);
+      outline: 1px solid #e5e5e5;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        background: #fcfcfc;
+        box-shadow: 8px 8px 16px hsl(0deg 0% 62% / 0.5);
+      }
+
+      @media (max-width: 768px) {
+        width: 32px;
+        height: 32px;
+        outline: none;
+
+        > span {
+          transform: scale(0.6);
+        }
+      }
+    }
+
+    .prev {
+      left: 12px;
+
+      @media (max-width: 768px) {
+        left: 8px;
+      }
+    }
+
+    .next {
+      right: 12px;
+
+      @media (max-width: 768px) {
+        right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .list {
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    background: linear-gradient(
+      rgb(7, 18, 20),
+      rgb(21, 48, 57),
+      rgb(32, 80, 85),
+      rgb(36, 218, 220),
+      rgb(36, 128, 220)
+    );
+
+    .list {
+      margin-top: -310px;
+    }
+
+    .prev,
+    .next {
+      top: -160px;
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 `;
 
 export default function ProjectsSection({ children }) {
+  const projectsContainerRef = useRef(null);
+
+  const handlePrev = () => {
+    projectsContainerRef.current.scrollBy(-340, 0);
+  };
+
+  const handleNext = () => {
+    projectsContainerRef.current.scrollBy(340, 0);
+  };
+
   return (
     <Projects className="projects-section">
-      <div className="list">{children}</div>
+      <div ref={projectsContainerRef} className="list">
+        {children}
+      </div>
+      <span className="prev" onClick={handlePrev}>
+        <Image
+          src="/images/projects/chevron-left.svg"
+          alt="Voltar"
+          width={32}
+          height={32}
+          loading="lazy"
+        />
+      </span>
+      <span className="next" onClick={handleNext}>
+        <Image
+          src="/images/projects/chevron-right.svg"
+          alt="Voltar"
+          width={32}
+          height={32}
+          loading="lazy"
+        />
+      </span>
     </Projects>
   );
 }

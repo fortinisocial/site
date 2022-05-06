@@ -16,7 +16,7 @@ export const StyledHeader = styled.div`
   height: 100vh;
   z-index: 1;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     gap: 3rem;
     padding: 0 30px;
   }
@@ -26,7 +26,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     justify-content: center;
     gap: 3rem;
   }
@@ -66,7 +66,7 @@ const Logo = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     width: 266px;
     height: 200px;
 
@@ -95,9 +95,8 @@ const Divider = styled.div`
   border-bottom: 1px solid #e3e3e3;
   margin: 20px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
       width: 180px;
-
     }
   }
 `;
@@ -141,7 +140,7 @@ const Menu = styled.nav`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -196,7 +195,7 @@ const MobileActions = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
@@ -236,7 +235,13 @@ const Message = styled.div`
     font-size: 3rem;
     font-weight: 500;
 
+    @media (max-width: 1024px) {
+      margin-top: 8rem;
+      font-size: 2.5rem;
+    }
+
     @media (max-width: 768px) {
+      margin-top: 2rem;
       font-size: 2rem;
     }
   }
@@ -246,6 +251,11 @@ const Message = styled.div`
     max-width: 600px;
     line-height: 2;
     font-family: 'Lora', serif;
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+      font-size: 1.75rem;
+      max-width: 700px;
+    }
   }
 
   strong {
