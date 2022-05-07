@@ -135,7 +135,7 @@ export default function JoinSection() {
             vidas.
           </p>
 
-          <a href="/participar" title="Faça parte da Fortini">
+          <a href="/doe" title="Faça parte da Fortini">
             Quero Doar
           </a>
         </div>
