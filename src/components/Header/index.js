@@ -331,18 +331,18 @@ export default function Header({ donation = false }) {
           />
         </Logo>
         <Menu>
-          <a href="/#about-section" title="Sobre">
-            Sobre{' '}
-          </a>
-          <a href="/#ods-section" title="Metodologia">
-            Metodologia{' '}
-          </a>
-          <a href="/#depositions-section" title="Depoimentos">
+          <Link href="/#about-section" title="Sobre">
+            Sobre
+          </Link>
+          <Link href="/#ods-section" title="Metodologia">
+            Metodologia
+          </Link>
+          <Link href="/#depositions-section" title="Depoimentos">
             Depoimentos
-          </a>
-          <a href="/#partners-section" title="Parceiros">
+          </Link>
+          <Link href="/#partners-section" title="Parceiros">
             Parceiros
-          </a>
+          </Link>
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
@@ -380,18 +380,18 @@ export default function Header({ donation = false }) {
 
       {opened ? (
         <MobileMenu>
-          <a href="/#about-section" title="Sobre">
-            Sobre{' '}
-          </a>
-          <a href="/#ods-section" title="Metodologia">
-            Metodologia{' '}
-          </a>
-          <a href="/#depositions-section" title="Depoimentos">
+          <Link href="/#about-section" title="Sobre">
+            Sobre
+          </Link>
+          <Link href="/#ods-section" title="Metodologia">
+            Metodologia
+          </Link>
+          <Link href="/#depositions-section" title="Depoimentos">
             Depoimentos
-          </a>
-          <a href="/#partners-section" title="Parceiros">
+          </Link>
+          <Link href="/#partners-section" title="Parceiros">
             Parceiros
-          </a>
+          </Link>
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
