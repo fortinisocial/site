@@ -32,7 +32,7 @@ const Projects = styled(Section)`
     );
   }
 
-  @media (max-width: 1366px) {
+  @media (max-width: 1440px) {
     .list {
       scroll-snap-type: x proximity;
       overflow-x: scroll;
@@ -60,8 +60,8 @@ const Projects = styled(Section)`
       align-items: center;
       justify-content: center;
 
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
 
       background: #fff;
       border-radius: 9999px;
@@ -78,10 +78,9 @@ const Projects = styled(Section)`
       @media (max-width: 768px) {
         width: 32px;
         height: 32px;
-        outline: none;
 
         > span {
-          transform: scale(0.6);
+          transform: scale(0.7);
         }
       }
     }
@@ -109,27 +108,14 @@ const Projects = styled(Section)`
     }
   }
 
-  @media (max-width: 1024px) {
-    background: linear-gradient(
-      rgb(7, 18, 20),
-      rgb(21, 48, 57),
-      rgb(32, 80, 85),
-      rgb(36, 218, 220),
-      rgb(36, 128, 220)
-    );
-
+  @media (max-width: 1440px) and (min-width: 768px) {
     .list {
-      margin-top: -310px;
+      margin-top: -342px;
     }
 
     .prev,
     .next {
-      top: -160px;
-      box-shadow: none;
-
-      &:hover {
-        box-shadow: none;
-      }
+      top: -300px;
     }
   }
 `;
@@ -154,8 +140,8 @@ export default function ProjectsSection({ children }) {
         <Image
           src="/images/projects/chevron-left.svg"
           alt="Voltar"
-          width={32}
-          height={32}
+          width={24}
+          height={24}
           loading="lazy"
         />
       </span>
@@ -163,8 +149,8 @@ export default function ProjectsSection({ children }) {
         <Image
           src="/images/projects/chevron-right.svg"
           alt="Voltar"
-          width={32}
-          height={32}
+          width={24}
+          height={24}
           loading="lazy"
         />
       </span>

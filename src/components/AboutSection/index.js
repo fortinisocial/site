@@ -94,7 +94,7 @@ const SecondColumn = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1200px) {
     > p {
       &:last-of-type {
         display: none;

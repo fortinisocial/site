@@ -204,18 +204,18 @@ export default function Footer() {
               <a href="#ods-section">Metodologia</a>
               <a href="#depositions-section">Depoimentos</a>
               <a href="#partners-section">Parceiros</a>
-              <a href="/contato">Contato</a>
+              {/* <a href="/contato">Contato</a> */}
             </nav>
           </MenuItem>
-          <MenuItem>
-            <h1>Oficinas</h1>
+          {/* <MenuItem>
+            <h1>Projetos sociais</h1>
             <nav role="navigation">
               <a href="/projeto-social/tenis">Tênis</a>
               <a href="/projeto-social/handebol">Handebol</a>
               <a href="/projeto-social/judo">Judô</a>
               <a href="/projeto-social/taekwondo">Taekwondo</a>
             </nav>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem>
             <h1>Contato</h1>
             <p>(31) 99265-7329</p>

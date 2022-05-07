@@ -11,9 +11,9 @@ export const StyledHeader = styled.div`
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
-  max-width: $max-width;
   width: 100%;
   height: 100vh;
+  min-height: 620px;
   z-index: 1;
 
   @media (min-width: 1024px) {
@@ -118,7 +118,7 @@ const Menu = styled.nav`
     transition: all 0.2s;
 
     &:hover {
-      color: #24d6db;
+      color: #2dfaff;
 
       &.donate {
         color: #ffffff;
@@ -128,9 +128,9 @@ const Menu = styled.nav`
 
     &.donate {
       padding: 5px 10px;
-      color: #24d6db;
+      color: #2dfaff;
       border-radius: 9999px;
-      border: 2px solid #24d6db;
+      border: 2px solid #2dfaff;
       min-width: 120px;
     }
 
@@ -174,7 +174,7 @@ const MobileActions = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      color: #24d6db;
+      color: #2dfaff;
 
       &.donate {
         color: #ffffff;
@@ -184,10 +184,15 @@ const MobileActions = styled.div`
 
     &.donate {
       padding: 5px 10px;
-      color: #24d6db;
+      color: #2dfaff;
       border-radius: 9999px;
-      border: 2px solid #24d6db;
+      border: 2px solid #2dfaff;
       min-width: 120px;
+
+      @media (max-width: 1024px) {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
     }
   }
 
@@ -195,7 +200,7 @@ const MobileActions = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     display: none;
   }
 `;
@@ -217,7 +222,18 @@ const MobileMenu = styled.nav`
     transition: all 0.2s;
 
     &:hover {
-      color: #24d6db;
+      color: #2dfaff;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 3rem;
+    gap: 2rem;
+    justify-content: center;
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 600;
     }
   }
 `;
@@ -240,21 +256,41 @@ const Message = styled.div`
       font-size: 2.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       margin-top: 2rem;
       font-size: 2rem;
+    }
+
+    @media (max-width: 414px) {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 1600px) {
+      margin-top: 3rem;
+      font-size: 3rem;
     }
   }
 
   p {
-    font-size: 1.25rem;
-    max-width: 600px;
+    font-size: 1.6rem;
+    max-width: 70%;
     line-height: 2;
     font-family: 'Lora', serif;
 
-    @media (max-width: 1024px) and (min-width: 768px) {
-      font-size: 1.75rem;
-      max-width: 700px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 1.4rem;
+      max-width: 95%;
+    }
+
+    @media (max-width: 414px) {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    @media (min-width: 1600px) {
+      max-width: 1200px;
+      font-size: 2rem;
     }
   }
 
@@ -303,9 +339,9 @@ export default function Header() {
           <a href="#partners-section" title="Parceiros">
             Parceiros
           </a>
-          <a href="/contato" title="Contato">
+          {/* <a href="/contato" title="Contato">
             Contato
-          </a>
+          </a> */}
           <a href="/doe" title="Doe agora" className="donate">
             Doe agora
           </a>
@@ -352,9 +388,9 @@ export default function Header() {
           <a href="#partners-section" title="Parceiros">
             Parceiros
           </a>
-          <a href="/contato" title="Contato">
+          {/* <a href="/contato" title="Contato">
             Contato
-          </a>
+          </a> */}
         </MobileMenu>
       ) : (
         <Message>

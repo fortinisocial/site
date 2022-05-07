@@ -63,7 +63,7 @@ const Card = styled.div`
     }
   }
 
-  @media (max-width: 1366px) {
+  @media (max-width: 1440px) {
     margin-top: 0;
     scroll-snap-align: start;
   }
