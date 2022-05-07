@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
+import Link from 'next/link';
 
 const Join = styled(Section)`
   display: flex;
@@ -135,9 +136,9 @@ export default function JoinSection() {
             vidas.
           </p>
 
-          <a href="/doe" title="Faça parte da Fortini">
+          <Link href="/doe" title="Faça parte da Fortini">
             Quero Doar
-          </a>
+          </Link>
         </div>
       </div>
     </Join>

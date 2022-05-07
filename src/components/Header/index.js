@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -122,13 +123,13 @@ const Menu = styled.nav`
     &:hover {
       color: #2dfaff;
 
-      &.donate {
+      &:last-of-type {
         color: #ffffff;
         border: 2px solid #ffffff;
       }
     }
 
-    &.donate {
+    &:last-of-type {
       padding: 5px 10px;
       color: #2dfaff;
       border-radius: 9999px;
@@ -178,13 +179,13 @@ const MobileActions = styled.div`
     &:hover {
       color: #2dfaff;
 
-      &.donate {
+      &:last-of-type {
         color: #ffffff;
         border: 2px solid #ffffff;
       }
     }
 
-    &.donate {
+    &:last-of-type {
       padding: 5px 10px;
       color: #2dfaff;
       border-radius: 9999px;
@@ -345,9 +346,9 @@ export default function Header({ donation = false }) {
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
-          <a href="/doe" title="Doe agora" className="donate">
+          <Link href="/doe" title="Doe agora" className="donate">
             Doe agora
-          </a>
+          </Link>
         </Menu>
       </Top>
 
@@ -372,9 +373,9 @@ export default function Header({ donation = false }) {
             />
           </svg>
         </MenuButton>
-        <a href="/doe" title="Institucional" className="donate">
+        <Link href="/doe" title="Institucional" className="donate">
           Doe agora
-        </a>
+        </Link>
       </MobileActions>
 
       {opened ? (
