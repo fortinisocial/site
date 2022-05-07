@@ -7,7 +7,9 @@ export const StyledHeader = styled.div`
   gap: 2rem;
   padding: 0 24px;
   background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
-    url('/images/header/background-01.jpg');
+    url('/images/header/background-${props =>
+      props.donation ? '02' : '01'}.jpg');
+  background-position: ${props => (props.donation ? `center` : `initial`)};
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -250,6 +252,7 @@ const Message = styled.div`
     font-family: 'Nunito', sans-serif;
     font-size: 3rem;
     font-weight: 500;
+    filter: drop-shadow(1px 2px 4px hsl(220deg 10% 20%));
 
     @media (max-width: 1024px) {
       margin-top: 8rem;
@@ -307,11 +310,11 @@ const PathLine = styled.path`
     stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
-export default function Header() {
+export default function Header({ donation = false }) {
   const [opened, setOpened] = useState(false);
 
   return (
-    <StyledHeader>
+    <StyledHeader donation={donation}>
       <Top>
         <Logo>
           <img
@@ -327,16 +330,16 @@ export default function Header() {
           />
         </Logo>
         <Menu>
-          <a href="#about-section" title="Sobre">
+          <a href="/#about-section" title="Sobre">
             Sobre{' '}
           </a>
-          <a href="#ods-section" title="Metodologia">
+          <a href="/#ods-section" title="Metodologia">
             Metodologia{' '}
           </a>
-          <a href="#depositions-section" title="Depoimentos">
+          <a href="/#depositions-section" title="Depoimentos">
             Depoimentos
           </a>
-          <a href="#partners-section" title="Parceiros">
+          <a href="/#partners-section" title="Parceiros">
             Parceiros
           </a>
           {/* <a href="/contato" title="Contato">
@@ -376,16 +379,16 @@ export default function Header() {
 
       {opened ? (
         <MobileMenu>
-          <a href="#about-section" title="Sobre">
+          <a href="/#about-section" title="Sobre">
             Sobre{' '}
           </a>
-          <a href="#ods-section" title="Metodologia">
+          <a href="/#ods-section" title="Metodologia">
             Metodologia{' '}
           </a>
-          <a href="#depositions-section" title="Depoimentos">
+          <a href="/#depositions-section" title="Depoimentos">
             Depoimentos
           </a>
-          <a href="#partners-section" title="Parceiros">
+          <a href="/#partners-section" title="Parceiros">
             Parceiros
           </a>
           {/* <a href="/contato" title="Contato">
@@ -394,15 +397,23 @@ export default function Header() {
         </MobileMenu>
       ) : (
         <Message>
-          <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
-          <p>
-            Somos a <strong>Fortini</strong>, uma{' '}
-            <strong>organização da sociedade civil sem fins lucrativos</strong>{' '}
-            que promove o acesso à <strong>educação integral</strong>, ao{' '}
-            <strong>esporte</strong> e a <strong>cultura</strong> para{' '}
-            <strong>estudantes de escolas públicas</strong> da{' '}
-            <strong>Região Metropolitana de Belo Horizonte</strong>.
-          </p>
+          {donation ? (
+            <h1>Ajude a transformar vidas</h1>
+          ) : (
+            <>
+              <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
+              <p>
+                Somos a <strong>Fortini</strong>, uma{' '}
+                <strong>
+                  organização da sociedade civil sem fins lucrativos
+                </strong>{' '}
+                que promove o acesso à <strong>educação integral</strong>, ao{' '}
+                <strong>esporte</strong> e a <strong>cultura</strong> para{' '}
+                <strong>estudantes de escolas públicas</strong> da{' '}
+                <strong>Região Metropolitana de Belo Horizonte</strong>.
+              </p>
+            </>
+          )}
         </Message>
       )}
     </StyledHeader>
