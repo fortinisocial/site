@@ -42,6 +42,7 @@ const Join = styled(Section)`
       }
 
       a {
+        font-family: 'Nunito', sans-serif;
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
