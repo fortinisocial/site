@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Image from 'next/image';
