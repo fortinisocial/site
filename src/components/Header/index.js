@@ -209,7 +209,7 @@ const MobileActions = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 1366px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
