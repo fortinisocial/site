@@ -66,10 +66,6 @@ const Depositions = styled(Section)`
         &:first-of-type {
           margin-top: 0;
         }
-
-        .quote {
-          color: #3f3f3f;
-        }
       }
 
       .author {
@@ -188,17 +184,16 @@ export default function DepositionsSection() {
             loading="lazy"
           />
           <p>
-            <span className="quote">&quot;</span>Não deixo de acreditar que
-            existem pessoas que estão sedentas de carinho e com um simples gesto
-            podemos fazer a diferença na vida de alguém, a Fortini tem uma visão
-            social e acima de tudo Humana, e me sinto privilegiado todos os
-            dias, pela confiança que fora depositada em minha pessoa, ao longo
-            desta caminhada de muitas batalhas sim, mas também de muitas
-            conquistas. Creio que com empenho demostrado pelas pessoas que estão
-            a frente deste projeto grandes coisas ainda estão por vim, espero
-            poder está sempre disponível para ajudar , pois sei que pequenos
-            gestos podem fazer muita diferença na vida de alguém..
-            <span className="quote">&quot;</span>
+            &quot;Não deixo de acreditar que existem pessoas que estão sedentas
+            de carinho e com um simples gesto podemos fazer a diferença na vida
+            de alguém, a Fortini tem uma visão social e acima de tudo Humana, e
+            me sinto privilegiado todos os dias, pela confiança que fora
+            depositada em minha pessoa, ao longo desta caminhada de muitas
+            batalhas sim, mas também de muitas conquistas. Creio que com empenho
+            demostrado pelas pessoas que estão a frente deste projeto grandes
+            coisas ainda estão por vim, espero poder está sempre disponível para
+            ajudar , pois sei que pequenos gestos podem fazer muita diferença na
+            vida de alguém.. &quot;
           </p>
           <p className="author">Gilberto Cardoso da Silva</p>
           <p className="author-info">
@@ -214,11 +209,10 @@ export default function DepositionsSection() {
             loading="lazy"
           />
           <p>
-            <span className="quote">&quot;</span>A Fortini proporciona acesso à
-            esportes considerados nobres e que não estariam ao alcance dos
-            estudantes de baixa renda se não existisse o projeto. As atividades
-            desenvolvem a auto estima das crianças influenciando no crescimento
-            de sua aprendizagem.<span className="quote">&quot;</span>
+            &quot;A Fortini proporciona acesso à esportes considerados nobres e
+            que não estariam ao alcance dos estudantes de baixa renda se não
+            existisse o projeto. As atividades desenvolvem a auto estima das
+            crianças influenciando no crescimento de sua aprendizagem. &quot;
           </p>
           <p className="author">Janis P. P. Costa</p>
           <p className="author-info">

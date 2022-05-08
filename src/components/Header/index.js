@@ -8,9 +8,7 @@ export const StyledHeader = styled.header`
   gap: 2rem;
   padding: 0 24px;
   background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
-    url('/images/header/background-${props =>
-      props.donation ? '02' : '01'}.jpg');
-  background-position: ${props => (props.donation ? `center` : `initial`)};
+    url('/images/header/background-01.jpg');
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -18,6 +16,12 @@ export const StyledHeader = styled.header`
   height: 100vh;
   min-height: 620px;
   z-index: 1;
+
+  &.donation {
+    background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
+      url('/images/header/background-02.jpg');
+    background-position: center;
+  }
 
   @media (min-width: 1024px) {
     gap: 3rem;
@@ -316,7 +320,9 @@ export default function Header({ donation = false }) {
   const [opened, setOpened] = useState(false);
 
   return (
-    <StyledHeader donation={donation} className="header-section">
+    <StyledHeader
+      className={donation ? 'header-section donation' : 'header-section'}
+    >
       <Top className="top">
         <Logo className="logo">
           <img

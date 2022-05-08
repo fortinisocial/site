@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -46,9 +47,22 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&family=Roboto+Slab:wght@400;500;700;800&display=swap"
             rel="stylesheet"
           />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-S2RL7YMX85"
+            strategy="afterInteractive"
+          ></Script>
+          <Script id="analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-S2RL7YMX85');
+            `}
+          </Script>
         </Head>
         <body>
           <Main />

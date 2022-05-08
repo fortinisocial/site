@@ -36,6 +36,12 @@ header {
     min-height: 620px;
     z-index: 1;
 
+    &.donation {
+      background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
+        url('/images/header/background-02.jpg');
+      background-position: center;
+    }
+
     @media (min-width: 1024px) {
       gap: 3rem;
       padding: 0 30px;
