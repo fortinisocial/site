@@ -15,13 +15,13 @@ export const StyledFooter = styled.footer`
   height: auto;
   gap: 50px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     text-align: center;
   }
 `;
 
-export const Logo = styled.div`
+export const LogoContainer = styled.div`
   flex-basis: 25%;
 
   p {
@@ -30,9 +30,15 @@ export const Logo = styled.div`
     color: #a3a3a3;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-basis: 100%;
   }
+`;
+
+export const Logos = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `;
 
 export const Navigation = styled.div`
@@ -41,7 +47,7 @@ export const Navigation = styled.div`
   gap: 50px;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-basis: 100%;
     flex-direction: column;
     align-items: center;
@@ -68,7 +74,7 @@ export const Social = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     min-width: auto;
   }
 `;
@@ -91,7 +97,7 @@ export const Menu = styled.div`
   display: flex;
   gap: 50px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
   }
 `;
@@ -129,15 +135,23 @@ export const MenuItem = styled.div`
 export default function Footer() {
   return (
     <StyledFooter>
-      <Logo>
-        <Image
-          src="/images/fortini-logo.svg"
-          alt="Fortini Investimento Social"
-          width={162}
-          height={50}
-        />
-        <p>Fortini 2021. Todos os direitos reservados.</p>
-      </Logo>
+      <LogoContainer>
+        <Logos>
+          <Image
+            src="/images/fortini-logo.svg"
+            alt="Fortini Investimento Social"
+            width={162}
+            height={50}
+          />
+          <Image
+            src="/images/footer/gf-logo-white.png"
+            alt="Gerando Falcões"
+            width={102}
+            height={25}
+          />
+        </Logos>
+        <p>Fortini Investimento Social ® 2016-2022</p>
+      </LogoContainer>
       <Navigation>
         <Social>
           <h1>Redes sociais</h1>
