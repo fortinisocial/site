@@ -19,3 +19,170 @@ a {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+header {
+  &.header-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 24px;
+    background-image: linear-gradient(rgb(36, 128, 220), rgb(36, 218, 220)),
+      url('/images/header/background-01.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    min-height: 620px;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      gap: 3rem;
+      padding: 0 30px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+        gap: 3rem;
+      }
+
+      .logo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 358px;
+        height: 245px;
+
+        .divider {
+          width: 200px;
+          border-bottom: 1px solid #e3e3e3;
+          margin: 20px 0;
+
+          @media (max-width: 1024px) {
+            width: 180px;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          width: 358px;
+          height: 318px;
+          background-image: url('/images/header/hexagon.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin-top: -60px;
+          transform: rotate(-102deg);
+          z-index: -1;
+        }
+
+        img {
+          &.fortini-logo {
+            width: 180px;
+            height: 55px;
+          }
+
+          &.gf-logo {
+            width: 120px;
+            height: 30px;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          width: 266px;
+          height: 200px;
+
+          img {
+            &.fortini-logo {
+              width: 160px;
+              height: 49px;
+            }
+
+            &.gf-logo {
+              width: 104px;
+              height: 26px;
+            }
+          }
+
+          &:before {
+            width: 305px;
+            height: 260px;
+            background-image: url('/images/header/hexagon-mobile.svg');
+          }
+        }
+      }
+    }
+
+    .mobile-actions {
+      @media (min-width: 1366px) {
+        display: none;
+      }
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      font-family: 'Roboto Slab', serif;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+
+        @media (max-width: 1024px) {
+          margin-top: 8rem;
+          font-size: 2.5rem;
+        }
+
+        @media (max-width: 800px) {
+          margin-top: 2rem;
+          font-size: 2rem;
+        }
+
+        @media (max-width: 414px) {
+          margin-top: 2rem;
+          font-size: 1.6rem;
+        }
+
+        @media (min-width: 1600px) {
+          margin-top: 3rem;
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        max-width: 70%;
+        line-height: 2;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 1.2rem;
+          max-width: 95%;
+        }
+
+        @media (max-width: 414px) {
+          font-size: 1rem;
+          max-width: 100%;
+        }
+
+        @media (min-width: 1600px) {
+          max-width: 1200px;
+          font-size: 2rem;
+        }
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+}
