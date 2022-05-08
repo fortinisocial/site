@@ -383,9 +383,11 @@ export default function Header({ donation = false }) {
             />
           </svg>
         </MenuButton>
-        <Link href="/doe" title="Institucional" className="donate">
-          Doe agora
-        </Link>
+        {!donation && (
+          <Link href="/doe" title="Institucional" className="donate">
+            Doe agora
+          </Link>
+        )}
       </MobileActions>
 
       {opened ? (
