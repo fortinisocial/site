@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
+import MenuButton from './MenuButton';
 
-export const StyledHeader = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -115,6 +117,31 @@ const Menu = styled.nav`
   margin: 60px 60px 0 0;
   gap: 20px;
 
+  &.fixed {
+    margin: 0 60px 0 0;
+
+    a {
+      color: #232323;
+      font-weight: 600;
+
+      &:hover {
+        color: #22c8cd;
+      }
+
+      :not(.donation) {
+        &:last-of-type {
+          color: #22c8cd;
+          border: 2px solid #22c8cd;
+
+          &:hover {
+            color: #232323;
+            border: 2px solid #232323;
+          }
+        }
+      }
+    }
+  }
+
   :not(.donation) {
     a {
       &:last-of-type {
@@ -154,18 +181,6 @@ const Menu = styled.nav`
 
   @media (max-width: 1024px) {
     display: none;
-  }
-`;
-
-const MenuButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  padding: 0;
-
-  svg {
-    transform: scale(0.75);
   }
 `;
 
@@ -224,7 +239,25 @@ const MobileMenu = styled.nav`
   align-items: center;
   line-height: 3rem;
 
-  a {
+  &.fixed {
+    position: fixed;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 -24px;
+
+    a,
+    span {
+      color: #24d6db;
+
+      &:hover {
+        color: #6a6363;
+      }
+    }
+  }
+
+  a,
+  span {
     display: inline-flex;
     align-items: center;
     font-family: 'Nunito', sans-serif;
@@ -245,7 +278,8 @@ const MobileMenu = styled.nav`
     gap: 2rem;
     justify-content: center;
 
-    a {
+    a,
+    span {
       font-size: 1.5rem;
       font-weight: 600;
     }
@@ -312,21 +346,146 @@ const Message = styled.div`
   }
 `;
 
-const PathLine = styled.path`
-  fill: none;
-  stroke: white;
-  stroke-width: 3;
-  transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+const FixedMenu = styled.nav`
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  background: #fff;
+  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+  opacity: 0;
+  transition: all 0.2s;
+
+  width: 100%;
+  height: 90px;
+  margin: 0 -30px;
+  padding: 1rem 2.85rem;
+  top: -90px;
+
+  @media (min-width: 1366px) {
+    &.visible {
+      display: flex;
+      visibility: visible;
+      opacity: 0.9;
+      top: 0;
+    }
+  }
+`;
+
+const Logos = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const FixedMobileMenu = styled.div`
+  visibility: hidden;
+  position: fixed;
+  right: -56px;
+  z-index: 10;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  background: #24d6db;
+  opacity: 0;
+  transition: all 0.4s;
+
+  @media (max-width: 768px) {
+    &.visible {
+      visibility: visible;
+      opacity: 0.9;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
 `;
 
 export default function Header({ donation = false }) {
-  const [opened, setOpened] = useState(false);
+  const [openedMobile, setOpenedMobile] = useState(false);
+  const [showFixedMenu, setShowFixedMenu] = useState(false);
+  const headerMenuRef = useRef(null);
+
+  useEffect(() => {
+    function handleObserver(observer) {
+      const [observerEntry] = observer;
+      setShowFixedMenu(!observerEntry.isIntersecting);
+    }
+
+    const observer = new IntersectionObserver(handleObserver, {
+      root: null,
+      rootMargin: '400px',
+      threshold: 1.0,
+    });
+
+    if (headerMenuRef.current) {
+      observer.observe(headerMenuRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  function handleMobileMenuClick() {
+    if (showFixedMenu) {
+      setOpenedMobile(false);
+    }
+  }
 
   return (
     <StyledHeader
+      ref={headerMenuRef}
       className={donation ? 'header-section donation' : 'header-section'}
     >
+      <FixedMobileMenu className={showFixedMenu ? 'visible' : ''}>
+        <MenuButton
+          opened={openedMobile}
+          onClick={() => setOpenedMobile(prevState => !prevState)}
+          size="xs"
+        />
+      </FixedMobileMenu>
+      <FixedMenu className={showFixedMenu ? 'visible' : ''}>
+        <Logos>
+          <Image
+            src="/images/fortini-logo.svg"
+            alt="Fortini Investimento Social"
+            width={137.7}
+            height={42.5}
+          />
+          <Image
+            src="/images/header/gerando-falcoes-logo.svg"
+            alt="Gerando Falcões"
+            width={86.7}
+            height={21.25}
+          />
+        </Logos>
+        <Menu className={donation ? 'menu fixed donation' : 'menu fixed'}>
+          <Link href="/#about-section" title="Sobre">
+            Sobre
+          </Link>
+          <Link href="/#ods-section" title="Metodologia">
+            Metodologia
+          </Link>
+          <Link href="/#depositions-section" title="Depoimentos">
+            Depoimentos
+          </Link>
+          <Link href="/#partners-section" title="Parceiros">
+            Parceiros
+          </Link>
+          {/* <a href="/contato" title="Contato">
+            Contato
+          </a> */}
+          {!donation && (
+            <Link href="/doe" title="Doe agora">
+              Doe agora
+            </Link>
+          )}
+        </Menu>
+      </FixedMenu>
       <Top className="top">
         <Logo className="logo">
           <img
@@ -366,29 +525,10 @@ export default function Header({ donation = false }) {
       </Top>
 
       <MobileActions className="mobile-actions">
-        <MenuButton onClick={() => setOpened(prevState => !prevState)}>
-          <svg width="100" height="100" viewBox="0 0 100 100">
-            <PathLine
-              className="pathline-menu"
-              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-              strokeDasharray={opened ? '90 207' : '60 207'}
-              strokeWidth="3"
-              strokeDashoffset={opened ? '-134' : 'initial'}
-            />
-            <PathLine
-              className="pathline-menu"
-              d="M 20,50 H 80"
-              strokeDasharray={opened ? '1 60' : '60 60'}
-              strokeDashoffset={opened ? '-30' : 'initial'}
-            />
-            <PathLine
-              className="pathline-menu"
-              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-              strokeDasharray={opened ? '90 207' : '60 207'}
-              strokeDashoffset={opened ? '-134' : 'initial'}
-            />
-          </svg>
-        </MenuButton>
+        <MenuButton
+          opened={openedMobile}
+          onClick={() => setOpenedMobile(prevState => !prevState)}
+        />
         {!donation && (
           <Link href="/doe" title="Doe agora">
             Doe agora
@@ -396,19 +536,19 @@ export default function Header({ donation = false }) {
         )}
       </MobileActions>
 
-      {opened ? (
-        <MobileMenu>
+      {openedMobile ? (
+        <MobileMenu className={showFixedMenu ? 'fixed' : ''}>
           <Link href="/#about-section" title="Sobre">
-            Sobre
+            <span onClick={handleMobileMenuClick}>Sobre</span>
           </Link>
           <Link href="/#ods-section" title="Metodologia">
-            Metodologia
+            <span onClick={handleMobileMenuClick}>Metodologia</span>
           </Link>
           <Link href="/#depositions-section" title="Depoimentos">
-            Depoimentos
+            <span onClick={handleMobileMenuClick}>Depoimentos</span>
           </Link>
           <Link href="/#partners-section" title="Parceiros">
-            Parceiros
+            <span onClick={handleMobileMenuClick}>Parceiros</span>
           </Link>
           {/* <a href="/contato" title="Contato">
             Contato
