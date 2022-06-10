@@ -15,7 +15,7 @@ export const Section = styled.section`
   }
 `;
 
-export const Main = styled.div`
+export const Main = styled.main`
   margin: 0 30px;
   width: 100%;
   flex: 1;
