@@ -94,6 +94,7 @@ const Depositions = styled(Section)`
     bottom: 0;
     top: 0;
     margin: auto;
+    z-index: 0;
 
     @media (min-width: 1024px) {
       max-width: 900px;

@@ -108,6 +108,7 @@ const Institutional = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 240px;
+  z-index: 0;
 
   @media (max-width: 768px) {
     gap: 2rem;
