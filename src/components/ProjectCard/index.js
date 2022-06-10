@@ -12,7 +12,7 @@ const Card = styled.div`
   color: #232323;
   font-size: 14px;
   box-shadow: 8px 16px 16px hsl(0deg 0% 62% / 0.25);
-  margin-top: -310px;
+  margin-top: -295px;
   flex-shrink: 0;
 
   .description {
