@@ -8,6 +8,7 @@ const Depositions = styled(Section)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
 
   h1 {
     color: #174f86;
@@ -86,7 +87,7 @@ const Depositions = styled(Section)`
     }
   }
 
-  .arrows {
+  .arrow {
     position: absolute;
     background: none;
     width: 100%;
@@ -100,8 +101,8 @@ const Depositions = styled(Section)`
       max-width: 900px;
     }
 
-    .prev,
-    .next {
+    &.prev,
+    &.next {
       display: initial;
       position: absolute;
       top: 0;
@@ -138,7 +139,7 @@ const Depositions = styled(Section)`
       }
     }
 
-    .prev {
+    &.prev {
       left: 12px;
 
       @media (max-width: 768px) {
@@ -146,7 +147,7 @@ const Depositions = styled(Section)`
       }
     }
 
-    .next {
+    &.next {
       right: 12px;
 
       @media (max-width: 768px) {
@@ -222,26 +223,24 @@ export default function DepositionsSection() {
           </p>
         </article>
       </div>
-      <div className="arrows">
-        <span className="prev" onClick={handlePrev}>
-          <Image
-            src="/images/projects/chevron-left.svg"
-            alt="Voltar"
-            width={24}
-            height={24}
-            loading="lazy"
-          />
-        </span>
-        <span className="next" onClick={handleNext}>
-          <Image
-            src="/images/projects/chevron-right.svg"
-            alt="Voltar"
-            width={24}
-            height={24}
-            loading="lazy"
-          />
-        </span>
-      </div>
+      <span className="arrow prev" onClick={handlePrev}>
+        <Image
+          src="/images/projects/chevron-left.svg"
+          alt="Voltar"
+          width={24}
+          height={24}
+          loading="lazy"
+        />
+      </span>
+      <span className="arrow next" onClick={handleNext}>
+        <Image
+          src="/images/projects/chevron-right.svg"
+          alt="Voltar"
+          width={24}
+          height={24}
+          loading="lazy"
+        />
+      </span>
     </Depositions>
   );
 }
