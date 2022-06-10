@@ -395,6 +395,7 @@ const FixedMobileMenu = styled.div`
   background: #24d6db;
   opacity: 0;
   transition: all 0.4s;
+  box-shadow: 4px 4px 20px hsl(0deg 0% 32% / 0.5);
 
   @media (max-width: 768px) {
     &.visible {
