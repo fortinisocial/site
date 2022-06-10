@@ -115,6 +115,23 @@ const Menu = styled.nav`
   margin: 60px 60px 0 0;
   gap: 20px;
 
+  :not(.donation) {
+    a {
+      &:last-of-type {
+        padding: 5px 10px;
+        color: #2dfaff;
+        border-radius: 9999px;
+        border: 2px solid #2dfaff;
+        min-width: 120px;
+
+        &:hover {
+          color: #ffffff;
+          border: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+
   a {
     font-family: 'Nunito', sans-serif;
     display: inline-flex;
@@ -127,19 +144,6 @@ const Menu = styled.nav`
 
     &:hover {
       color: #2dfaff;
-
-      &:last-of-type {
-        color: #ffffff;
-        border: 2px solid #ffffff;
-      }
-    }
-
-    &:last-of-type {
-      padding: 5px 10px;
-      color: #2dfaff;
-      border-radius: 9999px;
-      border: 2px solid #2dfaff;
-      min-width: 120px;
     }
 
     img {
@@ -337,7 +341,7 @@ export default function Header({ donation = false }) {
             alt="Gerando Falcões"
           />
         </Logo>
-        <Menu className="menu">
+        <Menu className={donation ? 'menu donation' : 'menu'}>
           <Link href="/#about-section" title="Sobre">
             Sobre
           </Link>
@@ -353,9 +357,11 @@ export default function Header({ donation = false }) {
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
-          <Link href="/doe" title="Doe agora" className="donate">
-            Doe agora
-          </Link>
+          {!donation && (
+            <Link href="/doe" title="Doe agora">
+              Doe agora
+            </Link>
+          )}
         </Menu>
       </Top>
 
@@ -384,7 +390,7 @@ export default function Header({ donation = false }) {
           </svg>
         </MenuButton>
         {!donation && (
-          <Link href="/doe" title="Institucional" className="donate">
+          <Link href="/doe" title="Doe agora">
             Doe agora
           </Link>
         )}
