@@ -8,7 +8,7 @@ const Join = styled(Section)`
   align-items: center;
   max-width: 1920px;
   width: 100%;
-  height: 390px;
+  height: 423px;
   padding: 0;
 
   .join {
