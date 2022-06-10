@@ -5,7 +5,7 @@ export const Section = styled.section`
   position: relative;
   width: 100%;
   height: 700px;
-  padding: 3.85rem 3.85rem 1.5rem 3.85rem;
+  padding: 2.85rem 3.85rem 2.85rem;
   font-family: 'Roboto Slab', serif;
   max-width: 1920px;
 
