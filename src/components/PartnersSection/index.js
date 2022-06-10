@@ -18,17 +18,19 @@ const Partners = styled(Section)`
       text-transform: uppercase;
       font-weight: 700;
       line-height: 1.2;
-      color: #4a4747;
+      color: #22c8cd;
     }
   }
 
   .list-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
 
-    .list {
+    .sponsor-list,
+    .partner-list {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -51,6 +53,19 @@ const Partners = styled(Section)`
         }
       }
     }
+
+    .sponsor-list {
+      margin-bottom: 1.5rem;
+
+      a {
+        img {
+          object-fit: none;
+          height: 70px;
+          width: 280px;
+          transform: scale(0.7);
+        }
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -69,7 +84,8 @@ export default function PartnersSection() {
         <h1>Quem já realiza com a gente</h1>
       </div>
       <div className="list-container">
-        <div className="list">
+        <h1>Patrocinador:</h1>
+        <div className="sponsor-list">
           <a
             href="https://www.cemig.com.br/"
             target="_blank"
@@ -78,6 +94,9 @@ export default function PartnersSection() {
           >
             <img src="/images/partners/cemig.jpg" title="Cemig" alt="Cemig" />
           </a>
+        </div>
+        <h1>Parceiros:</h1>
+        <div className="partner-list">
           <a
             href="https://www.ohubsocial.com.br"
             target="_blank"
