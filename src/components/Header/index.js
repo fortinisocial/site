@@ -293,7 +293,7 @@ const Message = styled.div`
   align-items: center;
   text-align: center;
   color: #fff;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Nunito', serif;
 
   h1 {
     font-size: 3rem;

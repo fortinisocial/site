@@ -9,7 +9,7 @@ const ODS = styled.div`
 
   .ods-description {
     display: flex;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Nunito', serif;
     font-size: 18px;
     font-weight: 600;
     color: #fff;

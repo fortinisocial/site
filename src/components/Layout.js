@@ -6,7 +6,7 @@ export const Section = styled.section`
   width: 100%;
   height: 700px;
   padding: 2.85rem 3.85rem 2.85rem;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Nunito', serif;
   max-width: 1920px;
 
   @media (max-width: 768px) {
