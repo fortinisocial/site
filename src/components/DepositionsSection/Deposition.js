@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Article = styled.article`
@@ -43,9 +44,37 @@ export default function Deposition({
   children,
   authorName,
   authorInfo,
+  onScroll,
 }) {
+  const depositionRef = useRef(null);
+
+  useEffect(() => {
+    function handleObserver(observer) {
+      const [observerEntry] = observer;
+      const isFirstElement = !observerEntry.target.previousElementSibling;
+      const isLastElement = !observerEntry.target.nextElementSibling;
+      if (isFirstElement || isLastElement) {
+        onScroll?.({
+          ...(isFirstElement && { arrowLeft: !observerEntry.isIntersecting }),
+          ...(isLastElement && {
+            arrowRight: !observerEntry.isIntersecting,
+          }),
+        });
+      }
+    }
+
+    const observer = new IntersectionObserver(handleObserver, {
+      root: document.getElementById('#depositions-container'),
+      threshold: 1,
+    });
+
+    observer.observe(depositionRef.current);
+
+    return () => observer.disconnect();
+  }, [onScroll]);
+
   return (
-    <Article>
+    <Article ref={depositionRef}>
       <img
         src={photoURL}
         alt={photoLabel}

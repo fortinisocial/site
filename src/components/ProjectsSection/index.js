@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Image from 'next/image';
+import ProjectCard from '../ProjectCard';
 
 const Projects = styled(Section)`
   position: relative;
@@ -120,8 +121,12 @@ const Projects = styled(Section)`
   }
 `;
 
-export default function ProjectsSection({ children }) {
+export default function ProjectsSection() {
   const projectsContainerRef = useRef(null);
+  const [navigation, setNavigation] = useState({
+    arrowLeft: false,
+    arrowRight: true,
+  });
 
   const handlePrev = () => {
     projectsContainerRef.current.scrollBy(-340, 0);
@@ -131,29 +136,81 @@ export default function ProjectsSection({ children }) {
     projectsContainerRef.current.scrollBy(340, 0);
   };
 
+  const handleNavigation = useCallback(({ arrowLeft, arrowRight }) => {
+    setNavigation(currentNavigation => ({
+      ...currentNavigation,
+      arrowLeft: arrowLeft ?? currentNavigation.arrowLeft,
+      arrowRight: arrowRight ?? currentNavigation.arrowRight,
+    }));
+  }, []);
+
   return (
-    <Projects className="projects-section">
-      <div ref={projectsContainerRef} className="list">
-        {children}
+    <Projects id="projects-section" className="projects-section">
+      <div id="projects-container" ref={projectsContainerRef} className="list">
+        <ProjectCard
+          onScroll={handleNavigation}
+          kind="tenis"
+          title="Tênis"
+          students="80"
+          city="Contagem"
+          schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos
+, E. M. René Chateubriand Domingues"
+          since="2016"
+          locations="Academia Tennis Hall"
+        />
+        <ProjectCard
+          onScroll={handleNavigation}
+          kind="handball"
+          title="Handebol"
+          students="200"
+          city="Betim, Contagem e Ibirité"
+          schools="E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares"
+          since="2018"
+          locations="E. E. Padre Camargos, E. M. Adelina Mesquita Januzzi, Ginásio Califórnia, Poliesportivo Petrovale"
+        />
+        <ProjectCard
+          onScroll={handleNavigation}
+          kind="judo"
+          title="Judô"
+          students="120"
+          city="Contagem"
+          schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
+          since="2021"
+          locations="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
+        />
+        <ProjectCard
+          onScroll={handleNavigation}
+          kind="taekwondo"
+          title="Taekwondo"
+          students="150"
+          city="Betim e Contagem"
+          schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães, E. M. Valério Ferreira Palhares"
+          since="2022"
+          locations="Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
+        />
       </div>
-      <span className="prev" onClick={handlePrev}>
-        <Image
-          src="/images/projects/chevron-left.svg"
-          alt="Voltar"
-          width={24}
-          height={24}
-          loading="lazy"
-        />
-      </span>
-      <span className="next" onClick={handleNext}>
-        <Image
-          src="/images/projects/chevron-right.svg"
-          alt="Voltar"
-          width={24}
-          height={24}
-          loading="lazy"
-        />
-      </span>
+      {navigation.arrowLeft && (
+        <span className="prev" onClick={handlePrev}>
+          <Image
+            src="/images/projects/chevron-left.svg"
+            alt="Voltar"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
+        </span>
+      )}
+      {navigation.arrowRight && (
+        <span className="next" onClick={handleNext}>
+          <Image
+            src="/images/projects/chevron-right.svg"
+            alt="Voltar"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
+        </span>
+      )}
     </Projects>
   );
 }

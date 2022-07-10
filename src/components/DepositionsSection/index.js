@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Image from 'next/image';
@@ -123,15 +123,26 @@ const Depositions = styled(Section)`
 
 export default function DepositionsSection() {
   const depositionsContainerRef = useRef(null);
+  const [navigation, setNavigation] = useState({
+    arrowLeft: false,
+    arrowRight: true,
+  });
 
   const handlePrev = () => {
-    depositionsContainerRef.current.scrollBy(-340, 0);
+    depositionsContainerRef.current.scrollBy(-739, 0);
   };
 
   const handleNext = () => {
-    console.log(depositionsContainerRef.current);
-    depositionsContainerRef.current.scrollBy(340, 0);
+    depositionsContainerRef.current.scrollBy(739, 0);
   };
+
+  const handleNavigation = useCallback(({ arrowLeft, arrowRight }) => {
+    setNavigation(currentNavigation => ({
+      ...currentNavigation,
+      arrowLeft: arrowLeft ?? currentNavigation.arrowLeft,
+      arrowRight: arrowRight ?? currentNavigation.arrowRight,
+    }));
+  }, []);
 
   return (
     <Depositions id="depositions-section" className="depositions-section">
@@ -141,8 +152,13 @@ export default function DepositionsSection() {
         conhece o nosso trabalho:
       </h2>
 
-      <div className="depositions-container" ref={depositionsContainerRef}>
+      <div
+        id="depositions-container"
+        className="depositions-container"
+        ref={depositionsContainerRef}
+      >
         <Deposition
+          onScroll={handleNavigation}
           photoURL="/images/depositions/lilian.jpg"
           photoLabel="Lilian"
           authorName="Lilian"
@@ -155,6 +171,7 @@ export default function DepositionsSection() {
           futuro. &quot;
         </Deposition>
         <Deposition
+          onScroll={handleNavigation}
           photoURL="/images/depositions/rose.jpg"
           photoLabel="Rose"
           authorName="Rose"
@@ -170,6 +187,7 @@ export default function DepositionsSection() {
           vida. &quot;
         </Deposition>
         <Deposition
+          onScroll={handleNavigation}
           photoURL="/images/depositions/janis-costa.jpg"
           photoLabel="Janis Perpétua Pedro Costa"
           authorName="Janis P. P. Costa"
@@ -182,6 +200,7 @@ export default function DepositionsSection() {
           crianças influenciando no crescimento de sua aprendizagem. &quot;
         </Deposition>
         <Deposition
+          onScroll={handleNavigation}
           photoURL="/images/depositions/gilberto-cardoso.jpg"
           photoLabel="Gilberto Cardoso"
           authorName="Gilberto Cardoso da Silva"
@@ -199,24 +218,28 @@ export default function DepositionsSection() {
           &quot;
         </Deposition>
       </div>
-      <span id="arrow-prev" className="arrow prev" onClick={handlePrev}>
-        <Image
-          src="/images/projects/chevron-left.svg"
-          alt="Voltar"
-          width={24}
-          height={24}
-          loading="lazy"
-        />
-      </span>
-      <span id="arrow-next" className="arrow next" onClick={handleNext}>
-        <Image
-          src="/images/projects/chevron-right.svg"
-          alt="Voltar"
-          width={24}
-          height={24}
-          loading="lazy"
-        />
-      </span>
+      {navigation.arrowLeft && (
+        <span id="arrow-prev" className="arrow prev" onClick={handlePrev}>
+          <Image
+            src="/images/projects/chevron-left.svg"
+            alt="Voltar"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
+        </span>
+      )}
+      {navigation.arrowRight && (
+        <span id="arrow-next" className="arrow next" onClick={handleNext}>
+          <Image
+            src="/images/projects/chevron-right.svg"
+            alt="Voltar"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
+        </span>
+      )}
     </Depositions>
   );
 }

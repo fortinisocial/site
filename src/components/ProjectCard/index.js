@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
-const Card = styled.div`
+const Card = styled.article`
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -136,9 +136,37 @@ export default function ProjectCard({
   schools,
   since,
   locations,
+  onScroll,
 }) {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    function handleObserver(observer) {
+      const [observerEntry] = observer;
+      const isFirstElement = !observerEntry.target.previousElementSibling;
+      const isLastElement = !observerEntry.target.nextElementSibling;
+      if (isFirstElement || isLastElement) {
+        onScroll?.({
+          ...(isFirstElement && { arrowLeft: !observerEntry.isIntersecting }),
+          ...(isLastElement && {
+            arrowRight: !observerEntry.isIntersecting,
+          }),
+        });
+      }
+    }
+
+    const observer = new IntersectionObserver(handleObserver, {
+      root: document.getElementById('#projects-container'),
+      threshold: 0.25,
+    });
+
+    observer.observe(cardRef.current);
+
+    return () => observer.disconnect();
+  }, [kind, onScroll]);
+
   return (
-    <Card>
+    <Card ref={cardRef}>
       <CardHeader className={kind} />
       <article className="description">
         <h1>{title}</h1>
@@ -200,7 +228,7 @@ export default function ProjectCard({
             height={20}
             loading="lazy"
           />
-          <span>Local de execução: </span>
+          <span>Locais de execução: </span>
         </p>
         <ul>
           {locations.split(',').map(location => (
