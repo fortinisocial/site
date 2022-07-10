@@ -65,26 +65,15 @@ const Columns = styled.div`
 const FirstColumn = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 
   img {
     margin-right: 2rem;
-  }
-
-  p {
-    max-width: 320px;
   }
 
   @media (max-width: 1024px) {
     img {
       width: 286px;
       height: 335px;
-    }
-
-    p {
-      &:first-of-type {
-        display: none;
-      }
     }
   }
 `;
@@ -200,10 +189,6 @@ export default function AboutSection() {
             width={381}
             height={447}
           />
-          <p>
-            Nosso propósito é transformar vidas proporcionado o acesso à
-            educação integral, ao esporte e a cultura.
-          </p>
         </FirstColumn>
         <SecondColumn>
           <div className="about-intro">
@@ -214,17 +199,18 @@ export default function AboutSection() {
               Metropolitana de Belo Horizonte.
             </p>
             <p>
-              Reconhecemos o papel primordial que a instituição escola tem na
-              constituição dos cidadãos e lhe propomos uma parceria para levar o
-              acesso ao <strong>esporte e a cultura</strong> de forma
-              sistematizada para os estudantes, além disso oferecendo
-              concomitantemente atividades de{' '}
+              Reconhecemos o papel primordial que a escola tem na constituição
+              dos cidadãos de amanhã. Por isso, as escolas públicas são as
+              nossas primeiras parceiras, na promoção do acesso ao{' '}
+              <strong>esporte e à cultura</strong> de forma sistematizada para
+              seus estudantes. Simultaneamente, promovemos atividades de{' '}
+              <strong>desenvolvimento socioemocional</strong> aos alunos{' '}
               <strong>
-                desenvolvimento socioemocional e acompanhamento
-                socioassistencial para seus familiares
+                e acompanhamento socioassistencial aos seus familiares
               </strong>
-              , agimos de forma multidisciplinar para que cada criança ou
-              adolescente atendido possa desempenhar o seu pelo potencial.
+              . Acreditamos na atuação de forma multidisciplinar, para que cada
+              criança ou adolescente atendido pela Fortini possa desempenhar o
+              seu pleno potencial.
             </p>
           </div>
           <Institutional>
@@ -256,12 +242,15 @@ export default function AboutSection() {
       <div className="about-hexagons">
         <h1>Por que o Hexágono?</h1>
         <p>
-          Para nós o hexágono é o símbolo representativo da sinergia que existe
-          no nosso método de trabalho. Desenvolvemos nossas ações no formato de{' '}
-          <strong>rede de cooperação</strong>, desde o início nos propomos a{' '}
-          <strong>estabelecer parcerias</strong> e todos os projetos são
+          Para nós, o hexágono é o símbolo representativo da centralidade da{' '}
+          <strong>atuação em rede</strong>, no nosso método de trabalho. Desde o
+          início, planejamos as nossas ações{' '}
+          <strong>estabelecendo parcerias</strong>; todos os projetos são
           planejados e executados com a atuação de{' '}
-          <strong>múltiplos atores</strong>.
+          <strong>múltiplos atores</strong>. A Fortini existe como uma{' '}
+          <strong>catalizadora</strong> do potencial de ação de todos os atores
+          que nos cercam, em um trabalho conjunto, complementar e
+          multiplicador..
         </p>
         <img
           src="/images/about/hexagons.png"

@@ -92,19 +92,17 @@ export default function HistorySection() {
       <div className="description">
         <h1>Projetos sociais</h1>
         <p>
-          Nossos projetos sociais são executados em{' '}
-          <strong>parceria com escolas públicas</strong> e utilizam uma
-          metodologia com foco no{' '}
-          <strong>desenvolvimento educacional em paralelo ao social</strong>{' '}
-          utilizando das{' '}
+          Nossos projetos sociais utilizam uma metodologia com foco no{' '}
+          <strong>desenvolvimento educacional em paralelo ao social</strong>,
+          utilizando as{' '}
           <strong>
             oficinas esportivas, culturais e de desenvolvimento socioemocional
           </strong>{' '}
           como ferramenta para a{' '}
           <strong>
-            melhoria no desempenho físico, escolar e na autoestima
+            melhoria do desempenho físico e escolar, e da autoestima
           </strong>{' '}
-          de cada criança e adolescente participante.
+          de cada criança e adolescente participante de nossas oficinas.
         </p>
       </div>
     </History>
