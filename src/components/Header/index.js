@@ -366,7 +366,7 @@ const FixedMenu = styled.nav`
   padding: 1rem 2.85rem;
   top: -90px;
 
-  @media (min-width: 1366px) {
+  @media (min-width: 1200px) {
     &.visible {
       display: flex;
       visibility: visible;
