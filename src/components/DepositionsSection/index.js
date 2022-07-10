@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Image from 'next/image';
+import Deposition from './Deposition';
 
 const Depositions = styled(Section)`
   background: #f8f9fa;
@@ -47,43 +48,6 @@ const Depositions = styled(Section)`
 
     &::-webkit-scrollbar {
       width: 0 !important;
-    }
-
-    article {
-      img {
-        mask: url('/images/depositions/avatar-mask.svg');
-      }
-
-      scroll-snap-align: center;
-      text-align: center;
-      font-weight: 400;
-      flex-basis: 100%;
-      flex-shrink: 0;
-      line-height: 2;
-
-      p {
-        color: #174f86;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-
-      .author {
-        margin: 0;
-        font-style: normal;
-        font-size: 1.2rem;
-        color: #232323;
-      }
-
-      .author-info {
-        margin: 0;
-        font-size: 0.8rem;
-        font-weight: 400;
-        font-style: normal;
-        color: #6a6363;
-        line-height: 1.4;
-      }
     }
   }
 
@@ -165,6 +129,7 @@ export default function DepositionsSection() {
   };
 
   const handleNext = () => {
+    console.log(depositionsContainerRef.current);
     depositionsContainerRef.current.scrollBy(340, 0);
   };
 
@@ -177,53 +142,64 @@ export default function DepositionsSection() {
       </h2>
 
       <div className="depositions-container" ref={depositionsContainerRef}>
-        <article>
-          <img
-            src="/images/depositions/gilberto-cardoso.jpg"
-            alt="Gilberto Cardoso"
-            width={175}
-            height={175}
-            loading="lazy"
-          />
-          <p>
-            &quot;Não deixo de acreditar que existem pessoas que estão sedentas
-            de carinho e com um simples gesto podemos fazer a diferença na vida
-            de alguém, a Fortini tem uma visão social e acima de tudo Humana, e
-            me sinto privilegiado todos os dias, pela confiança que fora
-            depositada em minha pessoa, ao longo desta caminhada de muitas
-            batalhas sim, mas também de muitas conquistas. Creio que com empenho
-            demostrado pelas pessoas que estão a frente deste projeto grandes
-            coisas ainda estão por vim, espero poder está sempre disponível para
-            ajudar , pois sei que pequenos gestos podem fazer muita diferença na
-            vida de alguém.. &quot;
-          </p>
-          <p className="author">Gilberto Cardoso da Silva</p>
-          <p className="author-info">
-            Sócio diretor da Academia Tennis Hall e professor de tênis
-          </p>
-        </article>
-        <article>
-          <img
-            src="/images/depositions/janis-costa.jpg"
-            alt="Janis Perpétua Pedro Costa"
-            width={175}
-            height={175}
-            loading="lazy"
-          />
-          <p>
-            &quot;A Fortini proporciona acesso à esportes considerados nobres e
-            que não estariam ao alcance dos estudantes de baixa renda se não
-            existisse o projeto. As atividades desenvolvem a auto estima das
-            crianças influenciando no crescimento de sua aprendizagem. &quot;
-          </p>
-          <p className="author">Janis P. P. Costa</p>
-          <p className="author-info">
-            Agente Comunitária no munícipio de Contagem e professora na E. E.
-            Carlos Drummond de Andrade
-          </p>
-        </article>
+        <Deposition
+          photoURL="/images/depositions/lilian.jpg"
+          photoLabel="Lilian"
+          authorName="Lilian"
+          authorInfo="Diretora da escola parceira E. M. Heitor Villa Lobos"
+        >
+          &quot;A Fortini tem sido parceira no desenvolvimento emocional e
+          cognitva dos estudantes de forma que a diferença é percebida no
+          comportamento. Eles estão mais centrados e conscientes de sua condição
+          de adolescentes em formação que precisam se responsabilizar pelo seu
+          futuro. &quot;
+        </Deposition>
+        <Deposition
+          photoURL="/images/depositions/rose.jpg"
+          photoLabel="Rose"
+          authorName="Rose"
+          authorInfo="Mãe da Cristiellen (participante do Projeto de Tênis)"
+        >
+          &quot;A Fortini é muito importante na vida da Cristiellen pois,
+          contribuir muito para desempenho escolar e sua saúde e com isso passou
+          a ter responsabilidade; Hoje é uma criança mas feliz!! A Fortini dar
+          todo suporte em sua vida com o apoio psicológico e pedagógico e outras
+          assistência para suas dificuldades. A Fortini acompanha sua qualidade
+          de vida para no futuro ela ser uma Atleta e uma pessoa encaminhada na
+          vida. Agradeço Fortini pelo apoio a Cristiellen em sua caminhada na
+          vida. &quot;
+        </Deposition>
+        <Deposition
+          photoURL="/images/depositions/janis-costa.jpg"
+          photoLabel="Janis Perpétua Pedro Costa"
+          authorName="Janis P. P. Costa"
+          authorInfo="Agente Comunitária no munícipio de Contagem e professora na E. E.
+            Carlos Drummond de Andrade"
+        >
+          &quot;A Fortini proporciona acesso à esportes considerados nobres e
+          que não estariam ao alcance dos estudantes de baixa renda se não
+          existisse o projeto. As atividades desenvolvem a auto estima das
+          crianças influenciando no crescimento de sua aprendizagem. &quot;
+        </Deposition>
+        <Deposition
+          photoURL="/images/depositions/gilberto-cardoso.jpg"
+          photoLabel="Gilberto Cardoso"
+          authorName="Gilberto Cardoso da Silva"
+          authorInfo="Sócio diretor da Academia Tennis Hall e professor de tênis"
+        >
+          &quot;Não deixo de acreditar que existem pessoas que estão sedentas de
+          carinho e com um simples gesto podemos fazer a diferença na vida de
+          alguém, a Fortini tem uma visão social e acima de tudo Humana, e me
+          sinto privilegiado todos os dias, pela confiança que fora depositada
+          em minha pessoa, ao longo desta caminhada de muitas batalhas sim, mas
+          também de muitas conquistas. Creio que com empenho demostrado pelas
+          pessoas que estão a frente deste projeto grandes coisas ainda estão
+          por vim, espero poder está sempre disponível para ajudar , pois sei
+          que pequenos gestos podem fazer muita diferença na vida de alguém..
+          &quot;
+        </Deposition>
       </div>
-      <span className="arrow prev" onClick={handlePrev}>
+      <span id="arrow-prev" className="arrow prev" onClick={handlePrev}>
         <Image
           src="/images/projects/chevron-left.svg"
           alt="Voltar"
@@ -232,7 +208,7 @@ export default function DepositionsSection() {
           loading="lazy"
         />
       </span>
-      <span className="arrow next" onClick={handleNext}>
+      <span id="arrow-next" className="arrow next" onClick={handleNext}>
         <Image
           src="/images/projects/chevron-right.svg"
           alt="Voltar"
