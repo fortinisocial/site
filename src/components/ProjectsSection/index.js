@@ -1,8 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
-import Image from 'next/image';
-import ProjectCard from '../ProjectCard';
+import ProjectCard from './ProjectCard';
 
 const Projects = styled(Section)`
   position: relative;
@@ -191,7 +190,7 @@ export default function ProjectsSection() {
       </div>
       {navigation.arrowLeft && (
         <span className="prev" onClick={handlePrev}>
-          <Image
+          <img
             src="/images/projects/chevron-left.svg"
             alt="Voltar"
             width={24}
@@ -202,7 +201,7 @@ export default function ProjectsSection() {
       )}
       {navigation.arrowRight && (
         <span className="next" onClick={handleNext}>
-          <Image
+          <img
             src="/images/projects/chevron-right.svg"
             alt="Voltar"
             width={24}
