@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <svg width="358" height="358" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1">
  <defs>
-  <filter id="svg_25_blur">
+  <filter id="svg_25_blur" color-interpolation-filters="sRGB">
    <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
   </filter>
  </defs>
