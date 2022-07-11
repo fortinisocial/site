@@ -143,7 +143,6 @@ export default function DepositionsSection() {
   };
 
   const handleNavigation = useCallback(({ arrowLeft, arrowRight }) => {
-    console.log({ arrowLeft, arrowRight });
     setNavigation(currentNavigation => ({
       ...currentNavigation,
       arrowLeft: arrowLeft ?? currentNavigation.arrowLeft,
