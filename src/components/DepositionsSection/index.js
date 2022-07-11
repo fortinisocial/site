@@ -129,14 +129,21 @@ export default function DepositionsSection() {
   });
 
   const handlePrev = () => {
-    depositionsContainerRef.current.scrollBy(-739, 0);
+    depositionsContainerRef.current.scrollBy(
+      -depositionsContainerRef.current.firstChild.offsetWidth,
+      0,
+    );
   };
 
   const handleNext = () => {
-    depositionsContainerRef.current.scrollBy(739, 0);
+    depositionsContainerRef.current.scrollBy(
+      depositionsContainerRef.current.firstChild.offsetWidth,
+      0,
+    );
   };
 
   const handleNavigation = useCallback(({ arrowLeft, arrowRight }) => {
+    console.log({ arrowLeft, arrowRight });
     setNavigation(currentNavigation => ({
       ...currentNavigation,
       arrowLeft: arrowLeft ?? currentNavigation.arrowLeft,
