@@ -174,13 +174,22 @@ export default function AboutSection() {
     <About id="about-section" className="about-section">
       <Columns>
         <FirstColumn>
-          <img
-            src="/images/about/maiara-wenceslau-fortini.png"
-            alt="Maiara Wenceslau"
-            loading="lazy"
-            width={381}
-            height={447}
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/images/about/maiara-wenceslau-fortini.webp"
+            />
+            <source
+              type="image/jpeg"
+              srcSet="/images/about/maiara-wenceslau-fortini.png"
+            />
+            <img
+              src="/images/about/maiara-wenceslau-fortini.png"
+              loading="lazy"
+              width={381}
+              height={447}
+            />
+          </picture>
         </FirstColumn>
         <SecondColumn>
           <div className="about-intro">

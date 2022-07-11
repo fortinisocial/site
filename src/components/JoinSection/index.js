@@ -123,13 +123,18 @@ export default function JoinSection() {
   return (
     <Join className="join-section">
       <div className="join">
-        <img
-          src="/images/join/background.jpg"
-          alt="Três crianças com a camisa da Fortini"
-          width={732}
-          height={423}
-          loading="lazy"
-        />
+        <picture>
+          <source type="image/webp" srcSet="/images/join/background.webp" />
+          <source type="image/jpeg" srcSet="/images/join/background.jpg" />
+          <img
+            src="/images/join/background.jpg"
+            alt="Três crianças com a camisa da Fortini"
+            width={732}
+            height={423}
+            loading="lazy"
+          />
+        </picture>
+
         <div className="description">
           <h1>Junte-se a nós</h1>
           <p>

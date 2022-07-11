@@ -92,7 +92,16 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Cemig"
           >
-            <img src="/images/partners/cemig.jpg" title="Cemig" alt="Cemig" />
+            <picture>
+              <source type="image/webp" srcSet="/images/partners/cemig.webp" />
+              <source type="image/jpeg" srcSet="/images/partners/cemig.jpg" />
+              <img
+                src="/images/partners/cemig.jpg"
+                title="Cemig"
+                alt="Cemig"
+                loading="lazy"
+              />
+            </picture>
           </a>
         </div>
         <h1>Parceiros:</h1>
@@ -103,11 +112,22 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Incubadora De Projetos Sociais | Hub Social"
           >
-            <img
-              src="/images/partners/ohubsocial.jpg"
-              title="Incubadora De Projetos Sociais | Hub Social"
-              alt="Incubadora De Projetos Sociais | Hub Social"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/partners/ohubsocial.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcSet="/images/partners/ohubsocial.jpg"
+              />
+              <img
+                src="/images/partners/ohubsocial.jpg"
+                title="Incubadora De Projetos Sociais | Hub Social"
+                alt="Incubadora De Projetos Sociais | Hub Social"
+                loading="lazy"
+              />
+            </picture>
           </a>
           <a
             href="https://www.institutoimap.org.br/"
@@ -115,11 +135,16 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Instituto Marum Patrus"
           >
-            <img
-              src="/images/partners/imap.jpg"
-              title="Instituto Marum Patrus"
-              alt="Instituto Marum Patrus"
-            />
+            <picture>
+              <source type="image/webp" srcSet="/images/partners/imap.webp" />
+              <source type="image/jpeg" srcSet="/images/partners/imap.jpg" />
+              <img
+                src="/images/partners/imap.jpg"
+                title="Instituto Marum Patrus"
+                alt="Instituto Marum Patrus"
+                loading="lazy"
+              />
+            </picture>
           </a>
           <a
             href="http://www.nucleoodontologicoeldorado.com.br"
@@ -127,11 +152,16 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Núcleo Odontológico Eldorado - NOE"
           >
-            <img
-              src="/images/partners/noe.jpg"
-              title="Núcleo Odontológico Eldorado - NOE"
-              alt="Núcleo Odontológico Eldorado - NOE"
-            />
+            <picture>
+              <source type="image/webp" srcSet="/images/partners/noe.webp" />
+              <source type="image/jpeg" srcSet="/images/partners/noe.jpg" />
+              <img
+                src="/images/partners/noe.jpg"
+                title="Núcleo Odontológico Eldorado - NOE"
+                alt="Núcleo Odontológico Eldorado - NOE"
+                loading="lazy"
+              />
+            </picture>
           </a>
           <a
             href="https://www.redesoma.com.br/"
@@ -139,11 +169,22 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Rede Soma Drogarias"
           >
-            <img
-              src="/images/partners/redesomadrogarias.jpg"
-              title="Rede Soma Drogarias"
-              alt="Rede Soma Drogarias"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/partners/redesomadrogarias.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcSet="/images/partners/redesomadrogarias.jpg"
+              />
+              <img
+                src="/images/partners/redesomadrogarias.jpg"
+                title="Rede Soma Drogarias"
+                alt="Rede Soma Drogarias"
+                loading="lazy"
+              />
+            </picture>
           </a>
           <a
             href="https://www.academiatennishall.com.br/"
@@ -151,11 +192,22 @@ export default function PartnersSection() {
             rel="noreferrer"
             title="Academia Tennis Hall"
           >
-            <img
-              src="/images/partners/academiatennishall.jpg"
-              title="Academia Tennis Hall"
-              alt="Academia Tennis Hall"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/partners/academiatennishall.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcSet="/images/partners/academiatennishall.jpg"
+              />
+              <img
+                src="/images/partners/academiatennishall.jpg"
+                title="Academia Tennis Hall"
+                alt="Academia Tennis Hall"
+                loading="lazy"
+              />
+            </picture>
           </a>
         </div>
       </div>

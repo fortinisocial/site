@@ -83,10 +83,26 @@ const CardHeader = styled.header`
 
   &.tenis {
     background: url('/images/projects/tenis.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/tenis.webp') 1x,
+      url('/images/projects/tenis.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/tenis.webp') 1x,
+      url('/images/projects/tenis.jpg') 1x
+    );
   }
 
   &.handball {
     background: url('/images/projects/handball.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/handball.webp') 1x,
+      url('/images/projects/handball.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/handball.webp') 1x,
+      url('/images/projects/handball.jpg') 1x
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -94,6 +110,14 @@ const CardHeader = styled.header`
 
   &.judo {
     background: url('/images/projects/judo.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/judo.webp') 1x,
+      url('/images/projects/judo.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/judo.webp') 1x,
+      url('/images/projects/judo.jpg') 1x
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -78px;
@@ -101,6 +125,14 @@ const CardHeader = styled.header`
 
   &.taekwondo {
     background: url('/images/projects/taekwondo.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/taekwondo.webp') 1x,
+      url('/images/projects/taekwondo.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/taekwondo.webp') 1x,
+      url('/images/projects/taekwondo.jpg') 1x
+    );
     background-size: cover;
     background-repeat: no-repeat;
   }
