@@ -66,7 +66,7 @@ const Projects = styled(Section)`
       background: #fff;
       border-radius: 9999px;
       box-shadow: 8px 8px 16px hsl(0deg 0% 62% / 0.25);
-      outline: 1px solid #e5e5e5;
+      border: 1px solid #e5e5e5;
       transition: 0.4s;
       cursor: pointer;
 
