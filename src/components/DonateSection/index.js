@@ -53,14 +53,24 @@ const Donate = styled(Section)`
   .donate-type {
     font-size: 1.1rem;
     text-align: center;
-    line-height: 6rem;
+    margin-top: 2rem;
 
     label {
+      font-weight: 500;
+      line-height: 2rem;
       cursor: pointer;
     }
 
     input {
       vertical-align: middle;
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+      margin: 0;
+      padding: 0;
+      color: #6a6363;
     }
   }
 
@@ -102,10 +112,6 @@ export default function DonateSection() {
         <p>
           Você pode ajudar a transformar vidas através de doações pontuais ou
           recorrentes.
-        </p>
-        <p>
-          Caso opte por doações recorrentes, fique tranquilo, você pode
-          cancelá-las a qualquer momento.
         </p>
       </div>
       <div className="donate-buttons">
@@ -157,6 +163,10 @@ export default function DonateSection() {
           />
           Doação mensal
         </label>
+        <p>
+          Caso opte por doações mensais, você pode cancelá-las a qualquer
+          momento.
+        </p>
       </div>
       <div className="donate-others">
         <p>Você também pode doar outros valores através do nosso PIX:</p>
