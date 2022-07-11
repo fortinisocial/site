@@ -228,6 +228,10 @@ const MobileActions = styled.div`
   img {
     cursor: pointer;
   }
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
 `;
 
 const MobileMenu = styled.nav`
@@ -341,15 +345,16 @@ const Message = styled.div`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2;
+    max-width: 80%;
 
     @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 1.2rem;
       max-width: 95%;
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: 425px) {
       font-size: 1rem;
       max-width: 100%;
     }
