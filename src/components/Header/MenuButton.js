@@ -26,7 +26,7 @@ const Button = styled.button`
 
 const PathLine = styled.path`
   fill: none;
-  stroke: white;
+  stroke: #22c8cd;
   stroke-width: 3;
   transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,8 +36,8 @@ export default function MenuButton({ opened, onClick, size }) {
   return (
     <Button onClick={onClick} className={size}>
       <svg
-        width={size ? '48' : '100'}
-        height={size ? '48' : '100'}
+        width={size ? '42' : '100'}
+        height={size ? '42' : '100'}
         viewBox="0 0 100 100"
       >
         <PathLine

@@ -356,7 +356,7 @@ const FixedMenu = styled.nav`
   z-index: 10;
 
   background: #fff;
-  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+  border: 1px solid #ebedf3;
   opacity: 0;
   transition: all 0.2s;
 
@@ -392,7 +392,7 @@ const FixedMobileMenu = styled.div`
   height: 56px;
 
   border-radius: 50%;
-  background: #24d6db;
+  background: #fff;
   opacity: 0;
   transition: all 0.4s;
   box-shadow: 4px 4px 20px hsl(0deg 0% 32% / 0.5);
