@@ -66,7 +66,7 @@ export default function Deposition({
 
     const observer = new IntersectionObserver(handleObserver, {
       root: document.getElementById('#depositions-container'),
-      rootMargin: '200px',
+      rootMargin: '400px',
       threshold: 0.75,
     });
 

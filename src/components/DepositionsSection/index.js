@@ -5,11 +5,13 @@ import Image from 'next/image';
 import Deposition from './Deposition';
 
 const Depositions = styled(Section)`
+  position: relative;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
+  z-index: 0;
 
   h1 {
     color: #174f86;
@@ -72,30 +74,31 @@ const Depositions = styled(Section)`
       top: 0;
       bottom: 0;
       margin: auto;
-      z-index: 9999;
+      z-index: 12;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      width: 40px;
-      height: 40px;
+      width: 96px;
+      height: 96px;
 
-      background: #fff;
       border-radius: 9999px;
-      box-shadow: 8px 8px 16px hsl(0deg 0% 62% / 0.25);
-      border: 1px solid #e5e5e5;
       transition: 0.4s;
       cursor: pointer;
 
-      &:hover {
-        background: #fcfcfc;
-        box-shadow: 8px 8px 16px hsl(0deg 0% 62% / 0.5);
+      img {
+        filter: invert(55%) sepia(66%) saturate(498%) hue-rotate(133deg)
+          brightness(106%) contrast(92%);
       }
 
       @media (max-width: 768px) {
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
+
+        img {
+          width: 44px;
+        }
 
         > span {
           transform: scale(0.7);
@@ -107,7 +110,7 @@ const Depositions = styled(Section)`
       left: 12px;
 
       @media (max-width: 768px) {
-        left: 8px;
+        left: -4px;
       }
     }
 
@@ -115,7 +118,7 @@ const Depositions = styled(Section)`
       right: 12px;
 
       @media (max-width: 768px) {
-        right: 8px;
+        right: -4px;
       }
     }
   }
@@ -226,22 +229,22 @@ export default function DepositionsSection() {
       </div>
       {navigation.arrowLeft && (
         <span id="arrow-prev" className="arrow prev" onClick={handlePrev}>
-          <Image
+          <img
             src="/images/projects/chevron-left.svg"
             alt="Voltar"
-            width={24}
-            height={24}
+            width={64}
+            height={64}
             loading="lazy"
           />
         </span>
       )}
       {navigation.arrowRight && (
         <span id="arrow-next" className="arrow next" onClick={handleNext}>
-          <Image
+          <img
             src="/images/projects/chevron-right.svg"
             alt="Voltar"
-            width={24}
-            height={24}
+            width={64}
+            height={64}
             loading="lazy"
           />
         </span>
