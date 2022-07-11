@@ -23,7 +23,7 @@ const About = styled(Section)`
   p {
     font-size: 1.2rem;
     text-align: left;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.75rem;
 
     strong {
@@ -82,14 +82,6 @@ const SecondColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
-  @media (min-width: 1200px) {
-    > p {
-      &:last-of-type {
-        display: none;
-      }
-    }
-  }
 `;
 
 const Institutional = styled.div`
@@ -233,10 +225,6 @@ export default function AboutSection() {
               </ul>
             </div>
           </Institutional>
-          <p>
-            Nosso propósito é transformar vidas proporcionado o acesso à
-            educação integral, ao esporte e a cultura.
-          </p>
         </SecondColumn>
       </Columns>
       <div className="about-hexagons">

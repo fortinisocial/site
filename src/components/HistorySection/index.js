@@ -39,7 +39,7 @@ const History = styled(Section)`
 
     p {
       line-height: 2rem;
-
+      font-weight: 500;
       font-size: 1.2rem;
       color: #ffffff;
     }

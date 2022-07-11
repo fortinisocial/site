@@ -44,9 +44,8 @@ class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="theme-color" content="#ffffff" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="stylesheet" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&family=Roboto+Slab:wght@400;500;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto+Slab:wght@400;500;700;800&display=swap"
             rel="stylesheet"
           />
         </Head>

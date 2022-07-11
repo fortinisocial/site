@@ -28,6 +28,7 @@ const Card = styled.article`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    font-weight: 500;
 
     span {
       flex-shrink: 0;
@@ -59,6 +60,7 @@ const Card = styled.article`
         display: inline-block;
         max-width: 236px;
         vertical-align: bottom;
+        font-weight: 500;
       }
     }
   }

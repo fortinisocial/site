@@ -20,7 +20,7 @@ const ODS = styled(Section)`
 
   h2 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     max-width: 800px;
   }
 

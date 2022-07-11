@@ -9,12 +9,13 @@ const Article = styled.article`
 
   scroll-snap-align: center;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   flex-basis: 100%;
   flex-shrink: 0;
   line-height: 2;
 
   p {
+    font-weight: 500;
     color: #174f86;
 
     &:first-of-type {
@@ -32,7 +33,7 @@ const Article = styled.article`
   .author-info {
     margin: 0;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     color: #6a6363;
     line-height: 1.4;
