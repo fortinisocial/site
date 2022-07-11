@@ -5,6 +5,7 @@ import Image from 'next/image';
 import MenuButton from './MenuButton';
 
 const StyledHeader = styled.header`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -227,10 +228,6 @@ const MobileActions = styled.div`
   img {
     cursor: pointer;
   }
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
 `;
 
 const MobileMenu = styled.nav`
@@ -287,6 +284,7 @@ const MobileMenu = styled.nav`
 `;
 
 const Message = styled.div`
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,35 +292,56 @@ const Message = styled.div`
   text-align: center;
   color: #fff;
   font-family: 'Nunito', serif;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  padding: 0 24px;
+
+  @media (max-width: 1024px) {
+    margin-top: 100px;
+  }
 
   h1 {
     font-size: 3rem;
     font-weight: 500;
+    filter: drop-shadow(4px 8px 8px hsl(0deg 0% 0% / 0.38));
 
     @media (max-width: 1024px) {
-      margin-top: 8rem;
       font-size: 2.5rem;
+
+      &.donation {
+        font-size: 3.5rem;
+      }
     }
 
     @media (max-width: 800px) {
-      margin-top: 2rem;
       font-size: 2rem;
+
+      &.donation {
+        font-size: 3.5rem;
+      }
     }
 
     @media (max-width: 414px) {
-      margin-top: 2rem;
       font-size: 1.6rem;
+
+      &.donation {
+        font-size: 3.5rem;
+      }
     }
 
     @media (min-width: 1600px) {
       margin-top: 3rem;
-      font-size: 3rem;
+      font-size: 5rem;
     }
   }
 
   p {
-    font-size: 1.4rem;
-    max-width: 70%;
+    font-size: 1.2rem;
     line-height: 2;
 
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -558,7 +577,7 @@ export default function Header({ donation = false }) {
       ) : (
         <Message className="message">
           {donation ? (
-            <h1>Ajude a transformar vidas</h1>
+            <h1 className="donation">Ajude a transformar vidas</h1>
           ) : (
             <>
               <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
