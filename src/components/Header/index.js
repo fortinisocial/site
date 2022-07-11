@@ -339,8 +339,7 @@ const Message = styled.div`
     }
 
     @media (min-width: 1600px) {
-      margin-top: 3rem;
-      font-size: 5rem;
+      font-size: 3.5rem;
     }
   }
 

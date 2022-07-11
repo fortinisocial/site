@@ -78,6 +78,14 @@ const Join = styled(Section)`
     &:after {
       content: '';
       background: url('/images/join/background.jpg') rgba(0, 0, 0, 0.1);
+      background-image: -webkit-image-set(
+        url('/images/join/background.webp') 1x,
+        url('/images/join/background.jpg') 1x
+      );
+      background-image: image-set(
+        url('/images/join/background.webp') 1x,
+        url('/images/join/background.jpg') 1x
+      );
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -93,10 +101,6 @@ const Join = styled(Section)`
       background: none;
       flex-direction: column;
       width: 100%;
-
-      > img {
-        display: none;
-      }
 
       .description {
         min-width: initial;
@@ -123,18 +127,6 @@ export default function JoinSection() {
   return (
     <Join className="join-section">
       <div className="join">
-        <picture>
-          <source type="image/webp" srcSet="/images/join/background.webp" />
-          <source type="image/jpeg" srcSet="/images/join/background.jpg" />
-          <img
-            src="/images/join/background.jpg"
-            alt="Três crianças com a camisa da Fortini"
-            width={732}
-            height={423}
-            loading="lazy"
-          />
-        </picture>
-
         <div className="description">
           <h1>Junte-se a nós</h1>
           <p>
