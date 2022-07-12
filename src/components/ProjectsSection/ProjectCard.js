@@ -262,7 +262,9 @@ export default function ProjectCard({
             height={20}
             loading="lazy"
           />
-          <span>Locais de execução: </span>
+          <span>
+            {locations.split(',').length > 1 ? 'Locais' : 'Local'} de execução:
+          </span>
         </p>
         <ul>
           {locations.split(',').map(location => (

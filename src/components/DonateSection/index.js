@@ -40,12 +40,12 @@ const Donate = styled(Section)`
       padding: 8px 16px;
       border-radius: 9999px;
       transition: 0.6s;
-      outline: 2px solid #24d6db;
+      border: 2px solid #24d6db;
 
       &:hover {
         background: #24d6db;
         color: #232323;
-        outline: 2px solid #2dfaff;
+        border: 2px solid #2dfaff;
       }
     }
   }
@@ -71,6 +71,7 @@ const Donate = styled(Section)`
       margin: 0;
       padding: 0;
       color: #6a6363;
+      text-align: center;
     }
   }
 

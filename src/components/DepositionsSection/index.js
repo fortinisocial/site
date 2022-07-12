@@ -174,7 +174,7 @@ export default function DepositionsSection() {
           authorInfo="Diretora da escola parceira E. M. Heitor Villa Lobos"
         >
           &quot;A Fortini tem sido parceira no desenvolvimento emocional e
-          cognitva dos estudantes de forma que a diferença é percebida no
+          cognitivo dos estudantes de forma que a diferença é percebida no
           comportamento. Eles estão mais centrados e conscientes de sua condição
           de adolescentes em formação que precisam se responsabilizar pelo seu
           futuro. &quot;
@@ -187,13 +187,13 @@ export default function DepositionsSection() {
           authorInfo="Mãe da Cristiellen (participante do Projeto de Tênis)"
         >
           &quot;A Fortini é muito importante na vida da Cristiellen pois,
-          contribuir muito para desempenho escolar e sua saúde e com isso passou
-          a ter responsabilidade; Hoje é uma criança mas feliz!! A Fortini dar
-          todo suporte em sua vida com o apoio psicológico e pedagógico e outras
-          assistência para suas dificuldades. A Fortini acompanha sua qualidade
-          de vida para no futuro ela ser uma Atleta e uma pessoa encaminhada na
-          vida. Agradeço Fortini pelo apoio a Cristiellen em sua caminhada na
-          vida. &quot;
+          contribui muito para o seu desempenho escolar e a sua saúde e com isso
+          ela passou a ter responsabilidade; Hoje é uma criança mais feliz!! A
+          Fortini dá todo suporte em sua vida com o apoio psicológico e
+          pedagógico e outras assistências para suas dificuldades. A Fortini
+          acompanha sua qualidade de vida para no futuro ela ser uma atleta e
+          uma pessoa encaminhada na vida. Agradeço Fortini pelo apoio a
+          Cristiellen em sua caminhada na vida. &quot;
         </Deposition>
         <Deposition
           onScroll={handleNavigation}

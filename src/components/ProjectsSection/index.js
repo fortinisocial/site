@@ -162,7 +162,7 @@ export default function ProjectsSection() {
           kind="handball"
           title="Handebol"
           students="200"
-          city="Betim, Contagem e Ibirité"
+          city="Betim e Contagem"
           schools="E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares"
           since="2018"
           locations="E. E. Padre Camargos, E. M. Adelina Mesquita Januzzi, Ginásio Califórnia, Poliesportivo Petrovale"
@@ -181,9 +181,9 @@ export default function ProjectsSection() {
           onScroll={handleNavigation}
           kind="taekwondo"
           title="Taekwondo"
-          students="150"
+          students="120"
           city="Betim e Contagem"
-          schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães, E. M. Valério Ferreira Palhares"
+          schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares"
           since="2022"
           locations="Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
         />

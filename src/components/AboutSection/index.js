@@ -246,8 +246,7 @@ export default function AboutSection() {
           planejados e executados com a atuação de{' '}
           <strong>múltiplos atores</strong>. A Fortini existe como uma{' '}
           <strong>catalizadora</strong> do potencial de ação de todos os atores
-          que nos cercam, em um trabalho conjunto, complementar e
-          multiplicador..
+          que nos cercam, em um trabalho conjunto, complementar e multiplicador.
         </p>
         <img
           src="/images/about/hexagons.png"
