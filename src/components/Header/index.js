@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Image from 'next/image';
 import MenuButton from './MenuButton';
 
 const StyledHeader = styled.header`
@@ -128,8 +127,10 @@ const Menu = styled.nav`
       &:hover {
         color: #22c8cd;
       }
+    }
 
-      :not(.donation) {
+    :not(.donation) {
+      a {
         &:last-of-type {
           color: #22c8cd;
           border: 2px solid #22c8cd;
@@ -474,13 +475,13 @@ export default function Header({ donation = false }) {
       </FixedMobileMenu>
       <FixedMenu className={showFixedMenu ? 'visible' : ''}>
         <Logos>
-          <Image
+          <img
             src="/images/fortini-logo.svg"
             alt="Fortini Investimento Social"
             width={137.7}
             height={42.5}
           />
-          <Image
+          <img
             src="/images/header/gerando-falcoes-logo.svg"
             alt="Gerando Falcões"
             width={86.7}

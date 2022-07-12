@@ -1,7 +1,6 @@
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
-import Image from 'next/image';
 import Testimonial from './Testimonial';
 
 const Testimonials = styled(Section)`

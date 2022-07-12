@@ -14,7 +14,6 @@ const Join = styled(Section)`
   .join {
     display: flex;
     flex: 1;
-    background: #174f86;
     margin: 0;
 
     .description {
@@ -22,7 +21,6 @@ const Join = styled(Section)`
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      min-width: 440px;
       height: 100%;
       padding: 62px;
       font-size: 18px;
@@ -32,7 +30,7 @@ const Join = styled(Section)`
         text-transform: uppercase;
         font-weight: 700;
         line-height: 1.2;
-        color: #6eb6ff;
+        color: #ffffff;
       }
 
       p {
@@ -44,13 +42,13 @@ const Join = styled(Section)`
       a {
         font-family: 'Nunito', sans-serif;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 600;
         text-transform: uppercase;
         transition: all 0.2s;
         padding: 10px 15px;
-        color: #6eb6ff;
+        color: #2bf1f7;
         border-radius: 50px;
-        border: 2px solid #6eb6ff;
+        border: 2px solid #2bf1f7;
         margin-top: 32px;
 
         &:hover {
@@ -72,54 +70,28 @@ const Join = styled(Section)`
     }
   }
 
-  @media (max-width: 1366px) {
-    background: rgba(7, 18, 20, 0.5);
+  background: rgba(23, 79, 134, 0.5);
 
-    &:after {
-      content: '';
-      background: url('/images/join/background.jpg') rgba(0, 0, 0, 0.1);
-      background-image: -webkit-image-set(
-        url('/images/join/background.webp') 1x,
-        url('/images/join/background.jpg') 1x
-      );
-      background-image: image-set(
-        url('/images/join/background.webp') 1x,
-        url('/images/join/background.jpg') 1x
-      );
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-    }
-
-    .join {
-      background: none;
-      flex-direction: column;
-      width: 100%;
-
-      .description {
-        min-width: initial;
-        padding: 2rem;
-
-        h1 {
-          color: white;
-        }
-
-        p {
-          filter: drop-shadow(1px 2px 8px hsl(260deg 20% 10% / 0.8));
-        }
-
-        a {
-          color: white;
-          border-color: white;
-        }
-      }
-    }
+  &:after {
+    content: '';
+    background: url('/images/join/background.jpg');
+    background-image: -webkit-image-set(
+      url('/images/join/background.webp') 1x,
+      url('/images/join/background.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/join/background.webp') 1x,
+      url('/images/join/background.jpg') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 `;
 

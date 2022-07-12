@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
@@ -137,17 +136,19 @@ export default function Footer() {
     <StyledFooter>
       <LogoContainer>
         <Logos>
-          <Image
+          <img
             src="/images/fortini-logo.svg"
             alt="Fortini Investimento Social"
             width={162}
             height={50}
+            loading="lazy"
           />
-          <Image
+          <img
             src="/images/footer/gf-logo-white.png"
             alt="Gerando Falcões"
             width={102}
             height={25}
+            loading="lazy"
           />
         </Logos>
         <p>Fortini Investimento Social ® 2016-2022</p>
@@ -172,7 +173,7 @@ export default function Footer() {
               rel="noreferrer"
               title="Instagram da Fortini"
             >
-              <Image
+              <img
                 src="/images/footer/insta_footer.svg"
                 alt="Instagram"
                 width={30}
@@ -186,7 +187,7 @@ export default function Footer() {
               rel="noreferrer"
               title="Facebook da Fortini"
             >
-              <Image
+              <img
                 src="/images/footer/fb_footer.svg"
                 alt="Facebook"
                 width={17}
@@ -200,7 +201,7 @@ export default function Footer() {
               rel="noreferrer"
               title="LinkedIn da Fortini"
             >
-              <Image
+              <img
                 src="/images/footer/linkedin_footer.svg"
                 alt="LinkedIn"
                 width={30}
