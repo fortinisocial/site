@@ -8,6 +8,7 @@ import ODSSection from '../components/ODSSection';
 import HistorySection from '../components/HistorySection';
 import JoinSection from '../components/JoinSection';
 import PartnersSection from '../components/PartnersSection';
+import TransparencySection from '../components/TransparencySection';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           <HistorySection />
           <ProjectsSection />
           <TestimonialsSection />
+          <TransparencySection />
           <PartnersSection />
           <JoinSection />
         </Main>
