@@ -8,8 +8,10 @@ export const Section = styled.section`
   padding: 2.85rem 3.85rem 2.85rem;
   font-family: 'Nunito', serif;
   max-width: 1920px;
+  scroll-margin-top: 90px;
 
   @media (max-width: 768px) {
+    scroll-margin-top: unset;
     padding: 1.4rem;
     height: auto;
   }
