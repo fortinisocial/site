@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Article = styled.article`
   img {
-    mask: url('/images/depositions/avatar-mask.svg');
+    mask: url('/images/testimonials/avatar-mask.svg');
     object-fit: cover;
   }
 
@@ -39,7 +39,7 @@ const Article = styled.article`
     line-height: 1.4;
   }
 `;
-export default function Deposition({
+export default function Testimonial({
   photoURL,
   photoLabel,
   children,
@@ -65,7 +65,7 @@ export default function Deposition({
     }
 
     const observer = new IntersectionObserver(handleObserver, {
-      root: document.getElementById('#depositions-container'),
+      root: document.getElementById('#testimonials-container'),
       rootMargin: '400px',
       threshold: 0.75,
     });

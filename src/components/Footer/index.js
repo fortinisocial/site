@@ -216,7 +216,7 @@ export default function Footer() {
             <nav role="navigation">
               <a href="#about-section">Sobre</a>
               <a href="#ods-section">Metodologia</a>
-              <a href="#depositions-section">Depoimentos</a>
+              <a href="#testimonials-section">Depoimentos</a>
               <a href="#partners-section">Parceiros</a>
               {/* <a href="/contato">Contato</a> */}
             </nav>

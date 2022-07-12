@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectsSection from '../components/ProjectsSection';
 import AboutSection from '../components/AboutSection';
-import DepositionsSection from '../components/DepositionsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 import ODSSection from '../components/ODSSection';
 import HistorySection from '../components/HistorySection';
 import JoinSection from '../components/JoinSection';
@@ -19,7 +19,7 @@ export default function Home() {
           <ODSSection />
           <HistorySection />
           <ProjectsSection />
-          <DepositionsSection />
+          <TestimonialsSection />
           <PartnersSection />
           <JoinSection />
         </Main>

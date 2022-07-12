@@ -2,9 +2,9 @@ import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Image from 'next/image';
-import Deposition from './Deposition';
+import Testimonial from './Testimonial';
 
-const Depositions = styled(Section)`
+const Testimonials = styled(Section)`
   position: relative;
   background: #f8f9fa;
   display: flex;
@@ -32,7 +32,7 @@ const Depositions = styled(Section)`
     }
   }
 
-  .depositions-container {
+  .testimonials-container {
     position: relative;
     display: flex;
     scroll-snap-type: x mandatory;
@@ -124,7 +124,7 @@ const Depositions = styled(Section)`
   }
 `;
 
-export default function DepositionsSection() {
+export default function TestimonialsSection() {
   const depositionsContainerRef = useRef(null);
   const [navigation, setNavigation] = useState({
     arrowLeft: false,
@@ -154,7 +154,7 @@ export default function DepositionsSection() {
   }, []);
 
   return (
-    <Depositions id="depositions-section" className="depositions-section">
+    <Testimonials id="testimonials-section" className="testimonials-section">
       <h1>O que dizem por aí...</h1>
       <h2>
         Quer saber o que dizem da gente? Se liga nos depoimentos de quem já
@@ -162,13 +162,13 @@ export default function DepositionsSection() {
       </h2>
 
       <div
-        id="depositions-container"
-        className="depositions-container"
+        id="testimonials-container"
+        className="testimonials-container"
         ref={depositionsContainerRef}
       >
-        <Deposition
+        <Testimonial
           onScroll={handleNavigation}
-          photoURL="/images/depositions/lilian.jpg"
+          photoURL="/images/testimonials/lilian.jpg"
           photoLabel="Lilian"
           authorName="Lilian"
           authorInfo="Diretora da escola parceira E. M. Heitor Villa Lobos"
@@ -178,10 +178,10 @@ export default function DepositionsSection() {
           comportamento. Eles estão mais centrados e conscientes de sua condição
           de adolescentes em formação que precisam se responsabilizar pelo seu
           futuro. &quot;
-        </Deposition>
-        <Deposition
+        </Testimonial>
+        <Testimonial
           onScroll={handleNavigation}
-          photoURL="/images/depositions/rose.jpg"
+          photoURL="/images/testimonials/rose.jpg"
           photoLabel="Rose"
           authorName="Rose"
           authorInfo="Mãe da Cristiellen (participante do Projeto de Tênis)"
@@ -194,10 +194,10 @@ export default function DepositionsSection() {
           acompanha sua qualidade de vida para no futuro ela ser uma atleta e
           uma pessoa encaminhada na vida. Agradeço Fortini pelo apoio a
           Cristiellen em sua caminhada na vida. &quot;
-        </Deposition>
-        <Deposition
+        </Testimonial>
+        <Testimonial
           onScroll={handleNavigation}
-          photoURL="/images/depositions/janis-costa.jpg"
+          photoURL="/images/testimonials/janis-costa.jpg"
           photoLabel="Janis Perpétua Pedro Costa"
           authorName="Janis P. P. Costa"
           authorInfo="Agente Comunitária no munícipio de Contagem e professora na E. E.
@@ -207,10 +207,10 @@ export default function DepositionsSection() {
           que não estariam ao alcance dos estudantes de baixa renda se não
           existisse o projeto. As atividades desenvolvem a auto estima das
           crianças influenciando no crescimento de sua aprendizagem. &quot;
-        </Deposition>
-        <Deposition
+        </Testimonial>
+        <Testimonial
           onScroll={handleNavigation}
-          photoURL="/images/depositions/gilberto-cardoso.jpg"
+          photoURL="/images/testimonials/gilberto-cardoso.jpg"
           photoLabel="Gilberto Cardoso"
           authorName="Gilberto Cardoso da Silva"
           authorInfo="Sócio diretor da Academia Tennis Hall e professor de tênis"
@@ -225,7 +225,7 @@ export default function DepositionsSection() {
           por vim, espero poder está sempre disponível para ajudar , pois sei
           que pequenos gestos podem fazer muita diferença na vida de alguém..
           &quot;
-        </Deposition>
+        </Testimonial>
       </div>
       {navigation.arrowLeft && (
         <span id="arrow-prev" className="arrow prev" onClick={handlePrev}>
@@ -249,6 +249,6 @@ export default function DepositionsSection() {
           />
         </span>
       )}
-    </Depositions>
+    </Testimonials>
   );
 }

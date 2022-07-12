@@ -494,7 +494,7 @@ export default function Header({ donation = false }) {
           <Link href="/#ods-section" title="Metodologia">
             Metodologia
           </Link>
-          <Link href="/#depositions-section" title="Depoimentos">
+          <Link href="/#testimonials-section" title="Depoimentos">
             Depoimentos
           </Link>
           <Link href="/#partners-section" title="Parceiros">
@@ -531,7 +531,7 @@ export default function Header({ donation = false }) {
           <Link href="/#ods-section" title="Metodologia">
             Metodologia
           </Link>
-          <Link href="/#depositions-section" title="Depoimentos">
+          <Link href="/#testimonials-section" title="Depoimentos">
             Depoimentos
           </Link>
           <Link href="/#partners-section" title="Parceiros">
@@ -568,7 +568,7 @@ export default function Header({ donation = false }) {
           <Link href="/#ods-section" title="Metodologia">
             <span onClick={handleMobileMenuClick}>Metodologia</span>
           </Link>
-          <Link href="/#depositions-section" title="Depoimentos">
+          <Link href="/#testimonials-section" title="Depoimentos">
             <span onClick={handleMobileMenuClick}>Depoimentos</span>
           </Link>
           <Link href="/#partners-section" title="Parceiros">
