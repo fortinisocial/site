@@ -52,9 +52,9 @@ const Transparency = styled(Section)`
           text-transform: uppercase;
           transition: all 0.2s;
           padding: 10px 15px;
-          color: #2bf1f7;
+          color: #93faff;
           border-radius: 50px;
-          border: 2px solid #2bf1f7;
+          border: 2px solid #93faff;
           margin-top: 32px;
 
           &:hover {

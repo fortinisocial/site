@@ -166,7 +166,7 @@ const Menu = styled.nav`
     display: inline-flex;
     align-items: center;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
     transition: all 0.2s;
@@ -198,7 +198,7 @@ const MobileActions = styled.div`
     display: inline-flex;
     align-items: center;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
     transition: all 0.2s;
@@ -265,7 +265,7 @@ const MobileMenu = styled.nav`
     font-family: 'Nunito', sans-serif;
 
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
     transition: all 0.2s;
@@ -305,6 +305,10 @@ const Message = styled.div`
   bottom: 0;
   pointer-events: none;
   padding: 0 24px;
+
+  @media (max-height: 750px) and (min-width: 768px) {
+    margin-top: 100px;
+  }
 
   @media (max-width: 1024px) {
     margin-top: 100px;
