@@ -91,16 +91,21 @@ const Donate = styled(Section)`
 
 const getLinkByValue = (value, isSubscription) =>
   ({
-    25: isSubscription ? 'https://buy.stripe.com/bIY5obfEwcdg3RubIM' : '',
+    25: isSubscription
+      ? 'https://buy.stripe.com/bIY5obfEwcdg3RubIM'
+      : 'https://donate.stripe.com/aEU7wjeAsgtwfAc9AS',
+    75: isSubscription
+      ? 'https://buy.stripe.com/6oE5obbog2CG3RuaEV'
+      : 'https://donate.stripe.com/4gwbMz0JCelo1Jm7sI',
     50: isSubscription
       ? 'https://buy.stripe.com/cN203R4ZS3GK3Ru7sx'
-      : 'https://buy.stripe.com/cN26sffEwa582Nq008',
+      : 'https://donate.stripe.com/cN26sffEwa582Nq008',
     100: isSubscription
       ? 'https://buy.stripe.com/cN2bMz9g84KO9bObIO'
-      : 'https://buy.stripe.com/00gbMzcsk5OSew87sB',
+      : 'https://donate.stripe.com/00gbMzcsk5OSew87sB',
     200: isSubscription
       ? 'https://buy.stripe.com/6oE7wj4ZS2CGfAc007'
-      : 'https://buy.stripe.com/bIYdUHbogelo5ZC4gq',
+      : 'https://donate.stripe.com/bIYdUHbogelo5ZC4gq',
   }[value]);
 
 export default function DonateSection() {
@@ -117,20 +122,20 @@ export default function DonateSection() {
       </div>
       <div className="donate-buttons">
         <a
-          href={getLinkByValue(25, isSubscription)}
-          rel="noreferrer"
-          target="_blank"
-          title={`Doe R$ 25,00${isSubscription ? ' por mês' : ''}`}
-        >
-          R$ 25,00
-        </a>
-        <a
           href={getLinkByValue(50, isSubscription)}
           rel="noreferrer"
           target="_blank"
           title={`Doe R$ 50,00${isSubscription ? ' por mês' : ''}`}
         >
           R$ 50,00
+        </a>
+        <a
+          href={getLinkByValue(75, isSubscription)}
+          rel="noreferrer"
+          target="_blank"
+          title={`Doe R$ 75,00${isSubscription ? ' por mês' : ''}`}
+        >
+          R$ 75,00
         </a>
         <a
           href={getLinkByValue(100, isSubscription)}
