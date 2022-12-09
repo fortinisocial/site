@@ -7,6 +7,17 @@ module.exports = {
   },
   i18n: {
     locales: ['pt-br', 'en'],
-    defaultLocale: 'en',
+    defaultLocale: 'pt-br',
+    localeDetection: false,
+    domains: [
+      {
+        domain: 'fortini.org',
+        defaultLocale: 'en',
+      },
+      {
+        domain: 'fortini.org.br',
+        defaultLocale: 'pt-br',
+      },
+    ],
   },
 };
