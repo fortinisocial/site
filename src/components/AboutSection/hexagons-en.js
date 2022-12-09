@@ -8,7 +8,7 @@ const HexagonsEn = () => (
   >
     <defs>
       <style>
-        @import url("https://fonts.googleapis.com/css?family=Nunito:400");
+        @import url(`https://fonts.googleapis.com/css?family=Nunito:400`);
       </style>
       <filter
         id="Polígono_57"
