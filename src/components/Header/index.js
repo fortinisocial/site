@@ -568,7 +568,10 @@ export default function Header({ donation = false }) {
       </MobileActions>
 
       {openedMobile ? (
-        <MobileMenu className={showFixedMenu ? 'fixed' : ''}>
+        <MobileMenu
+          className={showFixedMenu ? 'fixed' : ''}
+          onClick={() => setOpenedMobile(false)}
+        >
           <Link href="/#about-section" title={t('menu.about')}>
             <span onClick={handleMobileMenuClick}>{t('menu.about')}</span>
           </Link>
