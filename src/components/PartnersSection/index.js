@@ -59,11 +59,13 @@ const Partners = styled(Section)`
       margin-bottom: 1.5rem;
 
       a {
-        img {
-          object-fit: none;
-          height: 70px;
-          width: 280px;
-          transform: scale(0.7);
+        &:first-of-type {
+          img {
+            object-fit: none;
+            height: 70px;
+            width: 280px;
+            transform: scale(0.7);
+          }
         }
       }
     }
@@ -102,6 +104,26 @@ export default function PartnersSection() {
                 src="/images/partners/cemig.jpg"
                 title="Cemig"
                 alt="Cemig"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <a
+            href="https://hexagon.com/"
+            target="_blank"
+            rel="noreferrer"
+            title="Hexagon Mining"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/partners/hexagon.webp"
+              />
+              <source type="image/jpeg" srcSet="/images/partners/hexagon.jpg" />
+              <img
+                src="/images/partners/hexagon.jpg"
+                title="Hexagon Mining"
+                alt="Hexagon Mining"
                 loading="lazy"
               />
             </picture>
