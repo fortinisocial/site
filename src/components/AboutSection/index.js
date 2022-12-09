@@ -1,7 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
+import HexagonsEn from './hexagons-en';
+import HexagonsBr from './hexagons-pt-br';
 
 const About = styled(Section)`
   display: flex;
@@ -37,17 +39,19 @@ const About = styled(Section)`
     display: flex;
     flex-direction: column;
 
-    img {
-      margin-top: 4rem;
+    img,
+    svg {
+      margin-top: 2rem;
       align-self: center;
+      max-width: 727px;
     }
 
     @media (max-width: 1024px) {
       margin-top: 0;
 
-      img {
+      img,
+      svg {
         width: 100%;
-        max-width: 727px;
       }
     }
   }
@@ -172,6 +176,7 @@ const Institutional = styled.div`
 
 export default function AboutSection() {
   const t = useTranslations('About');
+  const locale = useLocale();
 
   return (
     <About id="about-section" className="about-section">
@@ -227,11 +232,7 @@ export default function AboutSection() {
           p: chunks => <p>{chunks}</p>,
           b: chunks => <b>{chunks}</b>,
         })}
-        <img
-          src="/images/about/hexagons.png"
-          alt="Hexágonos Fortini"
-          loading="lazy"
-        />
+        {locale === 'pt-br' ? <HexagonsBr /> : <HexagonsEn />}
       </div>
     </About>
   );
