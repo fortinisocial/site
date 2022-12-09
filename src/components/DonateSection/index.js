@@ -122,20 +122,20 @@ export default function DonateSection() {
       </div>
       <div className="donate-buttons">
         <a
+          href={getLinkByValue(25, isSubscription)}
+          rel="noreferrer"
+          target="_blank"
+          title={`Donate $25.00${isSubscription ? ' monthly' : ''}`}
+        >
+          $25.00
+        </a>
+        <a
           href={getLinkByValue(50, isSubscription)}
           rel="noreferrer"
           target="_blank"
           title={`Donate $50.00${isSubscription ? ' monthly' : ''}`}
         >
           $50.00
-        </a>
-        <a
-          href={getLinkByValue(75, isSubscription)}
-          rel="noreferrer"
-          target="_blank"
-          title={`Donate $75.00${isSubscription ? ' monthly' : ''}`}
-        >
-          $75.00
         </a>
         <a
           href={getLinkByValue(100, isSubscription)}
