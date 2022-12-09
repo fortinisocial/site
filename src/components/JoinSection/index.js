@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const Join = styled(Section)`
   display: flex;
@@ -96,18 +97,16 @@ const Join = styled(Section)`
 `;
 
 export default function JoinSection() {
+  const t = useTranslations('Join');
   return (
     <Join className="join-section">
       <div className="join">
         <div className="description">
-          <h1>Junte-se a nós</h1>
-          <p>
-            Faça parte da nossa rede de doadores e nos ajude a transformar
-            vidas.
-          </p>
+          <h1>{t('title')}</h1>
+          <p>{t('subTitle')}</p>
 
-          <Link href="/doe" title="Faça parte da Fortini">
-            Quero Doar
+          <Link href={t('url')} title={t('urlTitle')}>
+            {t('cta')}
           </Link>
         </div>
       </div>

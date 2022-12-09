@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -132,6 +133,8 @@ export const MenuItem = styled.div`
 `;
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+
   return (
     <StyledFooter>
       <LogoContainer>
@@ -155,13 +158,13 @@ export default function Footer() {
       </LogoContainer>
       <Navigation>
         <Social>
-          <h1>Redes sociais</h1>
+          <h1>{t('social.title')}</h1>
           <p>
             <a
               href="https://www.instagram.com/fortinisocial"
               target="_blank"
               rel="noreferrer"
-              title="Instagram da Fortini"
+              title={t('social.instagram')}
             >
               @fortinisocial
             </a>
@@ -171,7 +174,7 @@ export default function Footer() {
               href="https://www.instagram.com/fortinisocial"
               target="_blank"
               rel="noreferrer"
-              title="Instagram da Fortini"
+              title={t('social.instagram')}
             >
               <img
                 src="/images/footer/insta_footer.svg"
@@ -185,7 +188,7 @@ export default function Footer() {
               href="https://www.facebook.com/fortinisocial"
               target="_blank"
               rel="noreferrer"
-              title="Facebook da Fortini"
+              title={t('social.facebook')}
             >
               <img
                 src="/images/footer/fb_footer.svg"
@@ -199,7 +202,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/fortini-investimento-social"
               target="_blank"
               rel="noreferrer"
-              title="LinkedIn da Fortini"
+              title={t('social.linkedin')}
             >
               <img
                 src="/images/footer/linkedin_footer.svg"
@@ -213,12 +216,12 @@ export default function Footer() {
         </Social>
         <Menu>
           <MenuItem>
-            <h1>Institucional</h1>
+            <h1>{t('institutional')}</h1>
             <nav role="navigation">
-              <a href="#about-section">Sobre</a>
-              <a href="#ods-section">Metodologia</a>
-              <a href="#testimonials-section">Depoimentos</a>
-              <a href="#partners-section">Parceiros</a>
+              <a href="#about-section">{t('menu.about')}</a>
+              <a href="#ods-section">{t('menu.methodology')}</a>
+              <a href="#testimonials-section">{t('menu.testimonials')}</a>
+              <a href="#partners-section">{t('menu.partners')}</a>
               {/* <a href="/contato">Contato</a> */}
             </nav>
           </MenuItem>
@@ -232,13 +235,11 @@ export default function Footer() {
             </nav>
           </MenuItem> */}
           <MenuItem>
-            <h1>Contato</h1>
-            <p>(31) 99265-7329</p>
+            <h1>{t('contact')}</h1>
+            <p>{t('phone')}</p>
             <p>contato@fortini.org.br</p>
-            <p>Segunda a sexta, das 08h às 17h</p>
-            <p>
-              Av. Rio Negro, 580 - Riacho das Pedras, Contagem - MG, 32280-000
-            </p>
+            <p>{t('workingHours')}</p>
+            <p>{t('address')}</p>
           </MenuItem>
         </Menu>
       </Navigation>

@@ -1,6 +1,7 @@
 import '../styles/globals.scss';
 import Head from 'next/head';
 import Script from 'next/script';
+import { NextIntlProvider } from 'next-intl';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -21,7 +22,9 @@ function MyApp({ Component, pageProps }) {
               gtag('config', 'G-S2RL7YMX85');
             `}
       </Script>
-      <Component {...pageProps} />
+      <NextIntlProvider messages={pageProps.messages}>
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </>
   );
 }

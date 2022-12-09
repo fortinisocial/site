@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
@@ -121,6 +122,7 @@ const Projects = styled(Section)`
 `;
 
 export default function ProjectsSection() {
+  const t = useTranslations('Projects.names');
   const projectsContainerRef = useRef(null);
   const [navigation, setNavigation] = useState({
     arrowLeft: false,
@@ -149,7 +151,7 @@ export default function ProjectsSection() {
         <ProjectCard
           onScroll={handleNavigation}
           kind="tenis"
-          title="Tênis"
+          title={t('tennis')}
           students="80"
           city="Contagem"
           schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos
@@ -160,7 +162,7 @@ export default function ProjectsSection() {
         <ProjectCard
           onScroll={handleNavigation}
           kind="handball"
-          title="Handebol"
+          title={t('handball')}
           students="200"
           city="Betim e Contagem"
           schools="E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares"
@@ -170,7 +172,7 @@ export default function ProjectsSection() {
         <ProjectCard
           onScroll={handleNavigation}
           kind="judo"
-          title="Judô"
+          title={t('judo')}
           students="120"
           city="Contagem"
           schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
@@ -180,7 +182,7 @@ export default function ProjectsSection() {
         <ProjectCard
           onScroll={handleNavigation}
           kind="taekwondo"
-          title="Taekwondo"
+          title={t('taekwondo')}
           students="120"
           city="Betim e Contagem"
           schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares"

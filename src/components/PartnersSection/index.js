@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import styled from 'styled-components';
 import { Section } from '../Layout';
 
@@ -78,13 +79,15 @@ const Partners = styled(Section)`
 `;
 
 export default function PartnersSection() {
+  const t = useTranslations('Partners');
+
   return (
     <Partners id="partners-section" className="partners-section">
       <div className="description">
-        <h1>Quem já realiza com a gente</h1>
+        <h1>{t('title')}</h1>
       </div>
       <div className="list-container">
-        <h1>Patrocinador:</h1>
+        <h1>{t('sponsors')}</h1>
         <div className="sponsor-list">
           <a
             href="https://www.cemig.com.br/"
@@ -104,7 +107,7 @@ export default function PartnersSection() {
             </picture>
           </a>
         </div>
-        <h1>Parceiros:</h1>
+        <h1>{t('partners')}</h1>
         <div className="partner-list">
           <a
             href="https://www.ohubsocial.com.br"

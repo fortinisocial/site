@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ODSItem from '../ODSItem';
 import { Section } from '../Layout';
+import { useTranslations } from 'next-intl';
 
 const History = styled(Section)`
   position: relative;
@@ -86,24 +87,17 @@ const History = styled(Section)`
 `;
 
 export default function HistorySection() {
+  const t = useTranslations('Projects');
+
   return (
     <History className="history-section">
       <img src="/images/hexagon.svg" alt="Hexágono" />
       <div className="description">
-        <h1>Projetos sociais</h1>
-        <p>
-          Nossos projetos sociais utilizam uma metodologia com foco no{' '}
-          <strong>desenvolvimento educacional em paralelo ao social</strong>,
-          utilizando as{' '}
-          <strong>
-            oficinas esportivas, culturais e de desenvolvimento socioemocional
-          </strong>{' '}
-          como ferramenta para a{' '}
-          <strong>
-            melhoria do desempenho físico e escolar, e da autoestima
-          </strong>{' '}
-          de cada criança e adolescente participante de nossas oficinas.
-        </p>
+        <h1>{t('title')}</h1>
+        {t.rich('introduction', {
+          p: chunks => <p>{chunks}</p>,
+          b: chunks => <b>{chunks}</b>,
+        })}
       </div>
     </History>
   );

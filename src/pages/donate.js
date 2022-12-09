@@ -18,13 +18,10 @@ export default function Home() {
 }
 
 export async function getStaticProps(context) {
-  // I you don' use internationalized routing, define this statically.
   const locale = context.locale;
 
   return {
     props: {
-      // You can get the messages from anywhere you like. The recommended
-      // pattern is to put them in JSON files separated by language.
       messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };

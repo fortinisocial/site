@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
@@ -170,6 +171,8 @@ const Institutional = styled.div`
 `;
 
 export default function AboutSection() {
+  const t = useTranslations('About');
+
   return (
     <About id="about-section" className="about-section">
       <Columns>
@@ -193,61 +196,37 @@ export default function AboutSection() {
         </FirstColumn>
         <SecondColumn>
           <div className="about-intro">
-            <h1>Sobre a Fortini</h1>
-            <p>
-              Proporcionamos uma educação transformadora para crianças e
-              adolescentes estudantes da rede pública de ensino na Região
-              Metropolitana de Belo Horizonte.
-            </p>
-            <p>
-              Reconhecemos o papel primordial que a escola tem na constituição
-              dos cidadãos de amanhã. Por isso, as escolas públicas são as
-              nossas primeiras parceiras, na promoção do acesso ao{' '}
-              <strong>esporte e à cultura</strong> de forma sistematizada para
-              seus estudantes. Simultaneamente, promovemos atividades de{' '}
-              <strong>desenvolvimento socioemocional</strong> aos alunos{' '}
-              <strong>
-                e acompanhamento socioassistencial aos seus familiares
-              </strong>
-              . Acreditamos na atuação de forma multidisciplinar, para que cada
-              criança ou adolescente atendido pela Fortini possa desempenhar o
-              seu pleno potencial.
-            </p>
+            <h1>{t('title')}</h1>
+            {t.rich('content', {
+              p: chunks => <p>{chunks}</p>,
+              b: chunks => <b>{chunks}</b>,
+            })}
           </div>
           <Institutional>
             <div className="about-vision">
-              <h2>Nossa visão</h2>
-              <p>
-                Ser <strong>referência</strong> na realização de{' '}
-                <strong>projetos socioeducativos</strong>, na Região
-                Metropolitana de Belo Horizonte, <strong>até 2026</strong>.
-                Vamos conosco?
-              </p>
+              <h2>{t('Vision.title')}</h2>
+              {t.rich('Vision.content', {
+                p: chunks => <p>{chunks}</p>,
+                b: chunks => <b>{chunks}</b>,
+              })}
             </div>
             <div className="about-values">
-              <h2>Valores</h2>
+              <h2>{t('Values.title')}</h2>
               <ul>
-                <li>Amor e cuidado</li>
-                <li>Transparência</li>
-                <li>Ganha-ganha-ganha</li>
-                <li>Comprometimento e excelência</li>
+                {t.rich('Values.content', {
+                  li: chunks => <li>{chunks}</li>,
+                })}
               </ul>
             </div>
           </Institutional>
         </SecondColumn>
       </Columns>
       <div className="about-hexagons">
-        <h1>Por que o Hexágono?</h1>
-        <p>
-          Para nós, o hexágono é o símbolo representativo da centralidade da{' '}
-          <strong>atuação em rede</strong>, no nosso método de trabalho. Desde o
-          início, planejamos as nossas ações{' '}
-          <strong>estabelecendo parcerias</strong>; todos os projetos são
-          planejados e executados com a atuação de{' '}
-          <strong>múltiplos atores</strong>. A Fortini existe como uma{' '}
-          <strong>catalizadora</strong> do potencial de ação de todos os atores
-          que nos cercam, em um trabalho conjunto, complementar e multiplicador.
-        </p>
+        <h1>{t('Hexagon.title')}</h1>
+        {t.rich('Hexagon.content', {
+          p: chunks => <p>{chunks}</p>,
+          b: chunks => <b>{chunks}</b>,
+        })}
         <img
           src="/images/about/hexagons.png"
           alt="Hexágonos Fortini"

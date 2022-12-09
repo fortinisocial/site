@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
@@ -32,6 +33,10 @@ const Donate = styled(Section)`
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+
+    &:last-of-type {
+      margin-top: 0;
+    }
 
     a {
       font-size: 1.2rem;
@@ -92,74 +97,67 @@ const Donate = styled(Section)`
 const getLinkByValue = (value, isSubscription) =>
   ({
     25: isSubscription
-      ? 'https://buy.stripe.com/bIY5obfEwcdg3RubIM'
-      : 'https://donate.stripe.com/aEU7wjeAsgtwfAc9AS',
-    75: isSubscription
-      ? 'https://buy.stripe.com/6oE5obbog2CG3RuaEV'
-      : 'https://donate.stripe.com/4gwbMz0JCelo1Jm7sI',
+      ? 'https://buy.stripe.com/3cs7wj9g87X073GbJ2'
+      : 'https://donate.stripe.com/eVa2bZ3VO5OS4Vy145',
     50: isSubscription
-      ? 'https://buy.stripe.com/cN203R4ZS3GK3Ru7sx'
-      : 'https://donate.stripe.com/cN26sffEwa582Nq008',
+      ? 'https://buy.stripe.com/dR63g3fEw2CG9bO9AV'
+      : 'https://donate.stripe.com/8wMdUH0JC6SWew8000',
     100: isSubscription
-      ? 'https://buy.stripe.com/cN2bMz9g84KO9bObIO'
-      : 'https://donate.stripe.com/00gbMzcsk5OSew87sB',
+      ? 'https://buy.stripe.com/8wMaIv63W1yC5ZCdRc'
+      : 'https://donate.stripe.com/00geYL7807X0gEgcMO',
     200: isSubscription
-      ? 'https://buy.stripe.com/6oE7wj4ZS2CGfAc007'
-      : 'https://donate.stripe.com/bIYdUHbogelo5ZC4gq',
+      ? 'https://buy.stripe.com/aEU4k72RKa583Ru8wT'
+      : 'https://donate.stripe.com/fZe7wjeAs6SWew8dQT',
   }[value]);
 
 export default function DonateSection() {
+  const t = useTranslations('Donate');
   const [isSubscription, setIsSubscription] = useState(true);
 
   return (
     <Donate id="donate-section" className="donate-section">
       <div className="donate-intro">
-        <h1>Faça a sua doação</h1>
-        <p>
-          Você pode ajudar a transformar vidas através de doações pontuais ou
-          recorrentes.
-        </p>
+        <h1>{t('title')}</h1>
+        <p>{t('subTitle')}</p>
       </div>
       <div className="donate-buttons">
         <a
           href={getLinkByValue(50, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Doe R$ 50,00${isSubscription ? ' por mês' : ''}`}
+          title={`Donate $50.00${isSubscription ? ' monthly' : ''}`}
         >
-          R$ 50,00
+          $50.00
         </a>
         <a
           href={getLinkByValue(75, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Doe R$ 75,00${isSubscription ? ' por mês' : ''}`}
+          title={`Donate $75.00${isSubscription ? ' monthly' : ''}`}
         >
-          R$ 75,00
+          $75.00
         </a>
         <a
           href={getLinkByValue(100, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Doe R$ 100,00${isSubscription ? ' por mês' : ''}`}
+          title={`Donate $100.00${isSubscription ? ' monthly' : ''}`}
         >
-          R$ 100,00
+          $100.00
         </a>
         <a
           href={getLinkByValue(200, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Doe R$ 200,00${isSubscription ? ' por mês' : ''}`}
+          title={`Donate $200.00${isSubscription ? ' monthly' : ''}`}
         >
-          R$ 200,00
+          $200.00
         </a>
       </div>
       <div className="donate-type">
         <label
           title={
-            isSubscription
-              ? 'Desmarque para fazer uma doação pontual'
-              : 'Marque para fazer doações mensais (Cancele quando quiser)'
+            isSubscription ? t('recurrencyOnTitle') : t('recurrencyOffTitle')
           }
         >
           <input
@@ -167,23 +165,23 @@ export default function DonateSection() {
             checked={isSubscription}
             onChange={() => setIsSubscription(prevState => !prevState)}
           />
-          Doação mensal
+          {t('monthly')}
         </label>
-        <p>
-          Caso opte por doações mensais, você pode cancelá-las a qualquer
-          momento.
-        </p>
+        <p>{t('monthlyInfo')}</p>
       </div>
+      <br />
       <div className="donate-others">
-        <p>Você também pode doar outros valores através do nosso PIX:</p>
-        <h3>contato@fortini.org.br</h3>
-        <img
-          src="/images/donate/pix.jpg"
-          alt="QR Code PIX Fortini"
-          loading="lazy"
-          width={282}
-          height={282}
-        />
+        <p>{t('oneTimeDonationInfo')}</p>
+        <div className="donate-buttons">
+          <a
+            href="https://donate.stripe.com/bIY8An0JC0uy0FiaF2"
+            rel="noreferrer"
+            target="_blank"
+            title="One time donation (choose the amount)"
+          >
+            {t('oneTimeDonation')}
+          </a>
+        </div>
       </div>
     </Donate>
   );

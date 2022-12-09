@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ODSItem from '../ODSItem';
 import { Section } from '../Layout';
+import { useTranslations } from 'next-intl';
 
 const ODS = styled(Section)`
   background: #002743;
@@ -58,14 +59,12 @@ const ODS = styled(Section)`
 `;
 
 export default function ODSSection() {
+  const t = useTranslations('SDG');
+
   return (
     <ODS id="ods-section" className="ods-section">
-      <h1>Objetivos de Desenvolvimento Sustentável - ODS</h1>
-      <h2>
-        A Fortini está alinhada aos ODS da Agenda 2030 das Nações Unidas em
-        conformidade com as dimensões econômica, social e ambiental do
-        desenvolvimento sustentável.
-      </h2>
+      <h1>{t('title')}</h1>
+      <h2>{t('content')}</h2>
       <div className="onu">
         <img
           src="/images/ods/ONU.svg"
@@ -75,8 +74,9 @@ export default function ODSSection() {
           loading="lazy"
         />
         <p>
-          <strong>O</strong>bjetivos de <strong>d</strong>esenvolvimento{' '}
-          <strong>s</strong>ustentável
+          {t.rich('acronim', {
+            b: chunks => <b>{chunks}</b>,
+          })}
         </p>
       </div>
       <div className="ods-list">

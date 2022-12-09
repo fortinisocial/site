@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import MenuButton from './MenuButton';
+import { useTranslations } from 'next-intl';
 
 const StyledHeader = styled.header`
   position: relative;
@@ -439,6 +440,7 @@ export default function Header({ donation = false }) {
   const [openedMobile, setOpenedMobile] = useState(false);
   const [showFixedMenu, setShowFixedMenu] = useState(false);
   const headerMenuRef = useRef(null);
+  const t = useTranslations('Header');
 
   useEffect(() => {
     function handleObserver(observer) {
@@ -493,24 +495,24 @@ export default function Header({ donation = false }) {
           />
         </Logos>
         <Menu className={donation ? 'menu fixed donation' : 'menu fixed'}>
-          <Link href="/#about-section" title="Sobre">
-            Sobre
+          <Link href="/#about-section" title={t('menu.about')}>
+            {t('menu.about')}
           </Link>
-          <Link href="/#ods-section" title="Metodologia">
-            Metodologia
+          <Link href="/#ods-section" title={t('menu.methodology')}>
+            {t('menu.methodology')}
           </Link>
-          <Link href="/#testimonials-section" title="Depoimentos">
-            Depoimentos
+          <Link href="/#testimonials-section" title={t('menu.testimonials')}>
+            {t('menu.testimonials')}
           </Link>
-          <Link href="/#partners-section" title="Parceiros">
-            Parceiros
+          <Link href="/#partners-section" title={t('menu.partners')}>
+            {t('menu.partners')}
           </Link>
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
           {!donation && (
-            <Link href="/doe" title="Doe agora">
-              Doe agora
+            <Link href="/doe" title={t('menu.donate')}>
+              {t('menu.donate')}
             </Link>
           )}
         </Menu>
@@ -530,24 +532,24 @@ export default function Header({ donation = false }) {
           />
         </Logo>
         <Menu className={donation ? 'menu donation' : 'menu'}>
-          <Link href="/#about-section" title="Sobre">
-            Sobre
+          <Link href="/#about-section" title={t('menu.about')}>
+            {t('menu.about')}
           </Link>
-          <Link href="/#ods-section" title="Metodologia">
-            Metodologia
+          <Link href="/#ods-section" title={t('menu.methodology')}>
+            {t('menu.methodology')}
           </Link>
-          <Link href="/#testimonials-section" title="Depoimentos">
-            Depoimentos
+          <Link href="/#testimonials-section" title={t('menu.testimonials')}>
+            {t('menu.testimonials')}
           </Link>
-          <Link href="/#partners-section" title="Parceiros">
-            Parceiros
+          <Link href="/#partners-section" title={t('menu.partners')}>
+            {t('menu.partners')}
           </Link>
           {/* <a href="/contato" title="Contato">
             Contato
           </a> */}
           {!donation && (
-            <Link href="/doe" title="Doe agora">
-              Doe agora
+            <Link href="/doe" title={t('menu.donate')}>
+              {t('menu.donate')}
             </Link>
           )}
         </Menu>
@@ -559,25 +561,27 @@ export default function Header({ donation = false }) {
           onClick={() => setOpenedMobile(prevState => !prevState)}
         />
         {!donation && (
-          <Link href="/doe" title="Doe agora">
-            Doe agora
+          <Link href="/doe" title={t('menu.donate')}>
+            {t('menu.donate')}
           </Link>
         )}
       </MobileActions>
 
       {openedMobile ? (
         <MobileMenu className={showFixedMenu ? 'fixed' : ''}>
-          <Link href="/#about-section" title="Sobre">
-            <span onClick={handleMobileMenuClick}>Sobre</span>
+          <Link href="/#about-section" title={t('menu.about')}>
+            <span onClick={handleMobileMenuClick}>{t('menu.about')}</span>
           </Link>
-          <Link href="/#ods-section" title="Metodologia">
-            <span onClick={handleMobileMenuClick}>Metodologia</span>
+          <Link href="/#ods-section" title={t('menu.methodology')}>
+            <span onClick={handleMobileMenuClick}>{t('menu.methodology')}</span>
           </Link>
-          <Link href="/#testimonials-section" title="Depoimentos">
-            <span onClick={handleMobileMenuClick}>Depoimentos</span>
+          <Link href="/#testimonials-section" title={t('menu.testimonials')}>
+            <span onClick={handleMobileMenuClick}>
+              {t('menu.testimonials')}
+            </span>
           </Link>
-          <Link href="/#partners-section" title="Parceiros">
-            <span onClick={handleMobileMenuClick}>Parceiros</span>
+          <Link href="/#partners-section" title={t('menu.partners')}>
+            <span onClick={handleMobileMenuClick}>{t('menu.partners')}</span>
           </Link>
           {/* <a href="/contato" title="Contato">
             Contato
@@ -586,19 +590,14 @@ export default function Header({ donation = false }) {
       ) : (
         <Message className="message">
           {donation ? (
-            <h1 className="donation">Ajude a transformar vidas</h1>
+            <h1 className="donation">{t('donation.title')}</h1>
           ) : (
             <>
-              <h1>&quot;Sonho que se sonha junto é realidade&quot;</h1>
+              <h1>&quot;{t('title')}&quot;</h1>
               <p>
-                Somos a <strong>Fortini</strong>, uma{' '}
-                <strong>
-                  organização da sociedade civil sem fins lucrativos
-                </strong>{' '}
-                que promove o acesso à <strong>educação integral</strong>, ao{' '}
-                <strong>esporte</strong> e a <strong>cultura</strong> para{' '}
-                <strong>estudantes de escolas públicas</strong> da{' '}
-                <strong>Região Metropolitana de Belo Horizonte</strong>.
+                {t.rich('subTitle', {
+                  b: chunks => <b>{chunks}</b>,
+                })}
               </p>
             </>
           )}
@@ -606,4 +605,12 @@ export default function Header({ donation = false }) {
       )}
     </StyledHeader>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../../../messages/${locale}.json`)).default,
+    },
+  };
 }

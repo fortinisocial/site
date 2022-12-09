@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -173,6 +174,7 @@ export default function ProjectCard({
   onScroll,
 }) {
   const cardRef = useRef(null);
+  const t = useTranslations('Projects.Card');
 
   useEffect(() => {
     function handleObserver(observer) {
@@ -212,7 +214,7 @@ export default function ProjectCard({
             height={23}
             loading="lazy"
           />
-          <span>Número de participantes: </span>
+          <span>{t('participants')} </span>
           {students}
         </p>
         <p className="info">
@@ -223,7 +225,7 @@ export default function ProjectCard({
             height={20}
             loading="lazy"
           />
-          <span>Município: </span>
+          <span>{t('city')} </span>
           {city}
         </p>
         <p className="info">
@@ -234,7 +236,7 @@ export default function ProjectCard({
             height={20}
             loading="lazy"
           />
-          <span>Em execução desde: </span>
+          <span>{t('since')} </span>
           {since}
         </p>
         <p className="info">
@@ -245,7 +247,7 @@ export default function ProjectCard({
             height={19}
             loading="lazy"
           />
-          <span>Escolas Parceiras: </span>
+          <span>{t('schools')} </span>
         </p>
         <ul>
           {schools.split(',').map(school => (
@@ -262,9 +264,7 @@ export default function ProjectCard({
             height={20}
             loading="lazy"
           />
-          <span>
-            {locations.split(',').length > 1 ? 'Locais' : 'Local'} de execução:
-          </span>
+          <span>{t('location', { num: locations.split(',').length })}</span>
         </p>
         <ul>
           {locations.split(',').map(location => (

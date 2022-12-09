@@ -1,0 +1,122 @@
+{
+  "Header": {
+    "menu": {
+      "about": "About",
+      "methodology": "Methodology",
+      "testimonials": "Testimonials",
+      "partners": "Partners",
+      "donate": "Donate now"
+    },
+    "title": "A dream that is dreamed together is reality",
+    "subTitle": "We are <b>Fortini</b>, a <b>non-profit civil society organization</b> that promotes access to <b>comprehensive education</b>, <b>sports</b>, and <b>culture</b> for <b>students of public schools</b> in the <b>Metropolitan Region of Belo Horizonte</b>.",
+    "donation": {
+      "title": "Help transform lives"
+    }
+  },
+  "About": {
+    "title": "About Fortini",
+    "content": "<p>We provide transformative education for children and teenagers who attend public schools in the Metropolitan Region of Belo Horizonte.</p><p>We recognize the crucial role that schools play in the formation of tomorrow's citizens. Therefore, public schools are our first partners in promoting access to <b>sports and culture</b> in a systematic way for their students. At the same time, we promote <b>socioemotional development</b> activities for students <b>and socio-assistance follow-up for their families</b>. We believe in a multidisciplinary approach, so that each child or teenager served by Fortini can fulfill their full potential.</p>",
+    "Vision": {
+      "title": "Our vision",
+      "content": "<p>To be a <b>reference</b> in the realization of <b>socio-educational projects</b> in the Metropolitan Region of Belo Horizonte, <b>by 2026</b>. Come with us?</p>"
+    },
+    "Values": {
+      "title": "Values",
+      "content": "<li>Love and care</li><li>Transparency</li><li>Win-win-win</li><li>Commitment and excellence</li>"
+    },
+    "Hexagon": {
+      "title": "Why the Hexagon?",
+      "content": "<p>For us, the hexagon is a symbol representing the centrality of <b>network action</b> in our work method. From the beginning, we have planned our actions by <b>establishing partnerships</b>; all projects are planned and executed with the involvement of <b>multiple actors</b>. Fortini exists as a <b>catalyst</b> for the potential action of all the actors around us, in a joint, complementary, and multiplying work.</p>"
+    }
+  },
+  "SDG": {
+    "title": "Sustainable Development Goals - SDG",
+    "content": "Fortini aligns with the SDGs of the United Nations 2030 Agenda in accordance with the economic, social, and environmental dimensions of sustainable development.",
+    "acronim": "<b>S</b>ustainable <b>D</b>evelopment <b>G</b>oals",
+    "goal": "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-{number}.jpg"
+  },
+  "Projects": {
+    "title": "Social Projects",
+    "introduction": "<p>Our social projects use a methodology focused on <b>educational development in parallel with social development</b>, using <b>sports, cultural, and socio-emotional development workshops</b> as a tool for <b>improving physical and academic performance, and self-esteem</b> of each child and adolescent participant in our workshops.</p>",
+    "Card": {
+      "participants": "Number of participants:",
+      "city": "City:",
+      "since": "In execution since:",
+      "schools": "Partner Schools:",
+      "location": "{num, plural, =1 {Location} other {Locations}} of execution:"
+    },
+    "names": {
+      "tennis": "Tennis",
+      "handball": "Handball",
+      "judo": "Judo",
+      "taekwondo": "Taekwondo"
+    }
+  },
+  "Testimonials": {
+    "title": "What people say out there...",
+    "subTitle": "Want to know what they say about us? Check out the testimonials of those who already know our work:",
+    "lilian": {
+      "authorInfo": "Director of partner school E. M. Heitor Villa Lobos",
+      "testimonial": "Fortini has been a partner in the emotional and cognitive development of students in a way that the difference is noticed in their behavior. They are more focused and aware of their condition as teenagers in training who need to take responsibility for their future."
+    },
+    "rose": {
+      "authorInfo": "Mother of Cristiellen (tennis project participant)",
+      "testimonial": "Fortini is very important in Cristiellen's life because it contributes a lot to her academic performance and her health and, as a result, she has become more responsible; Today she is a happier child!! Fortini provides full support in her life with psychological and pedagogical support and other assistance for her difficulties. Fortini monitors her quality of life so that in the future she can be an athlete and a person on track in life. I thank Fortini for supporting Cristiellen on her journey in life."
+    },
+    "janis": {
+      "authorInfo": "Community Agent in the city of Contagem and teacher at E. E. Carlos Drummond de Andrade",
+      "testimonial": "Fortini provides access to sports considered noble and that would not be within the reach of low-income students if it did not exist. The activities develop the self-esteem of the children influencing their learning growth."
+    },
+    "gilberto": {
+      "authorInfo": "Managing partner of the Tennis Hall Academy and tennis teacher",
+      "testimonial": "I don't stop believing that there are people who are thirsty for affection and with a simple gesture we can make a difference in someone's life, Fortini has a social and above all Human vision, and I feel privileged every day, for the trust that has been deposited in me, along this journey of many battles yes, but also of many victories. I believe that with the commitment demonstrated by the people who are at the forefront of this project, great things are still to come, I hope to be always available to help, because I know that small gestures can make a big difference in someone's life..."
+    }
+  },
+  "Transparency": {
+    "title": "Transparency",
+    "subTitle": "Check out our annual reports.",
+    "socialBalance2020": "SOCIAL BALANCE 2020 (pt-br)",
+    "socialBalance2021": "SOCIAL BALANCE 2021 (pt-br)"
+  },
+  "Partners": {
+    "title": "Those who already do with us",
+    "sponsors": "Sponsors:",
+    "partners": "Partners:"
+  },
+  "Join": {
+    "title": "Join us",
+    "subTitle": "Be part of our donor network and help us transform lives.",
+    "cta": "Donate now",
+    "url": "/donate",
+    "urlTitle": "Be part of Fortini"
+  },
+  "Footer": {
+    "social": {
+      "title": "Social Media",
+      "instagram": "Fortini's Instagram",
+      "facebook": "Fortini's Facebook",
+      "linkedin": "Fortini's LinkedIn"
+    },
+    "institutional": "Institutional",
+    "contact": "Contact",
+    "workingHours": "Monday to Friday, from 8am to 5pm",
+    "address": "580 Rio Negro Ave. - Riacho das Pedras, Contagem - MG, 32280-000",
+    "phone": "+55 31 99265-7329",
+    "menu": {
+      "about": "About",
+      "methodology": "Methodology",
+      "testimonials": "Testimonials",
+      "partners": "Partners"
+    }
+  },
+  "Donate": {
+    "title": "Make your donation",
+    "subTitle": "You can help transform lives through one-time or recurring donations.",
+    "monthly": "Monthly donation",
+    "monthlyInfo": "If you opt for monthly donations, you can cancel them at any time.",
+    "recurrencyOnTitle": "Uncheck to make a one-time donation",
+    "recurrencyOffTitle": "Check to make monthly donations (Cancel whenever you want)",
+    "oneTimeDonation": "One time donation (choose the amount)",
+    "oneTimeDonationInfo": "You can also choose the amount you want to donate:"
+  }
+}

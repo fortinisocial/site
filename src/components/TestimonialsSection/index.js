@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
@@ -124,6 +125,7 @@ const Testimonials = styled(Section)`
 `;
 
 export default function TestimonialsSection() {
+  const t = useTranslations('Testimonials');
   const depositionsContainerRef = useRef(null);
   const [navigation, setNavigation] = useState({
     arrowLeft: false,
@@ -154,11 +156,8 @@ export default function TestimonialsSection() {
 
   return (
     <Testimonials id="testimonials-section" className="testimonials-section">
-      <h1>O que dizem por aí...</h1>
-      <h2>
-        Quer saber o que dizem da gente? Se liga nos depoimentos de quem já
-        conhece o nosso trabalho:
-      </h2>
+      <h1>{t('title')}</h1>
+      <h2>{t('subTitle')}</h2>
 
       <div
         id="testimonials-container"
@@ -170,60 +169,36 @@ export default function TestimonialsSection() {
           photoURL="/images/testimonials/lilian.jpg"
           photoLabel="Lilian"
           authorName="Lilian"
-          authorInfo="Diretora da escola parceira E. M. Heitor Villa Lobos"
+          authorInfo={t('lilian.authorInfo')}
         >
-          &quot;A Fortini tem sido parceira no desenvolvimento emocional e
-          cognitivo dos estudantes de forma que a diferença é percebida no
-          comportamento. Eles estão mais centrados e conscientes de sua condição
-          de adolescentes em formação que precisam se responsabilizar pelo seu
-          futuro. &quot;
+          &quot;{t('lilian.testimonial')} &quot;
         </Testimonial>
         <Testimonial
           onScroll={handleNavigation}
           photoURL="/images/testimonials/rose.jpg"
           photoLabel="Rose"
           authorName="Rose"
-          authorInfo="Mãe da Cristiellen (participante do Projeto de Tênis)"
+          authorInfo={t('rose.authorInfo')}
         >
-          &quot;A Fortini é muito importante na vida da Cristiellen pois,
-          contribui muito para o seu desempenho escolar e a sua saúde e com isso
-          ela passou a ter responsabilidade; Hoje é uma criança mais feliz!! A
-          Fortini dá todo suporte em sua vida com o apoio psicológico e
-          pedagógico e outras assistências para suas dificuldades. A Fortini
-          acompanha sua qualidade de vida para no futuro ela ser uma atleta e
-          uma pessoa encaminhada na vida. Agradeço Fortini pelo apoio a
-          Cristiellen em sua caminhada na vida. &quot;
+          &quot;{t('rose.testimonial')} &quot;
         </Testimonial>
         <Testimonial
           onScroll={handleNavigation}
           photoURL="/images/testimonials/janis-costa.jpg"
           photoLabel="Janis Perpétua Pedro Costa"
           authorName="Janis P. P. Costa"
-          authorInfo="Agente Comunitária no munícipio de Contagem e professora na E. E.
-            Carlos Drummond de Andrade"
+          authorInfo={t('janis.authorInfo')}
         >
-          &quot;A Fortini proporciona acesso à esportes considerados nobres e
-          que não estariam ao alcance dos estudantes de baixa renda se não
-          existisse o projeto. As atividades desenvolvem a auto estima das
-          crianças influenciando no crescimento de sua aprendizagem. &quot;
+          &quot;{t('janis.testimonial')} &quot;
         </Testimonial>
         <Testimonial
           onScroll={handleNavigation}
           photoURL="/images/testimonials/gilberto-cardoso.jpg"
           photoLabel="Gilberto Cardoso"
           authorName="Gilberto Cardoso da Silva"
-          authorInfo="Sócio diretor da Academia Tennis Hall e professor de tênis"
+          authorInfo={t('gilberto.authorInfo')}
         >
-          &quot;Não deixo de acreditar que existem pessoas que estão sedentas de
-          carinho e com um simples gesto podemos fazer a diferença na vida de
-          alguém, a Fortini tem uma visão social e acima de tudo Humana, e me
-          sinto privilegiado todos os dias, pela confiança que fora depositada
-          em minha pessoa, ao longo desta caminhada de muitas batalhas sim, mas
-          também de muitas conquistas. Creio que com empenho demostrado pelas
-          pessoas que estão a frente deste projeto grandes coisas ainda estão
-          por vim, espero poder está sempre disponível para ajudar , pois sei
-          que pequenos gestos podem fazer muita diferença na vida de alguém..
-          &quot;
+          &quot;{t('gilberto.testimonial')} &quot;
         </Testimonial>
       </div>
       {navigation.arrowLeft && (

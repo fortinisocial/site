@@ -30,3 +30,13 @@ export default function Home() {
     </Layout>
   );
 }
+
+export async function getStaticProps(context) {
+  const locale = context.locale;
+
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
+  };
+}

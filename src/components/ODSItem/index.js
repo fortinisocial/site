@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -169,11 +170,12 @@ const getTitleByNumber = number =>
   }[number]);
 
 export default function ODSItem({ number }) {
+  const t = useTranslations('SDG');
   return (
     <ODS className={`n${number}`}>
       <div className="ods" data-text={getTitleByNumber(number)}>
         <img
-          src={`/images/ods/ODS-${number}.svg`}
+          src={t('goal', { number: number < 10 ? `0${number}` : number })}
           alt={getTitleByNumber(number)}
           height={130}
           loading="lazy"

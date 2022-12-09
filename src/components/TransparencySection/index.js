@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../Layout';
@@ -129,29 +130,31 @@ const Transparency = styled(Section)`
 `;
 
 export default function TransparencySection() {
+  const t = useTranslations('Transparency');
+
   return (
     <Transparency className="transparency-section">
       <div className="transparency">
         <div className="description">
-          <h1>Transparência</h1>
-          <p>Confira nossos balanços anuais.</p>
+          <h1>{t('title')}</h1>
+          <p>{t('subTitle')}</p>
 
           <div className="annual-balances">
             <a
               href="/balance/Balanco_Social_Fortini_Investimento_Social_2020.pdf"
-              title="Balanço Social 2020 - Fortini Investimento Social"
+              title={`${t('socialBalance2020')} - Fortini Investimento Social"`}
               target="_blank"
               rel="noreferrer"
             >
-              Balanço Social 2020
+              {t('socialBalance2020')}
             </a>
             <a
               href="/balance/Balanco_Social_Fortini_Investimento_Social_2021.pdf"
-              title="Balanço Social 2021 - Fortini Investimento Social"
+              title={`${t('socialBalance2021')} - Fortini Investimento Social"`}
               target="_blank"
               rel="noreferrer"
             >
-              Balanço Social 2021
+              {t('socialBalance2021')}
             </a>
           </div>
         </div>
