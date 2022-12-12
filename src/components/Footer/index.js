@@ -132,100 +132,111 @@ export const MenuItem = styled.div`
   }
 `;
 
+export const StyledLang = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #232323;
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+`;
+
 export default function Footer() {
   const t = useTranslations('Footer');
 
   return (
-    <StyledFooter>
-      <LogoContainer>
-        <Logos>
-          <img
-            src="/images/fortini-logo.svg"
-            alt="Fortini Investimento Social"
-            width={162}
-            height={50}
-            loading="lazy"
-          />
-          <img
-            src="/images/footer/gf-logo-white.png"
-            alt="Gerando Falcões"
-            width={102}
-            height={25}
-            loading="lazy"
-          />
-        </Logos>
-        <p>Fortini Investimento Social ® 2016-2022</p>
-      </LogoContainer>
-      <Navigation>
-        <Social>
-          <h1>{t('social.title')}</h1>
-          <p>
-            <a
-              href="https://www.instagram.com/fortinisocial"
-              target="_blank"
-              rel="noreferrer"
-              title={t('social.instagram')}
-            >
-              @fortinisocial
-            </a>
-          </p>
-          <Icons>
-            <a
-              href="https://www.instagram.com/fortinisocial"
-              target="_blank"
-              rel="noreferrer"
-              title={t('social.instagram')}
-            >
-              <img
-                src="/images/footer/insta_footer.svg"
-                alt="Instagram"
-                width={30}
-                height={30}
-                loading="lazy"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/fortinisocial"
-              target="_blank"
-              rel="noreferrer"
-              title={t('social.facebook')}
-            >
-              <img
-                src="/images/footer/fb_footer.svg"
-                alt="Facebook"
-                width={17}
-                height={30}
-                loading="lazy"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/fortini-investimento-social"
-              target="_blank"
-              rel="noreferrer"
-              title={t('social.linkedin')}
-            >
-              <img
-                src="/images/footer/linkedin_footer.svg"
-                alt="LinkedIn"
-                width={30}
-                height={30}
-                loading="lazy"
-              />
-            </a>
-          </Icons>
-        </Social>
-        <Menu>
-          <MenuItem>
-            <h1>{t('institutional')}</h1>
-            <nav role="navigation">
-              <a href="#about-section">{t('menu.about')}</a>
-              <a href="#ods-section">{t('menu.methodology')}</a>
-              <a href="#testimonials-section">{t('menu.testimonials')}</a>
-              <a href="#partners-section">{t('menu.partners')}</a>
-              {/* <a href="/contato">Contato</a> */}
-            </nav>
-          </MenuItem>
-          {/* <MenuItem>
+    <>
+      <StyledFooter>
+        <LogoContainer>
+          <Logos>
+            <img
+              src="/images/fortini-logo.svg"
+              alt="Fortini Investimento Social"
+              width={162}
+              height={50}
+              loading="lazy"
+            />
+            <img
+              src="/images/footer/gf-logo-white.png"
+              alt="Gerando Falcões"
+              width={102}
+              height={25}
+              loading="lazy"
+            />
+          </Logos>
+          <p>Fortini Investimento Social ® 2016-2022</p>
+        </LogoContainer>
+        <Navigation>
+          <Social>
+            <h1>{t('social.title')}</h1>
+            <p>
+              <a
+                href="https://www.instagram.com/fortinisocial"
+                target="_blank"
+                rel="noreferrer"
+                title={t('social.instagram')}
+              >
+                @fortinisocial
+              </a>
+            </p>
+            <Icons>
+              <a
+                href="https://www.instagram.com/fortinisocial"
+                target="_blank"
+                rel="noreferrer"
+                title={t('social.instagram')}
+              >
+                <img
+                  src="/images/footer/insta_footer.svg"
+                  alt="Instagram"
+                  width={30}
+                  height={30}
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/fortinisocial"
+                target="_blank"
+                rel="noreferrer"
+                title={t('social.facebook')}
+              >
+                <img
+                  src="/images/footer/fb_footer.svg"
+                  alt="Facebook"
+                  width={17}
+                  height={30}
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/fortini-investimento-social"
+                target="_blank"
+                rel="noreferrer"
+                title={t('social.linkedin')}
+              >
+                <img
+                  src="/images/footer/linkedin_footer.svg"
+                  alt="LinkedIn"
+                  width={30}
+                  height={30}
+                  loading="lazy"
+                />
+              </a>
+            </Icons>
+          </Social>
+          <Menu>
+            <MenuItem>
+              <h1>{t('institutional')}</h1>
+              <nav role="navigation">
+                <a href="#about-section">{t('menu.about')}</a>
+                <a href="#ods-section">{t('menu.methodology')}</a>
+                <a href="#testimonials-section">{t('menu.testimonials')}</a>
+                <a href="#partners-section">{t('menu.partners')}</a>
+                {/* <a href="/contato">Contato</a> */}
+              </nav>
+            </MenuItem>
+            {/* <MenuItem>
             <h1>Projetos sociais</h1>
             <nav role="navigation">
               <a href="/projeto-social/tenis">Tênis</a>
@@ -234,15 +245,21 @@ export default function Footer() {
               <a href="/projeto-social/taekwondo">Taekwondo</a>
             </nav>
           </MenuItem> */}
-          <MenuItem>
-            <h1>{t('contact')}</h1>
-            <p>{t('phone')}</p>
-            <p>contato@fortini.org.br</p>
-            <p>{t('workingHours')}</p>
-            <p>{t('address')}</p>
-          </MenuItem>
-        </Menu>
-      </Navigation>
-    </StyledFooter>
+            <MenuItem>
+              <h1>{t('contact')}</h1>
+              <p>{t('phone')}</p>
+              <p>contato@fortini.org.br</p>
+              <p>{t('workingHours')}</p>
+              <p>{t('address')}</p>
+            </MenuItem>
+          </Menu>
+        </Navigation>
+      </StyledFooter>
+      <StyledLang>
+        <a href="https://fortini.org.br" target="_blank" rel="noreferrer">
+          🇧🇷
+        </a>
+      </StyledLang>
+    </>
   );
 }
