@@ -15,10 +15,10 @@
   },
   "About": {
     "title": "About Fortini",
-    "content": "<p>We provide transformative education for children and teenagers who attend public schools in the Metropolitan Region of Belo Horizonte, Minas Gerais, Brazil.</p><p>We recognize the crucial role that schools play in the formation of tomorrow's citizens. Therefore, public schools are our first partners in promoting access to <b>sports and culture</b> in a systematic way for their students. At the same time, we promote <b>socioemotional development</b> activities for students <b>and socio-assistance follow-up for their families</b>. We believe in a multidisciplinary approach, so that each child or teenager served by Fortini can fulfill their full potential.</p>",
+    "content": "<p>We provide transformative education for children and teenagers who attend public schools in the Metropolitan Region of Belo Horizonte, Minas Gerais, Brazil.</p><p>We recognize the crucial role that schools play in the formation of tomorrow's citizens. Therefore, public schools are our first partners in promoting access to <b>sports and culture</b> in a systematic way. At the same time, we promote <b>socio-emotional development</b> activities for students <b>follow-up with the families</b> in regard to the progress of their children. We believe in a multi-disciplinary approach, so that each child or teenager served by Fortini can fulfill their full potential.</p>",
     "Vision": {
       "title": "Our vision",
-      "content": "<p>To be a <b>reference</b> in the realization of <b>socio-educational projects</b> in the Metropolitan Region of Belo Horizonte, <b>by 2026</b>. Come with us?</p>"
+      "content": "<p>To be a <b>reference</b> in the realization of <b>socio-educational projects</b> in the Metropolitan Region of Belo Horizonte, <b>by 2026</b>. Will you join us?</p>"
     },
     "Values": {
       "title": "Values",
@@ -37,7 +37,7 @@
   },
   "Projects": {
     "title": "Social Projects",
-    "introduction": "<p>Our social projects use a methodology focused on <b>educational development in parallel with social development</b>, using <b>sports, cultural, and socio-emotional development workshops</b> as a tool for <b>improving physical and academic performance, and self-esteem</b> of each child and adolescent participant in our workshops.</p>",
+    "introduction": "<p>Our social projects use a methodology focused on <b>educational development in parallel with social development</b> using <b>sports, cultural, and socio-emotional development workshops</b> as a tool for <b>improving academic performance, physical performance, and the self-esteem</b> of each youth who participates in our workshops.</p>",
     "Card": {
       "participants": "Number of participants:",
       "city": "City:",
@@ -53,11 +53,11 @@
     }
   },
   "Testimonials": {
-    "title": "What people say out there...",
-    "subTitle": "Want to know what they say about us? Check out the testimonials of those who already know our work:",
+    "title": "What people are saying?",
+    "subTitle": "Check out the testimonials from folks familiar with our work:",
     "lilian": {
       "authorInfo": "Director of partner school E. M. Heitor Villa Lobos",
-      "testimonial": "Fortini has been a partner in the emotional and cognitive development of students in a way that the difference is noticed in their behavior. They are more focused and aware of their condition as teenagers in training who need to take responsibility for their future."
+      "testimonial": "Fortini has been a partner in the emotional and cognitive development of students, changing the way students behave. They are more focused and aware of the responsibility they have to improve their future."
     },
     "rose": {
       "authorInfo": "Mother of Cristiellen (tennis project participant)",
@@ -79,7 +79,7 @@
     "socialBalance2021": "SOCIAL BALANCE 2021 (pt-br)"
   },
   "Partners": {
-    "title": "Those who already do with us",
+    "title": "Those who already work with us",
     "sponsors": "Sponsors:",
     "partners": "Partners:"
   },
@@ -100,7 +100,7 @@
     "institutional": "Institutional",
     "contact": "Contact",
     "workingHours": "Monday to Friday, from 8am to 5pm",
-    "address": "580 Rio Negro Ave. - Riacho das Pedras, Contagem - MG, 32280-000",
+    "address": "580 Rio Negro Ave. - Riacho das Pedras, Contagem - MG, Brazil, 32280-000",
     "phone": "+55 31 99265-7329",
     "menu": {
       "about": "About",
