@@ -141,12 +141,12 @@ export default function TransparencySection() {
 
           <div className="annual-balances">
             <a
-              href="/balance/Balanco_Social_Fortini_Investimento_Social_2020.pdf"
-              title={`${t('socialBalance2020')} - Fortini Investimento Social"`}
+              href="/balance/Balanco_Social_Fortini_Investimento_Social_2022.pdf"
+              title={`${t('socialBalance2022')} - Fortini Investimento Social"`}
               target="_blank"
               rel="noreferrer"
             >
-              {t('socialBalance2020')}
+              {t('socialBalance2022')}
             </a>
             <a
               href="/balance/Balanco_Social_Fortini_Investimento_Social_2021.pdf"
@@ -155,6 +155,14 @@ export default function TransparencySection() {
               rel="noreferrer"
             >
               {t('socialBalance2021')}
+            </a>
+            <a
+              href="/balance/Balanco_Social_Fortini_Investimento_Social_2020.pdf"
+              title={`${t('socialBalance2020')} - Fortini Investimento Social"`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t('socialBalance2020')}
             </a>
           </div>
         </div>
