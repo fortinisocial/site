@@ -112,18 +112,19 @@ const Transparency = styled(Section)`
       flex-direction: column;
       width: 100%;
 
-      .annual-balances {
-        flex-direction: column;
-
-        a {
-          flex: 1;
-          text-align: center;
-        }
-      }
-
       .description {
         padding: 2rem;
         min-width: initial;
+
+        .annual-balances {
+          flex-direction: column;
+
+          a {
+            flex: 1;
+            text-align: center;
+            margin-top: initial;
+          }
+        }
       }
     }
   }
