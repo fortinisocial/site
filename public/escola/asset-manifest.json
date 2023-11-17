@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/escola/static/css/main.fe7bfd0e.chunk.css",
+    "main.js": "/escola/static/js/main.8fd0a11f.chunk.js",
+    "main.js.map": "/escola/static/js/main.8fd0a11f.chunk.js.map",
+    "runtime-main.js": "/escola/static/js/runtime-main.8dc2e530.js",
+    "runtime-main.js.map": "/escola/static/js/runtime-main.8dc2e530.js.map",
+    "static/js/2.d84c8a62.chunk.js": "/escola/static/js/2.d84c8a62.chunk.js",
+    "static/js/2.d84c8a62.chunk.js.map": "/escola/static/js/2.d84c8a62.chunk.js.map",
+    "index.html": "/escola/index.html",
+    "static/css/main.fe7bfd0e.chunk.css.map": "/escola/static/css/main.fe7bfd0e.chunk.css.map",
+    "static/js/2.d84c8a62.chunk.js.LICENSE.txt": "/escola/static/js/2.d84c8a62.chunk.js.LICENSE.txt",
+    "static/media/cloudy.717e1c25.svg": "/escola/static/media/cloudy.717e1c25.svg",
+    "static/media/escola.7aa563d4.png": "/escola/static/media/escola.7aa563d4.png",
+    "static/media/sun.2e5e3d01.svg": "/escola/static/media/sun.2e5e3d01.svg",
+    "static/media/sunrise.8066ef8a.svg": "/escola/static/media/sunrise.8066ef8a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dc2e530.js",
+    "static/js/2.d84c8a62.chunk.js",
+    "static/css/main.fe7bfd0e.chunk.css",
+    "static/js/main.8fd0a11f.chunk.js"
+  ]
+}
