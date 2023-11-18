@@ -36,21 +36,16 @@ const Partners = styled(Section)`
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 48px;
 
       a {
-        img {
-          height: 150px;
-          border: 0;
-        }
-      }
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
 
-      @media (min-width: 1024px) and (max-width: 1366px) {
-        gap: 20px;
-        a {
-          img {
-            height: 110px;
-          }
+        img {
+          max-height: 100px;
+          border: 0;
         }
       }
     }
@@ -59,13 +54,15 @@ const Partners = styled(Section)`
       margin-bottom: 1.5rem;
 
       a {
-        &:first-of-type {
-          img {
-            object-fit: none;
-            height: 70px;
-            width: 280px;
-            transform: scale(0.7);
-          }
+        width: 150px;
+        height: 150px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          max-height: 60px;
         }
       }
     }
@@ -74,11 +71,81 @@ const Partners = styled(Section)`
   @media (max-width: 768px) {
     flex-direction: column;
 
+    .list-container {
+      .sponsor-list {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
     .description {
       width: 100%;
     }
   }
 `;
+
+const sponsors = [
+  {
+    name: 'Cemig',
+    logoPng: 'cemig.png',
+    logoWebp: 'cemig.webp',
+    link: 'https://www.cemig.com.br',
+  },
+  {
+    name: 'CNH Industrial',
+    logoPng: 'cnh-industrial.png',
+    logoWebp: 'cnh-industrial.webp',
+    link: 'https://www.cnhindustrial.com',
+  },
+  {
+    name: 'GEOSOL',
+    logoPng: 'geosol.png',
+    logoWebp: 'geosol.webp',
+    link: 'https://www.geosol.com.br',
+  },
+  {
+    name: 'Hexagon Mining',
+    logoPng: 'hexagon-mining.png',
+    logoWebp: 'hexagon-mining.webp',
+    link: 'https://hexagon.com',
+  },
+  {
+    name: 'Inova BH',
+    logoPng: 'inova-bh.png',
+    logoWebp: 'inova-bh.webp',
+    link: 'https://www.inovabh.com.br',
+  },
+  {
+    name: 'Magotteaux',
+    logoPng: 'magotteaux.png',
+    logoWebp: 'magotteaux.webp',
+    link: 'https://www.magotteaux.com',
+  },
+  {
+    name: 'Minasligas',
+    logoPng: 'minasligas.png',
+    logoWebp: 'minasligas.webp',
+    link: 'https://www.minasligas.com.br',
+  },
+  {
+    name: 'NTS',
+    logoPng: 'nts.png',
+    logoWebp: 'nts.webp',
+    link: 'https://www.ntsbrasil.com',
+  },
+  {
+    name: 'Supermix',
+    logoPng: 'supermix.png',
+    logoWebp: 'supermix.webp',
+    link: 'https://www.supermix.com.br',
+  },
+  {
+    name: 'Tracbel',
+    logoPng: 'tracbel.png',
+    logoWebp: 'tracbel.webp',
+    link: 'https://www.tracbel.com.br',
+  },
+];
 
 export default function PartnersSection() {
   const t = useTranslations('Partners');
@@ -91,43 +158,34 @@ export default function PartnersSection() {
       <div className="list-container">
         <h1>{t('sponsors')}</h1>
         <div className="sponsor-list">
-          <a
-            href="https://www.cemig.com.br/"
-            target="_blank"
-            rel="noreferrer"
-            title="Cemig"
-          >
-            <picture>
-              <source type="image/webp" srcSet="/images/partners/cemig.webp" />
-              <source type="image/jpeg" srcSet="/images/partners/cemig.jpg" />
-              <img
-                src="/images/partners/cemig.jpg"
-                title="Cemig"
-                alt="Cemig"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://hexagon.com/"
-            target="_blank"
-            rel="noreferrer"
-            title="Hexagon Mining"
-          >
-            <picture>
-              <source
-                type="image/webp"
-                srcSet="/images/partners/hexagon.webp"
-              />
-              <source type="image/jpeg" srcSet="/images/partners/hexagon.jpg" />
-              <img
-                src="/images/partners/hexagon.jpg"
-                title="Hexagon Mining"
-                alt="Hexagon Mining"
-                loading="lazy"
-              />
-            </picture>
-          </a>
+          {sponsors
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(sponsor => (
+              <a
+                key={sponsor.name}
+                href={sponsor.link}
+                target="_blank"
+                rel="noreferrer"
+                title={sponsor.name}
+              >
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={`/images/partners/${sponsor.logoWebp}`}
+                  />
+                  <source
+                    type="image/png"
+                    srcSet={`/images/partners/${sponsor.logoPng}`}
+                  />
+                  <img
+                    src={`/images/partners/${sponsor.logoPng}`}
+                    title={sponsor.name}
+                    alt={sponsor.name}
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+            ))}
         </div>
         <h1>{t('partners')}</h1>
         <div className="partner-list">
