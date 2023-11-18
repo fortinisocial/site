@@ -247,7 +247,9 @@ const MobileMenu = styled.nav`
     background: #fff;
     width: 100vw;
     height: 100vh;
-    margin: 0 -24px;
+    margin: 0;
+    top: 0;
+    left: 0;
 
     a,
     span {
@@ -441,6 +443,16 @@ export default function Header({ donation = false }) {
   const [showFixedMenu, setShowFixedMenu] = useState(false);
   const headerMenuRef = useRef(null);
   const t = useTranslations('Header');
+
+  useEffect(() => {
+    if (openedMobile) {
+      document.documentElement.style = 'overflow: hidden';
+      document.body.style = 'overflow: hidden';
+    } else {
+      document.documentElement.style = 'overflow: initial';
+      document.body.style = 'overflow: initial';
+    }
+  }, [openedMobile]);
 
   useEffect(() => {
     function handleObserver(observer) {
