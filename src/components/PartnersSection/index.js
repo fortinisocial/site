@@ -34,24 +34,10 @@ const Partners = styled(Section)`
     .partner-list {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 48px;
-
-      a {
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        img {
-          max-height: 100px;
-          border: 0;
-        }
-      }
-    }
-
-    .sponsor-list {
-      margin-bottom: 1.5rem;
+      gap: 56px;
+      row-gap: 0;
 
       a {
         width: 150px;
@@ -60,21 +46,34 @@ const Partners = styled(Section)`
         align-items: center;
         justify-content: center;
 
+        picture {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
         img {
-          width: 100%;
-          max-height: 60px;
+          max-width: 100%;
+          width: auto;
+          max-height: 70px;
         }
       }
     }
+
+    .sponsor-list {
+      margin-bottom: 1.5rem;
+    }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     flex-direction: column;
 
     .list-container {
+      .partners-list,
       .sponsor-list {
-        flex-direction: column;
-        gap: 0;
+        a {
+          margin: -8px 0;
+        }
       }
     }
 
@@ -116,6 +115,12 @@ const sponsors = [
     link: 'https://www.inovabh.com.br',
   },
   {
+    name: 'Itaú',
+    logoPng: 'banco-itau.png',
+    logoWebp: 'banco-itau.webp',
+    link: 'https://www.itau.com.br',
+  },
+  {
     name: 'Magotteaux',
     logoPng: 'magotteaux.png',
     logoWebp: 'magotteaux.webp',
@@ -134,6 +139,12 @@ const sponsors = [
     link: 'https://www.ntsbrasil.com',
   },
   {
+    name: 'Rede Soma Drogarias',
+    logoPng: 'rede-soma-drogarias.png',
+    logoWebp: 'rede-soma-drogarias.webp',
+    link: 'https://www.redesoma.com.br',
+  },
+  {
     name: 'Supermix',
     logoPng: 'supermix.png',
     logoWebp: 'supermix.webp',
@@ -144,6 +155,33 @@ const sponsors = [
     logoPng: 'tracbel.png',
     logoWebp: 'tracbel.webp',
     link: 'https://www.tracbel.com.br',
+  },
+  {
+    name: 'Usiminas',
+    logoPng: 'usiminas.png',
+    logoWebp: 'usiminas.webp',
+    link: 'https://www.usiminas.com',
+  },
+];
+
+const partners = [
+  {
+    name: 'DOZE Rackethouse',
+    logoPng: 'doze-rackethouse.png',
+    logoWebp: 'doze-rackethouse.webp',
+    link: 'https://linktr.ee/doze.rackethouse',
+  },
+  {
+    name: 'Núcleo Odontológico Eldorado',
+    logoPng: 'nucleo-odontologico-eldorado.png',
+    logoWebp: 'nucleo-odontologico-eldorado.webp',
+    link: 'http://www.nucleoodontologicoeldorado.com.br',
+  },
+  {
+    name: 'Academia Tennis Hall',
+    logoPng: 'academia-tennis-hall.png',
+    logoWebp: 'academia-tennis-hall.webp',
+    link: 'https://www.academiatennishall.com.br',
   },
 ];
 
@@ -189,109 +227,32 @@ export default function PartnersSection() {
         </div>
         <h1>{t('partners')}</h1>
         <div className="partner-list">
-          <a
-            href="https://www.ohubsocial.com.br"
-            target="_blank"
-            rel="noreferrer"
-            title="Incubadora De Projetos Sociais | Hub Social"
-          >
-            <picture>
-              <source
-                type="image/webp"
-                srcSet="/images/partners/ohubsocial.webp"
-              />
-              <source
-                type="image/jpeg"
-                srcSet="/images/partners/ohubsocial.jpg"
-              />
-              <img
-                src="/images/partners/ohubsocial.jpg"
-                title="Incubadora De Projetos Sociais | Hub Social"
-                alt="Incubadora De Projetos Sociais | Hub Social"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://www.institutoimap.org.br/"
-            target="_blank"
-            rel="noreferrer"
-            title="Instituto Marum Patrus"
-          >
-            <picture>
-              <source type="image/webp" srcSet="/images/partners/imap.webp" />
-              <source type="image/jpeg" srcSet="/images/partners/imap.jpg" />
-              <img
-                src="/images/partners/imap.jpg"
-                title="Instituto Marum Patrus"
-                alt="Instituto Marum Patrus"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            href="http://www.nucleoodontologicoeldorado.com.br"
-            target="_blank"
-            rel="noreferrer"
-            title="Núcleo Odontológico Eldorado - NOE"
-          >
-            <picture>
-              <source type="image/webp" srcSet="/images/partners/noe.webp" />
-              <source type="image/jpeg" srcSet="/images/partners/noe.jpg" />
-              <img
-                src="/images/partners/noe.jpg"
-                title="Núcleo Odontológico Eldorado - NOE"
-                alt="Núcleo Odontológico Eldorado - NOE"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://www.redesoma.com.br/"
-            target="_blank"
-            rel="noreferrer"
-            title="Rede Soma Drogarias"
-          >
-            <picture>
-              <source
-                type="image/webp"
-                srcSet="/images/partners/redesomadrogarias.webp"
-              />
-              <source
-                type="image/jpeg"
-                srcSet="/images/partners/redesomadrogarias.jpg"
-              />
-              <img
-                src="/images/partners/redesomadrogarias.jpg"
-                title="Rede Soma Drogarias"
-                alt="Rede Soma Drogarias"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://www.academiatennishall.com.br/"
-            target="_blank"
-            rel="noreferrer"
-            title="Academia Tennis Hall"
-          >
-            <picture>
-              <source
-                type="image/webp"
-                srcSet="/images/partners/academiatennishall.webp"
-              />
-              <source
-                type="image/jpeg"
-                srcSet="/images/partners/academiatennishall.jpg"
-              />
-              <img
-                src="/images/partners/academiatennishall.jpg"
-                title="Academia Tennis Hall"
-                alt="Academia Tennis Hall"
-                loading="lazy"
-              />
-            </picture>
-          </a>
+          {partners.map(partner => (
+            <a
+              key={partner.name}
+              href={partner.link}
+              target="_blank"
+              rel="noreferrer"
+              title={partner.name}
+            >
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`/images/partners/${partner.logoWebp}`}
+                />
+                <source
+                  type="image/png"
+                  srcSet={`/images/partners/${partner.logoPng}`}
+                />
+                <img
+                  src={`/images/partners/${partner.logoPng}`}
+                  title={partner.name}
+                  alt={partner.name}
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          ))}
         </div>
       </div>
     </Partners>
