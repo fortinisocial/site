@@ -142,13 +142,13 @@ export const StyledLang = styled.div`
   padding-bottom: 1rem;
 `;
 
-const userLocale =
-  navigator.languages && navigator.languages.length
-    ? navigator.languages[0]
-    : navigator.language;
-
 export default function Footer() {
   const t = useTranslations('Footer');
+
+  const userLocale =
+    navigator.languages && navigator.languages.length
+      ? navigator.languages[0]
+      : navigator.language;
 
   return (
     <>
