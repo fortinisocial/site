@@ -166,6 +166,12 @@ const sponsors = [
 
 const partners = [
   {
+    name: 'Academia Tennis Hall',
+    logoPng: 'academia-tennis-hall.png',
+    logoWebp: 'academia-tennis-hall.webp',
+    link: 'https://www.academiatennishall.com.br',
+  },
+  {
     name: 'DOZE Rackethouse',
     logoPng: 'doze-rackethouse.png',
     logoWebp: 'doze-rackethouse.webp',
@@ -176,12 +182,6 @@ const partners = [
     logoPng: 'nucleo-odontologico-eldorado.png',
     logoWebp: 'nucleo-odontologico-eldorado.webp',
     link: 'http://www.nucleoodontologicoeldorado.com.br',
-  },
-  {
-    name: 'Academia Tennis Hall',
-    logoPng: 'academia-tennis-hall.png',
-    logoWebp: 'academia-tennis-hall.webp',
-    link: 'https://www.academiatennishall.com.br',
   },
 ];
 
@@ -227,32 +227,34 @@ export default function PartnersSection() {
         </div>
         <h1>{t('partners')}</h1>
         <div className="partner-list">
-          {partners.map(partner => (
-            <a
-              key={partner.name}
-              href={partner.link}
-              target="_blank"
-              rel="noreferrer"
-              title={partner.name}
-            >
-              <picture>
-                <source
-                  type="image/webp"
-                  srcSet={`/images/partners/${partner.logoWebp}`}
-                />
-                <source
-                  type="image/png"
-                  srcSet={`/images/partners/${partner.logoPng}`}
-                />
-                <img
-                  src={`/images/partners/${partner.logoPng}`}
-                  title={partner.name}
-                  alt={partner.name}
-                  loading="lazy"
-                />
-              </picture>
-            </a>
-          ))}
+          {partners
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(partner => (
+              <a
+                key={partner.name}
+                href={partner.link}
+                target="_blank"
+                rel="noreferrer"
+                title={partner.name}
+              >
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={`/images/partners/${partner.logoWebp}`}
+                  />
+                  <source
+                    type="image/png"
+                    srcSet={`/images/partners/${partner.logoPng}`}
+                  />
+                  <img
+                    src={`/images/partners/${partner.logoPng}`}
+                    title={partner.name}
+                    alt={partner.name}
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+            ))}
         </div>
       </div>
     </Partners>
