@@ -145,10 +145,15 @@ export const StyledLang = styled.div`
 export default function Footer() {
   const t = useTranslations('Footer');
 
-  const userLocale =
-    navigator.languages && navigator.languages.length
+  const getUserLocale = () => {
+    if (typeof window !== 'undefined') {
+      return '';
+    }
+
+    return navigator.languages && navigator.languages.length
       ? navigator.languages[0]
       : navigator.language;
+  };
 
   return (
     <>
@@ -260,7 +265,7 @@ export default function Footer() {
           </Menu>
         </Navigation>
       </StyledFooter>
-      {!userLocale.includes('br') && (
+      {!getUserLocale().includes('br') && (
         <StyledLang>
           <a href="https://fortini.org.br" target="_blank" rel="noreferrer">
             🇧🇷
