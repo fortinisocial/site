@@ -255,11 +255,13 @@ export default function Footer() {
           </Menu>
         </Navigation>
       </StyledFooter>
-      <StyledLang>
-        <a href="https://fortini.org.br" target="_blank" rel="noreferrer">
-          🇧🇷
-        </a>
-      </StyledLang>
+      {!navigator.language.includes('br') && (
+        <StyledLang>
+          <a href="https://fortini.org.br" target="_blank" rel="noreferrer">
+            🇧🇷
+          </a>
+        </StyledLang>
+      )}
     </>
   );
 }
