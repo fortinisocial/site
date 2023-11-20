@@ -145,31 +145,31 @@ export default function ProjectsSection() {
       kind: 'taekwondo',
       title: t('taekwondo'),
       students: '120',
-      city: 'Betim e Contagem',
-      schools:
-        'E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares',
+      city: 'Betim',
+      schools: 'E. M. do Bairro Petrovale, E. M. Valério Ferreira Palhares',
       since: '2022',
-      locations:
-        'Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+      locations: 'Poliesportivo Petrovale',
     },
     {
       kind: 'beach-tennis',
       title: t('beach-tennis'),
       students: '50',
       city: 'Contagem',
-      schools: 'E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+      schools:
+        'E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães, E. E. Ruy Pimenta',
       since: '2022',
       locations: 'Doze Rackethouse',
     },
     {
       kind: 'tennis',
       title: t('tennis'),
-      students: '50',
-      city: 'Contagem',
+      students: '130',
+      city: 'Contagem e Sarzedo',
       schools:
-        'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos, E. M. René Chateubriand Domingues',
+        'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos, E. M. René Chateubriand Domingues, E. E. Prof Nilza Bergman, E. M. Eva Fernandes',
       since: '2016',
-      locations: 'Academia Tennis Hall',
+      locations:
+        'Academia Tennis Hall, E. E. Prof Nilza Bergman, E. M. Eva Fernandes',
     },
     {
       kind: 'handball',
