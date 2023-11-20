@@ -129,6 +129,72 @@ export default function ProjectsSection() {
     arrowRight: true,
   });
 
+  const projects = [
+    {
+      kind: 'jiu-jitsu',
+      title: t('jiu-jitsu'),
+      students: '120',
+      city: 'Contagem e Ibirité',
+      schools:
+        'E. M. Heitor Villa Lobos, E. E. Ruy Pimenta, E. M. Deputado Jorge Ferraz, E. M. Maria Martins de Moraes, E. E. José Rodrigues Betim',
+      since: '2023',
+      locations:
+        'E. M. Heitor Villa Lobos, E. E. Ruy Pimenta, E. M. Deputado Jorge Ferraz, E. M. Maria Martins de Moraes, E. E. José Rodrigues Betim',
+    },
+    {
+      kind: 'beach-tennis',
+      title: t('beach-tennis'),
+      students: '50',
+      city: 'Contagem',
+      schools: 'E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+      since: '2022',
+      locations: 'Doze Rackethouse',
+    },
+    {
+      kind: 'tennis',
+      title: t('tennis'),
+      students: '50',
+      city: 'Contagem',
+      schools:
+        'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos, E. M. René Chateubriand Domingues',
+      since: '2016',
+      locations: 'Academia Tennis Hall',
+    },
+    {
+      kind: 'handball',
+      title: t('handball'),
+      students: '225',
+      city: 'Betim e Contagem',
+      schools:
+        'E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares',
+      since: '2018',
+      locations:
+        'E. E. Padre Camargos, E. M. Adelina Mesquita Januzzi, Ginásio Califórnia, Poliesportivo Petrovale',
+    },
+    {
+      kind: 'judo',
+      title: t('judo'),
+      students: '120',
+      city: 'Contagem',
+      schools:
+        'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+      since: '2021',
+      locations:
+        'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+    },
+    {
+      kind: 'taekwondo',
+      title: t('taekwondo'),
+      students: '120',
+      city: 'Betim e Contagem',
+      schools:
+        'E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares',
+      since: '2022',
+      locations:
+        'Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+    },
+  ];
+
   const handlePrev = () => {
     projectsContainerRef.current.scrollBy(-340, 0);
   };
@@ -148,47 +214,15 @@ export default function ProjectsSection() {
   return (
     <Projects id="projects-section" className="projects-section">
       <div id="projects-container" ref={projectsContainerRef} className="list">
-        <ProjectCard
-          onScroll={handleNavigation}
-          kind="tenis"
-          title={t('tennis')}
-          students="80"
-          city="Contagem"
-          schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. E. Conceição Hilário, E. M. Heitor Villa Lobos
-, E. M. René Chateubriand Domingues"
-          since="2016"
-          locations="Academia Tennis Hall"
-        />
-        <ProjectCard
-          onScroll={handleNavigation}
-          kind="handball"
-          title={t('handball')}
-          students="200"
-          city="Betim e Contagem"
-          schools="E. E. Padre Camargos, E. M. do Bairro Petrovale, E. M. Adelina Mesquita Januzzi, E. M. Valério Ferreira Palhares"
-          since="2018"
-          locations="E. E. Padre Camargos, E. M. Adelina Mesquita Januzzi, Ginásio Califórnia, Poliesportivo Petrovale"
-        />
-        <ProjectCard
-          onScroll={handleNavigation}
-          kind="judo"
-          title={t('judo')}
-          students="120"
-          city="Contagem"
-          schools="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
-          since="2021"
-          locations="E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
-        />
-        <ProjectCard
-          onScroll={handleNavigation}
-          kind="taekwondo"
-          title={t('taekwondo')}
-          students="120"
-          city="Betim e Contagem"
-          schools="E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares"
-          since="2022"
-          locations="Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães"
-        />
+        {projects
+          .sort((a, b) => Number(a.since) - Number(b.since))
+          .map(project => (
+            <ProjectCard
+              key={project.kind}
+              onScroll={handleNavigation}
+              {...project}
+            />
+          ))}
       </div>
       {navigation.arrowLeft && (
         <span className="prev" onClick={handlePrev}>

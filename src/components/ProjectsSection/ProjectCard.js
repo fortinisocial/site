@@ -82,16 +82,46 @@ const CardHeader = styled.header`
   height: 249px;
   flex-shrink: 0;
 
-  &.tenis {
-    background: url('/images/projects/tenis.jpg');
+  &.beach-tennis {
+    background: url('/images/projects/beach-tennis.jpg');
     background-image: -webkit-image-set(
-      url('/images/projects/tenis.webp') 1x,
-      url('/images/projects/tenis.jpg') 1x
+      url('/images/projects/beach-tennis.webp') 1x,
+      url('/images/projects/beach-tennis.jpg') 1x
     );
     background-image: image-set(
-      url('/images/projects/tenis.webp') 1x,
-      url('/images/projects/tenis.jpg') 1x
+      url('/images/projects/beach-tennis.webp') 1x,
+      url('/images/projects/beach-tennis.jpg') 1x
     );
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &.jiu-jitsu {
+    background: url('/images/projects/jiu-jitsu.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/jiu-jitsu.webp') 1x,
+      url('/images/projects/jiu-jitsu.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/jiu-jitsu.webp') 1x,
+      url('/images/projects/jiu-jitsu.jpg') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &.tennis {
+    background: url('/images/projects/tennis.jpg');
+    background-image: -webkit-image-set(
+      url('/images/projects/tennis.webp') 1x,
+      url('/images/projects/tennis.jpg') 1x
+    );
+    background-image: image-set(
+      url('/images/projects/tennis.webp') 1x,
+      url('/images/projects/tennis.jpg') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &.handball {
@@ -106,7 +136,6 @@ const CardHeader = styled.header`
     );
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: bottom;
   }
 
   &.judo {
@@ -121,7 +150,6 @@ const CardHeader = styled.header`
     );
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -78px;
   }
 
   &.taekwondo {
@@ -136,6 +164,7 @@ const CardHeader = styled.header`
     );
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center -68px;
   }
 `;
 
@@ -266,13 +295,17 @@ export default function ProjectCard({
           />
           <span>{t('location', { num: locations.split(',').length })}</span>
         </p>
-        <ul>
-          {locations.split(',').map(location => (
-            <li key={location} title={location}>
-              <span>{location}</span>
-            </li>
-          ))}
-        </ul>
+        {['jiu-jitsu', 'judo'].includes(kind) ? (
+          <p>Escolas parceiras citadas acima.</p>
+        ) : (
+          <ul>
+            {locations.split(',').map(location => (
+              <li key={location} title={location}>
+                <span>{location}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </article>
     </Card>
   );

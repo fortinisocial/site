@@ -46,6 +46,8 @@
       "location": "{num, plural, =1 {Location} other {Locations}} of execution:"
     },
     "names": {
+      "jiu-jitsu": "Jiu-jitsu",
+      "beach-tennis": "Beach Tennis",
       "tennis": "Tennis",
       "handball": "Handball",
       "judo": "Judo",
