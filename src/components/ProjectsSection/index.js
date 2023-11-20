@@ -142,6 +142,17 @@ export default function ProjectsSection() {
         'E. M. Heitor Villa Lobos, E. E. Ruy Pimenta, E. M. Deputado Jorge Ferraz, E. M. Maria Martins de Moraes, E. E. José Rodrigues Betim',
     },
     {
+      kind: 'taekwondo',
+      title: t('taekwondo'),
+      students: '120',
+      city: 'Betim e Contagem',
+      schools:
+        'E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares',
+      since: '2022',
+      locations:
+        'Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
+    },
+    {
       kind: 'beach-tennis',
       title: t('beach-tennis'),
       students: '50',
@@ -181,17 +192,6 @@ export default function ProjectsSection() {
       since: '2021',
       locations:
         'E. E. Padre Camargos, E. M. Carlos Drummond de Andrade (CAIC), E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
-    },
-    {
-      kind: 'taekwondo',
-      title: t('taekwondo'),
-      students: '120',
-      city: 'Betim e Contagem',
-      schools:
-        'E. M. do Bairro Petrovale, E. M. Heitor Villa Lobos, E. M. Valério Ferreira Palhares',
-      since: '2022',
-      locations:
-        'Poliesportivo Petrovale, E. M. Heitor Villa Lobos, E. M. Professora Lígia Magalhães',
     },
   ];
 
