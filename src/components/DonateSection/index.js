@@ -94,7 +94,7 @@ const Donate = styled(Section)`
   }
 `;
 
-const getLinkByValue = (value, isSubscription) =>
+const getLinkByValueUSD = (value, isSubscription) =>
   ({
     25: isSubscription
       ? 'https://buy.stripe.com/3cs7wj9g87X073GbJ2'
@@ -110,9 +110,33 @@ const getLinkByValue = (value, isSubscription) =>
       : 'https://donate.stripe.com/fZe7wjeAs6SWew8dQT',
   }[value]);
 
-export default function DonateSection() {
+const getLinkByValueBRL = (value, isSubscription) =>
+  ({
+    25: isSubscription
+      ? 'https://buy.stripe.com/bIY5obfEwcdg3RubIM'
+      : 'https://donate.stripe.com/aEU7wjeAsgtwfAc9AS',
+    75: isSubscription
+      ? 'https://buy.stripe.com/6oE5obbog2CG3RuaEV'
+      : 'https://donate.stripe.com/4gwbMz0JCelo1Jm7sI',
+    50: isSubscription
+      ? 'https://buy.stripe.com/cN203R4ZS3GK3Ru7sx'
+      : 'https://donate.stripe.com/cN26sffEwa582Nq008',
+    100: isSubscription
+      ? 'https://buy.stripe.com/cN2bMz9g84KO9bObIO'
+      : 'https://donate.stripe.com/00gbMzcsk5OSew87sB',
+    200: isSubscription
+      ? 'https://buy.stripe.com/6oE7wj4ZS2CGfAc007'
+      : 'https://donate.stripe.com/bIYdUHbogelo5ZC4gq',
+  }[value]);
+
+export default function DonateSection({ locale }) {
   const t = useTranslations('Donate');
   const [isSubscription, setIsSubscription] = useState(true);
+
+  const getDonationLink =
+    locale === 'pt-br' ? getLinkByValueBRL : getLinkByValueUSD;
+
+  const currency = locale === 'pt-br' ? 'R$ ' : '$';
 
   return (
     <Donate id="donate-section" className="donate-section">
@@ -122,36 +146,36 @@ export default function DonateSection() {
       </div>
       <div className="donate-buttons">
         <a
-          href={getLinkByValue(25, isSubscription)}
+          href={getDonationLink(25, isSubscription)}
           rel="noreferrer"
           target="_blank"
           title={`Donate $25.00${isSubscription ? ' monthly' : ''}`}
         >
-          $25.00
+          {currency}25.00
         </a>
         <a
-          href={getLinkByValue(50, isSubscription)}
+          href={getDonationLink(50, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Donate $50.00${isSubscription ? ' monthly' : ''}`}
+          title={`Donate ${currency}50.00${isSubscription ? ' monthly' : ''}`}
         >
-          $50.00
+          {currency}50.00
         </a>
         <a
-          href={getLinkByValue(100, isSubscription)}
+          href={getDonationLink(100, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Donate $100.00${isSubscription ? ' monthly' : ''}`}
+          title={`Donate ${currency}100.00${isSubscription ? ' monthly' : ''}`}
         >
-          $100.00
+          {currency}100.00
         </a>
         <a
-          href={getLinkByValue(200, isSubscription)}
+          href={getDonationLink(200, isSubscription)}
           rel="noreferrer"
           target="_blank"
-          title={`Donate $200.00${isSubscription ? ' monthly' : ''}`}
+          title={`Donate ${currency}200.00${isSubscription ? ' monthly' : ''}`}
         >
-          $200.00
+          {currency}200.00
         </a>
       </div>
       <div className="donate-type">
@@ -174,10 +198,14 @@ export default function DonateSection() {
         <p>{t('oneTimeDonationInfo')}</p>
         <div className="donate-buttons">
           <a
-            href="https://donate.stripe.com/bIY8An0JC0uy0FiaF2"
+            href={
+              locale === 'pt-br'
+                ? 'https://donate.stripe.com/eVa5obakcfps1JmfZd'
+                : 'https://donate.stripe.com/bIY8An0JC0uy0FiaF2'
+            }
             rel="noreferrer"
             target="_blank"
-            title="One time donation (choose the amount)"
+            title={t('oneTimeDonation')}
           >
             {t('oneTimeDonation')}
           </a>

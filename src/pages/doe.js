@@ -3,13 +3,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DonateSection from '../components/DonateSection';
 
-export default function Home() {
+export default function Home({ locale }) {
   return (
     <Layout title={'Fortini Investimento Social - Belo Horizonte'}>
       <Wrapper>
         <Header donation />
         <Main>
-          <DonateSection />
+          <DonateSection locale={locale} />
         </Main>
         <Footer />
       </Wrapper>
@@ -26,6 +26,7 @@ export async function getStaticProps(context) {
       // You can get the messages from anywhere you like. The recommended
       // pattern is to put them in JSON files separated by language.
       messages: (await import(`../../messages/${locale}.json`)).default,
+      locale,
     },
   };
 }
