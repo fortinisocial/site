@@ -9,7 +9,7 @@ export default function Home() {
       <Wrapper>
         <Header donation />
         <Main>
-          <DonateSection />
+          <DonateSection locale={locale} />
         </Main>
         <Footer />
       </Wrapper>
@@ -23,6 +23,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,
+      locale,
     },
   };
 }
