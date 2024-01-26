@@ -165,7 +165,12 @@ export default function Footer() {
               loading="lazy"
             />
           </Logos>
-          <p>Fortini Investimento Social ® 2016-2022</p>
+          <p>
+            Fortini Investimento Social ® 2016-
+            {new Intl.DateTimeFormat('en', { year: 'numeric' }).format(
+              new Date(),
+            )}
+          </p>
         </LogoContainer>
         <Navigation>
           <Social>
