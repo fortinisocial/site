@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DonateSection from '../components/DonateSection';
 
-export default function Home() {
+export default function Home({ locale }) {
   return (
     <Layout title={'Fortini Investimento Social - Belo Horizonte'}>
       <Wrapper>
