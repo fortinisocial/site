@@ -23,7 +23,7 @@ export default function Bio() {
               />
               <BioCard
                 href="https://dub.sh/fortini-parcerias"
-                title="Parcerias"
+                title="Parcerias 🤝"
                 variant="primary"
               />
               <BioCard
