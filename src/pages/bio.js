@@ -18,13 +18,12 @@ export default function Bio() {
             <h1 className={styles.title}>Fortini</h1>
             <ul role="list" className={styles.linkCardFlex}>
               <BioCard
-                href="https://dub.sh/fortini-doe"
-                title="Faça sua doação! 💙"
+                href="https://dub.sh/fortini-acaoamigos"
+                title="Comprar bilhetes da Ação Entre Amigos 🤝"
               />
               <BioCard
-                href="https://dub.sh/fortini-parcerias"
-                title="Parcerias 🤝"
-                variant="tertiary"
+                href="https://dub.sh/fortini-doe"
+                title="Faça sua doação! 💙"
               />
               <BioCard
                 href="https://dub.sh/fortini-faca-parte"
