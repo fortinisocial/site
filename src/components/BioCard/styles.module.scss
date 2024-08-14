@@ -18,6 +18,10 @@
     background: #22c8cd;
   }
 
+  &[data-variant='tertiary'] {
+    background: #25d366;
+  }
+
   > a {
     display: block;
     text-decoration: none;

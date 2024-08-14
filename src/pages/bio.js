@@ -24,12 +24,12 @@ export default function Bio() {
               <BioCard
                 href="https://dub.sh/fortini-parcerias"
                 title="Parcerias 🤝"
-                variant="primary"
+                variant="tertiary"
               />
               <BioCard
                 href="https://dub.sh/fortini-faca-parte"
                 title="Venha ser Fortini"
-                variant="primary"
+                variant="secondary"
               />
               <BioCard
                 href="https://dub.sh/fortini-site"
