@@ -20,6 +20,7 @@ export default function Bio() {
               <BioCard
                 href="https://dub.sh/fortini-acaoamigos"
                 title="Comprar bilhetes da Ação Entre Amigos 🤝"
+                variant="campaign"
               />
               <BioCard
                 href="https://dub.sh/fortini-doe"
