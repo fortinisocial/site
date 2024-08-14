@@ -40,7 +40,7 @@ export default function Bio() {
           </main>
           <footer className={styles.footer}>
             <a
-              href="https://www.instagram.com/fortinisocial"
+              href="https://dub.sh/fortini-instagram"
               target="_blank"
               rel="noreferrer"
               title="Instagram da Fortini"
@@ -54,7 +54,7 @@ export default function Bio() {
               />
             </a>
             <a
-              href="https://www.facebook.com/fortinisocial"
+              href="https://dub.sh/fortini-facebook"
               target="_blank"
               rel="noreferrer"
               title="Facebook da Fortini"
@@ -68,7 +68,7 @@ export default function Bio() {
               />
             </a>
             <a
-              href="https://www.linkedin.com/company/fortini-investimento-social"
+              href="https://dub.sh/fortini-linkedin"
               target="_blank"
               rel="noreferrer"
               title="LinkedIn da Fortini"
