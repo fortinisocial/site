@@ -22,6 +22,10 @@
     background: #25d366;
   }
 
+  &[data-variant='campaign'] {
+    background: #fbbd45;
+  }
+
   > a {
     display: block;
     text-decoration: none;
