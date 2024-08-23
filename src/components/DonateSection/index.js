@@ -145,14 +145,14 @@ export default function DonateSection({ locale }) {
         <p>{t('subTitle')}</p>
       </div>
       <div className="donate-buttons">
-        {/* <a
+        <a
           href={getDonationLink(25, isSubscription)}
           rel="noreferrer"
           target="_blank"
           title={`Donate $25.00${isSubscription ? ' monthly' : ''}`}
         >
           {currency}25.00
-        </a> */}
+        </a>
         <a
           href={getDonationLink(50, isSubscription)}
           rel="noreferrer"
