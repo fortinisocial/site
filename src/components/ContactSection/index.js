@@ -187,7 +187,12 @@ export default function FormularioContato() {
         Enviar
       </Button>
       <br />
-      {sent && <p>Mensagem enviada com sucesso!</p>}
+      {sent && (
+        <>
+          <p>Mensagem enviada com sucesso!</p>
+          <p>Responderemos o seu contato em até 48h úteis.</p>
+        </>
+      )}
       {error && <p>Erro ao enviar mensagem. Tente novamente mais tarde.</p>}
     </Form>
   );
