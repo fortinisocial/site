@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Modal } from '../Modal';
+import Link from 'next/link';
 
 export const StyledFooter = styled.footer`
   max-width: 1920px;
