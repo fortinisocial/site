@@ -19,7 +19,7 @@ const newMessage = async (req, res) => {
       <p><strong>Nome:</strong> ${body?.name}</p>
       <p><strong>Email:</strong> ${body?.email}</p
       <p><strong>Assunto:</strong> ${body?.subject}</p>
-      <p style="white-space:pre-line;"><strong>Mensagem:</strong> ${body?.message}</p>
+      <p style="white-space:pre-line;"><strong>Mensagem:</strong><br> ${body?.message}</p>
       `,
     });
   } catch (error) {
