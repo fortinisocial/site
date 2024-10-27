@@ -178,7 +178,7 @@ export default function DonateSection({ locale }) {
           {currency}200.00
         </a>
       </div>
-      {/* <div className="donate-type">
+      <div className="donate-type">
         <label
           title={
             isSubscription ? t('recurrencyOnTitle') : t('recurrencyOffTitle')
@@ -192,8 +192,8 @@ export default function DonateSection({ locale }) {
           {t('monthly')}
         </label>
         <p>{t('monthlyInfo')}</p>
-      </div> */}
-      {/* <br />
+      </div>
+      <br />
       <div className="donate-others">
         <p>{t('oneTimeDonationInfo')}</p>
         <div className="donate-buttons">
@@ -210,7 +210,7 @@ export default function DonateSection({ locale }) {
             {t('oneTimeDonation')}
           </a>
         </div>
-      </div> */}
+      </div>
     </Donate>
   );
 }
