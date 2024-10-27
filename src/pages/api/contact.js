@@ -8,7 +8,7 @@ const newMessage = async (req, res) => {
   try {
     await sgMail.send({
       to: toEmails,
-      from: 'newsletter@fortini.org.br',
+      from: 'site@fortini.org.br',
       ...(body?.email &&
         !toEmails.includes(body?.email) && {
           cc: body.email,
