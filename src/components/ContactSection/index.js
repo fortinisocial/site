@@ -21,7 +21,6 @@ const InputTelefoneBrasileiro = ({ value, onChange }) => {
       value={value}
       onChange={handleChange}
       placeholder="(XX) XXXXX-XXXX"
-      pattern="$$\d{2}$$\s\d{5}-\d{4}"
       title="Número de telefone no formato: (XX) XXXXX-XXXX"
     />
   );
@@ -130,10 +129,10 @@ export default function FormularioContato() {
     <Form onSubmit={handleSubmit}>
       <h1>Contato</h1>
       <div>
-        <Label htmlFor="nome">Nome</Label>
+        <Label htmlFor="name">Nome</Label>
         <Input
-          id="nome"
-          name="nome"
+          id="name"
+          name="name"
           required
           minLength={2}
           maxLength={100}
