@@ -5,6 +5,7 @@
       "methodology": "Metodologia",
       "testimonials": "Depoimentos",
       "partners": "Parceiros",
+      "contact": "Contato",
       "donate": "Doe agora"
     },
     "title": "Sonho que se sonha junto é realidade",
@@ -113,7 +114,8 @@
       "about": "Sobre",
       "methodology": "Metodologia",
       "testimonials": "Depoimentos",
-      "partners": "Parceiros"
+      "partners": "Parceiros",
+      "contact": "Contato"
     }
   },
   "Donate": {

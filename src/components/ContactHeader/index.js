@@ -16,8 +16,7 @@ const StyledHeader = styled.header`
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
-  min-height: 620px;
+  min-height: 300px;
   z-index: 1;
 
   &.donation {
@@ -583,7 +582,7 @@ export default function Header({ donation = false }) {
         )}
       </MobileActions>
 
-      {openedMobile ? (
+      {openedMobile && (
         <MobileMenu className={showFixedMenu ? 'fixed' : ''}>
           <Link href="/#about-section" title={t('menu.about')}>
             <span onClick={handleMobileMenuClick}>{t('menu.about')}</span>
@@ -606,21 +605,6 @@ export default function Header({ donation = false }) {
             Contato
           </a> */}
         </MobileMenu>
-      ) : (
-        <Message className="message">
-          {donation ? (
-            <h1 className="donation">{t('donation.title')}</h1>
-          ) : (
-            <>
-              <h1>&quot;{t('title')}&quot;</h1>
-              <p>
-                {t.rich('subTitle', {
-                  b: chunks => <b>{chunks}</b>,
-                })}
-              </p>
-            </>
-          )}
-        </Message>
       )}
     </StyledHeader>
   );

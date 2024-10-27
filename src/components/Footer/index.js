@@ -268,6 +268,7 @@ export default function Footer() {
                 <a href="#ods-section">{t('menu.methodology')}</a>
                 <a href="#testimonials-section">{t('menu.testimonials')}</a>
                 <a href="#partners-section">{t('menu.partners')}</a>
+                <a href="/contato">{t('menu.contact')}</a>
                 {/* <a href="/contato">Contato</a> */}
               </nav>
             </MenuItem>
