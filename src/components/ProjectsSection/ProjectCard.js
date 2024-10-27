@@ -8,7 +8,7 @@ const Card = styled.article`
   flex-direction: column;
   justify-content: flex-start;
   width: 340px;
-  height: 680px;
+  height: 732px;
   border-radius: 30px;
   color: #232323;
   font-size: 14px;
