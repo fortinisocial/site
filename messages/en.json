@@ -100,6 +100,10 @@
       "facebook": "Fortini's Facebook",
       "linkedin": "Fortini's LinkedIn"
     },
+    "newsletter": {
+      "title": "Newsletter",
+      "subTitle": "Subscribe"
+    },
     "institutional": "Institutional",
     "contact": "Contact",
     "workingHours": "Monday to Friday, from 8am to 5pm",

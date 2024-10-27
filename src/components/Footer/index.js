@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Modal } from '../Modal';
 
 export const StyledFooter = styled.footer`
   max-width: 1920px;
@@ -54,15 +55,18 @@ export const Navigation = styled.div`
   }
 `;
 
-export const Social = styled.div`
-  min-width: 200px;
+export const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 
   h1 {
     text-transform: uppercase;
     font-size: 16px;
   }
 
-  p {
+  p,
+  button {
     font-size: 14px;
 
     a {
@@ -73,6 +77,23 @@ export const Social = styled.div`
       }
     }
   }
+`;
+
+export const Newsletter = styled.button`
+  all: unset;
+  background: transparent;
+  border: 1px solid #24dbdd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: #111111;
+  }
+`;
+
+export const Social = styled.div`
+  min-width: 200px;
 
   @media (max-width: 800px) {
     min-width: auto;
@@ -144,6 +165,7 @@ export const StyledLang = styled.div`
 
 export default function Footer() {
   const t = useTranslations('Footer');
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
@@ -173,63 +195,71 @@ export default function Footer() {
           </p>
         </LogoContainer>
         <Navigation>
-          <Social>
-            <h1>{t('social.title')}</h1>
-            <p>
-              <a
-                href="https://www.instagram.com/fortinisocial"
-                target="_blank"
-                rel="noreferrer"
-                title={t('social.instagram')}
-              >
-                @fortinisocial
-              </a>
-            </p>
-            <Icons>
-              <a
-                href="https://www.instagram.com/fortinisocial"
-                target="_blank"
-                rel="noreferrer"
-                title={t('social.instagram')}
-              >
-                <img
-                  src="/images/footer/insta_footer.svg"
-                  alt="Instagram"
-                  width={30}
-                  height={30}
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/fortinisocial"
-                target="_blank"
-                rel="noreferrer"
-                title={t('social.facebook')}
-              >
-                <img
-                  src="/images/footer/fb_footer.svg"
-                  alt="Facebook"
-                  width={17}
-                  height={30}
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/fortini-investimento-social"
-                target="_blank"
-                rel="noreferrer"
-                title={t('social.linkedin')}
-              >
-                <img
-                  src="/images/footer/linkedin_footer.svg"
-                  alt="LinkedIn"
-                  width={30}
-                  height={30}
-                  loading="lazy"
-                />
-              </a>
-            </Icons>
-          </Social>
+          <Contact>
+            <Social>
+              <h1>{t('social.title')}</h1>
+              <p>
+                <a
+                  href="https://www.instagram.com/fortinisocial"
+                  target="_blank"
+                  rel="noreferrer"
+                  title={t('social.instagram')}
+                >
+                  @fortinisocial
+                </a>
+              </p>
+              <Icons>
+                <a
+                  href="https://www.instagram.com/fortinisocial"
+                  target="_blank"
+                  rel="noreferrer"
+                  title={t('social.instagram')}
+                >
+                  <img
+                    src="/images/footer/insta_footer.svg"
+                    alt="Instagram"
+                    width={30}
+                    height={30}
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/fortinisocial"
+                  target="_blank"
+                  rel="noreferrer"
+                  title={t('social.facebook')}
+                >
+                  <img
+                    src="/images/footer/fb_footer.svg"
+                    alt="Facebook"
+                    width={17}
+                    height={30}
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/fortini-investimento-social"
+                  target="_blank"
+                  rel="noreferrer"
+                  title={t('social.linkedin')}
+                >
+                  <img
+                    src="/images/footer/linkedin_footer.svg"
+                    alt="LinkedIn"
+                    width={30}
+                    height={30}
+                    loading="lazy"
+                  />
+                </a>
+              </Icons>
+            </Social>
+            <div>
+              <h1>{t('newsletter.title')}</h1>
+              <Newsletter onClick={() => setOpenModal(true)}>
+                {t('newsletter.subTitle')}
+              </Newsletter>
+            </div>
+          </Contact>
           <Menu>
             <MenuItem>
               <h1>{t('institutional')}</h1>
@@ -265,6 +295,12 @@ export default function Footer() {
           🇧🇷
         </a>
       </StyledLang>
+      <Modal open={openModal} onOpenChange={setOpenModal}>
+        <iframe
+          style={{ overflow: 'hidden' }}
+          src="https://cdn.forms-content.sg-form.com/bc56aa34-92d0-11ef-9602-a24e5c97aee3"
+        />
+      </Modal>
     </>
   );
 }

@@ -100,6 +100,10 @@
       "facebook": "Facebook da Fortini",
       "linkedin": "LinkedIn da Fortini"
     },
+    "newsletter": {
+      "title": "Newsletter",
+      "subTitle": "Inscrever-se"
+    },
     "institutional": "Institutional",
     "contact": "Contato",
     "workingHours": "Segunda a Sexta, das 8h às 17h",
